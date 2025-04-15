@@ -1,0 +1,2319 @@
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:16] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Left Button
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha1 x2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:17] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] Alpha2 + Alpha3 + Alpha1
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] A
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:18] Alpha1
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x2
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x3
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x4
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x5
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x6
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x7
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x8
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x9
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:19] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x10
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x11
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x12
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x13
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x14
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x15
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x17
+[20:56:20] Alpha1 x19
+[20:56:20] Alpha1 x19
+[20:56:20] Alpha1 x19
+[20:56:20] Alpha1 x19
+[20:56:20] Alpha1 x19
+[20:56:20] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x19
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] Alpha1 x20
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] D + Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:21] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:22] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Right Button
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x2
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x3
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x4
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x5
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:23] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x6
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x7
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x9
+[20:56:24] Alpha1 x10
+[20:56:24] Alpha1 x10
+[20:56:24] Alpha1 x10
+[20:56:24] Alpha1 x10
+[20:56:24] Alpha1 + Right Button
+[20:56:24] Alpha1 + Right Button
+[20:56:24] Alpha1 + Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:24] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:25] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
+[20:56:26] Right Button
