@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5158480e410ef4aa44922b3a75a388, type: 3}
+  m_Name: Screencast Input Mouse Settings
+  m_EditorClassIdentifier: 
+  MouseBase: {fileID: 21300000, guid: 9d55ac9787af9d5429e809b641b81955, type: 3}
+  LeftButtonIdle: {fileID: 21300000, guid: fa71543f996cddd46980010538636ab3, type: 3}
+  LeftButtonPress: {fileID: 21300000, guid: a00450aad6afcba438fc4030b874f8f5, type: 3}
+  MiddleButtonIdle: {fileID: 21300000, guid: 359ca34c453e7df4d942963a058f514e, type: 3}
+  MiddleButtonPress: {fileID: 21300000, guid: 7e400d598c756ed488a7bbf9e9a00c29, type: 3}
+  RightButtonIdle: {fileID: 21300000, guid: f072dba637af63d45b5ef93e747268ff, type: 3}
+  RightButtonPress: {fileID: 21300000, guid: d05ff4727f1970f40a0f042d8877ae95, type: 3}
