@@ -1,33 +1,53 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Playables;
+
+enum PlayerState
+{
+    Idle = 0,
+    Hit,
+    Dead,
+}
 
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rigid2d;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] private Vector2 moveInput;
+    private Vector2 moveInput;
 
-    [SerializeField] private float baseSpeed = 5.0f;
-    [SerializeField] private float currentSpeed = 5.0f;
-    [SerializeField] private float walkSpeed = 2.0f;
-    [SerializeField] private float jumpForce = 10.0f;
-    [SerializeField] private float dashForce = 20.0f;
-    [SerializeField] private float dashDuration = 0.2f; // dash Cooldown
+    PlayState state;
 
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform groundCheck;
+    // states
+    private float baseSpeed = 5.0f;
+    private float currentSpeed = 5.0f;
+    private float walkSpeed = 2.0f;
+    private float jumpForce = 30.0f;
+    private float dashForce = 20.0f;
+    private float dashDuration = 0.2f; // dash Cooldown
 
-    [SerializeField] private bool isGrounded;
-    [SerializeField] private float dashTime;
+    // ground check
+    private LayerMask groundLayer;
+    private Transform groundCheck;
+
+    // flag
+    private bool isGrounded;
+    private float dashTime;
 
     // Animator for animations (if you have an Animator for animations)
     private Animator animator;
+    private int HashToIsWalk = Animator.StringToHash("IsWalk");
+    private int HashToSpeed = Animator.StringToHash("Speed");
+    private int HashToIsGrounded = Animator.StringToHash("IsGrounded");
+    private int HashToOnJump = Animator.StringToHash("OnJump");
 
     void Start()
     {
         rigid2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        groundLayer = LayerMask.GetMask("Ground");
+        groundCheck = transform.GetChild(0);
     }
 
     void Update()
@@ -67,11 +87,11 @@ public class Player : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftControl))
             {
                 currentSpeed = walkSpeed;
-                animator.SetBool("IsWalk", true);
+                animator.SetBool(HashToIsWalk, true);
             }
             else if (Input.GetKeyUp(KeyCode.LeftControl))
             {
-                animator.SetBool("IsWalk", false);
+                animator.SetBool(HashToIsWalk, false);
                 currentSpeed = baseSpeed;
             }
         }
@@ -82,6 +102,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rigid2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            animator.SetTrigger(HashToOnJump);
         }
     }
 
@@ -112,8 +133,8 @@ public class Player : MonoBehaviour
     {
         if (animator != null)
         {
-            animator.SetFloat("Speed", Mathf.Abs(moveInput.x)); // abs -> need positive value
-            animator.SetBool("IsGrounded", isGrounded);
+            animator.SetFloat(HashToSpeed, Mathf.Abs(moveInput.x)); // abs -> need positive value
+            animator.SetBool(HashToIsGrounded, isGrounded);
         }
     }
 

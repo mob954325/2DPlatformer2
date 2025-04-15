@@ -382,16 +382,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53eafdff8b2c8b4a8577bb85d7ce6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveInput: {x: 0, y: 0}
   baseSpeed: 5
   currentSpeed: 5
   walkSpeed: 2
-  jumpForce: 10
+  jumpForce: 30
   dashForce: 20
   dashDuration: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 1578963098}
+  isGrounded: 0
+  dashTime: 0
 --- !u!61 &381962950
 BoxCollider2D:
   m_ObjectHideFlags: 0
