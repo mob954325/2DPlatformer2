@@ -124,6 +124,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void HandleAttack()
+    {
+
+    }
+
     // Animation ------------------------------------------------------------------------------------
 
     /// <summary>

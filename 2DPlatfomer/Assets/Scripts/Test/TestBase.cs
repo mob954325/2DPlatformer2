@@ -11,7 +11,7 @@ public class TestBase : MonoBehaviour
         inputActions = new TestInputActions();
     }
 
-    private void OnEnable()
+    private void OnEnable() 
     {
         inputActions.Enable();
         inputActions.Test.Test1.performed += OnTest1;
