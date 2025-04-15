@@ -1,18 +1,28 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum EnemyState
+{
+    Idle = 0,
+    Search,
+    Attack,
+    Dead,
+}
+
 public class EnemyBase : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    EnemyState state;
+
+    public virtual void OnIdle()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void OnAttack()
     {
-        
-    }
+
+    }  
+
+    public virtual void 
 }
