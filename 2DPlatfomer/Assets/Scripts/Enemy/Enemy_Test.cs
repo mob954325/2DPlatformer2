@@ -11,11 +11,13 @@ public class Enemy_Test : EnemyBase
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         OnHitAction += OnTestEnemyHit;
+        MaxHp = 10;
     }
 
     protected override void OnDeadState()
     {
         base.OnDeadState();
+        Destroy(this.gameObject); // 임시
     }
 
     private void OnTestEnemyHit()
@@ -23,6 +25,7 @@ public class Enemy_Test : EnemyBase
         StopAllCoroutines();
         StartCoroutine(ColorChangeProcess());
     }
+
 
     IEnumerator ColorChangeProcess()
     {

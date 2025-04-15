@@ -11,7 +11,7 @@ public interface IDamageable
     /// 피격시 호출되는 함수
     /// </summary>
     /// <param name="damageValue">입히는 데미지 값</param>
-    void TakeDamage(float damageValue);
+    public void TakeDamage(float damageValue);
 
     /// <summary>
     /// Hp가 다 닳았을 때 호출되는 함수

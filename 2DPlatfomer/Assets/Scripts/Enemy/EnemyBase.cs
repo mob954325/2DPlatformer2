@@ -16,7 +16,15 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     EnemyState state;
 
     private float maxHp = 0;
-    public float MaxHp { get => maxHp; set => maxHp = value; }
+    public float MaxHp 
+    { 
+        get => maxHp;
+        set
+        {
+            maxHp = value;
+            Hp = maxHp;
+        }
+    }
     private float hp = 0;
     public float Hp 
     { 
@@ -34,7 +42,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         }
     }
 
-    private float maxHitDelay = 0.5f;
+    private float maxHitDelay = 0.25f;
     private float hitDelay = 0.0f;
 
     public Action OnHitAction;
@@ -100,6 +108,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         hitDelay = maxHitDelay;
         Hp -= damageValue;
         OnHitAction?.Invoke();
+
+        Debug.Log("hit!!!");
     }
 
     public void OnDead()
