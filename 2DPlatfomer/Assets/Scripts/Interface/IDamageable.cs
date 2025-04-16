@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,10 @@ public interface IDamageable
 {
     float MaxHp { get; set; }
     float Hp { get; set; }
+    
+    public Action OnHpChange { get; set; }
+    public Action OnHitAction { get; set; }
+    public Action OnDeadAction { get; set; }
 
     /// <summary>
     /// 피격시 호출되는 함수
@@ -17,4 +22,5 @@ public interface IDamageable
     /// Hp가 다 닳았을 때 호출되는 함수
     /// </summary>
     void OnDead();
+
 }

@@ -39,13 +39,20 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
                 ChangeState(EnemyState.Dead);
                 OnDead();
             }
+            else
+            {
+                OnHpChange?.Invoke();
+            }
         }
     }
+
+    public Action OnHpChange { get; set; }
+    public Action OnHitAction { get; set; }
+    public Action OnDeadAction { get; set; }
 
     private float maxHitDelay = 0.25f;
     private float hitDelay = 0.0f;
 
-    public Action OnHitAction;
 
     // unity ---------------------------------------------------------------------------------------
 
@@ -55,13 +62,14 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
 
     virtual protected void OnEnable()
     {
-        Hp = MaxHp; // 임시
-        state = EnemyState.Idle;
+
     }
 
     virtual protected void OnDisable()
     {
+        OnHpChange = null;
         OnHitAction = null;
+        OnDeadAction = null;
     }
 
     protected virtual void Update()
@@ -71,6 +79,12 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     }
 
     // functions ---------------------------------------------------------------------------------------
+
+    public void Initialize(int maxHp)
+    {
+        Hp = MaxHp; // 임시
+        state = EnemyState.Idle;
+    }
 
     public void UpdateByState()
     {
@@ -109,7 +123,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         Hp -= damageValue;
         OnHitAction?.Invoke();
 
-        Debug.Log("hit!!!");
+        Debug.Log($"{gameObject.name} hit!!!");
     }
 
     public void OnDead()

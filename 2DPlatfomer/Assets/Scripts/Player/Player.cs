@@ -62,6 +62,10 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
         }
     }
 
+    public Action OnHpChange { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public Action OnHitAction { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public Action OnDeadAction { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
 
     // ground check
     private LayerMask groundLayer;
