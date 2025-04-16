@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class TestBase : MonoBehaviour
 {
+#if UNITY_EDITOR
     TestInputActions inputActions;
 
     private void Awake()
@@ -55,4 +56,5 @@ public class TestBase : MonoBehaviour
     {
         //
     }
+#endif
 }

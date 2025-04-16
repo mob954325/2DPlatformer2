@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Test_00_EnemyBase : TestBase
 {
+#if UNITY_EDITOR
     public EnemyBase enemy;
 
     public int damage = 2;
@@ -27,4 +28,5 @@ public class Test_00_EnemyBase : TestBase
         if (!enemy) return;
         enemy.TakeDamage(damage);
     }
+#endif
 }

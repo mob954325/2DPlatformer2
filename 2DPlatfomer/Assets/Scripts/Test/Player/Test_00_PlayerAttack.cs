@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Test_00_PlayerAttack : TestBase
 {
+#if UNITY_EDITOR
     public GameObject enemyObject;
     public Transform spawnTransform;
 
@@ -16,4 +17,5 @@ public class Test_00_PlayerAttack : TestBase
 
         enemy.MaxHp = 10;
     }
+#endif
 }
