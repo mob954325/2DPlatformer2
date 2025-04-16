@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Test : EnemyBase
+public class EnemyTest : EnemyBase
 {
     SpriteRenderer spriteRenderer;
 

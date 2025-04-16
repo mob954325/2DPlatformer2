@@ -5,15 +5,33 @@ using UnityEngine;
 
 public enum EnemyState
 {
-    Idle = 0,
+    BeforeSpawn = 0,
+    Idle,
     Search,
     Attack,
     Dead,
 }
 
+[RequireComponent(typeof(Rigidbody2D),typeof(Collider2D))]
 public abstract class EnemyBase : MonoBehaviour, IDamageable
 {
-    EnemyState state;
+    protected SpriteRenderer spriteRenderer;
+    protected Rigidbody2D rigid2d;
+    protected AttackArea attackArea;
+    protected CircleCollider2D attackAreaCollider;
+
+    [SerializeField] private EnemyState currentState;
+    public EnemyState CurrentState
+    {
+        get => currentState;
+        set
+        {
+            if (currentState == value) return; // 중복 방지
+
+            currentState = value;
+            InitializeState(currentState);
+        }
+    }
 
     // stats
     private float maxHp = 0;
@@ -37,7 +55,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
 
             if (hp <= 0.0f)
             {
-                ChangeState(EnemyState.Dead);
+                CurrentState = EnemyState.Dead;
                 OnDead();
             }
             else
@@ -47,27 +65,37 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         }
     }
 
+    private float maxHitDelay = 0.25f;
+    private float hitDelay = 0.0f;
+
     // sight
-    [SerializeField] float sieghtAngle = 20.0f;
-    [SerializeField] float sieghtRadius = 5.0f;
+    [SerializeField] protected float sieghtAngle = 20.0f;
+    [SerializeField] protected float sieghtRadius = 5.0f;
 
     public Action OnHpChange { get; set; }
     public Action OnHitAction { get; set; }
     public Action OnDeadAction { get; set; }
 
-    private float maxHitDelay = 0.25f;
-    private float hitDelay = 0.0f;
-
-
-    // unity ---------------------------------------------------------------------------------------
-
     virtual protected void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rigid2d = GetComponent<Rigidbody2D>();
+
+        Transform child = transform.GetChild(0);
+        if(child != null)
+        {
+            attackAreaCollider = child.GetComponent<CircleCollider2D>();
+            attackArea = child.GetComponent<AttackArea>();
+        }
+        else
+        {
+            Debug.LogWarning("Attack area collider is missing!");
+        }
     }
 
     virtual protected void OnEnable()
     {
-
+        CurrentState = EnemyState.BeforeSpawn;
     }
 
     virtual protected void OnDisable()
@@ -75,6 +103,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         OnHpChange = null;
         OnHitAction = null;
         OnDeadAction = null;
+
+        if(attackArea != null) attackArea.OnActiveAttackArea = null;
     }
 
     protected virtual void Update()
@@ -83,17 +113,21 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         UpdateByState();
     }
 
-    // functions ---------------------------------------------------------------------------------------
 
-    public void Initialize(int maxHp)
+    public virtual void Initialize(int maxHp)
     {
-        Hp = MaxHp; // 임시
-        state = EnemyState.Idle;
+        MaxHp = maxHp;
+        CurrentState = EnemyState.BeforeSpawn;
+        if (attackArea != null) attackAreaCollider.radius = sieghtRadius;
+
+        CurrentState = EnemyState.Idle;
     }
+
+    // State ---------------------------------------------------------------------------------------
 
     public void UpdateByState()
     {
-        switch (state)
+        switch (CurrentState)
         {
             case EnemyState.Idle:
                 OnIdleState();
@@ -110,15 +144,40 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         }
     }
 
-    public void ChangeState(EnemyState state)
+    /// <summary>
+    /// 상태 변경 후 상태 진입 전 초기화 함수 호출
+    /// </summary>
+    /// <param name="state">변경할 상태</param>
+    public void InitializeState(EnemyState state)
     {
-        this.state = state;
+        switch (state)
+        {
+            case EnemyState.Idle:
+                OnIdleStateStart();
+                break;
+            case EnemyState.Search:
+                OnSearchStateStart();
+                break;
+            case EnemyState.Attack:
+                OnAttackStateStart();
+                break;
+            case EnemyState.Dead:
+                OnDeadStateStart();
+                break;
+        }
     }
+
+    protected virtual void OnIdleStateStart() { }
+    protected virtual void OnSearchStateStart() { }
+    protected virtual void OnAttackStateStart() { }
+    protected virtual void OnDeadStateStart() { }
 
     protected virtual void OnIdleState() { } 
     protected virtual void OnSearchState() { }
     protected virtual void OnAttackState() { }
     protected virtual void OnDeadState() { } // 상태 업데이트 용
+
+    // IDamageable ---------------------------------------------------------------------------------------
 
     public void TakeDamage(float damageValue)
     {

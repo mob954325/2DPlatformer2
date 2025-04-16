@@ -114,7 +114,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
         attackAreas = GetComponentsInChildren<AttackArea>();
         foreach(AttackArea comp in attackAreas)
         {
-            comp.OnActiveAttackArea += OnAttack;
+            comp.OnActiveAttackArea += (target, _) => { OnAttack(target); };
         }
 
         trailRenderer.enabled = false;
