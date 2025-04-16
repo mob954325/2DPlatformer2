@@ -15,6 +15,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
 {
     EnemyState state;
 
+    // stats
     private float maxHp = 0;
     public float MaxHp 
     { 
@@ -45,6 +46,10 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
             }
         }
     }
+
+    // sight
+    [SerializeField] float sieghtAngle = 20.0f;
+    [SerializeField] float sieghtRadius = 5.0f;
 
     public Action OnHpChange { get; set; }
     public Action OnHitAction { get; set; }

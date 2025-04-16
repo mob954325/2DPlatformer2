@@ -17,7 +17,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     private Transform attackTransform;
     private Transform energyAttackTransform;
     private Transform attackPivot;
-    private PlayerAttackArea[] attackAreas = new PlayerAttackArea[2]; 
+    private AttackArea[] attackAreas = new AttackArea[2]; 
     private Vector2 moveInput;
 
     PlayerState state;
@@ -111,8 +111,8 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
         child = attackPivot.GetChild(1);
         energyAttackTransform = child;
 
-        attackAreas = GetComponentsInChildren<PlayerAttackArea>();
-        foreach(PlayerAttackArea comp in attackAreas)
+        attackAreas = GetComponentsInChildren<AttackArea>();
+        foreach(AttackArea comp in attackAreas)
         {
             comp.OnActiveAttackArea += OnAttack;
         }
