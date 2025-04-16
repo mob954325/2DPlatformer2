@@ -13,6 +13,7 @@ public class Player : MonoBehaviour, IAttackable
 {
     private Rigidbody2D rigid2d;
     private SpriteRenderer spriteRenderer;
+    private TrailRenderer trailRenderer;
     private Transform attackTransform;
     private Transform energyAttackTransform;
     private Transform attackPivot;
@@ -64,6 +65,7 @@ public class Player : MonoBehaviour, IAttackable
         rigid2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        trailRenderer = GetComponentInChildren<TrailRenderer>();
 
         groundLayer = LayerMask.GetMask("Ground");
 
@@ -81,6 +83,7 @@ public class Player : MonoBehaviour, IAttackable
             comp.OnActiveAttackArea += OnAttack;
         }
 
+        trailRenderer.enabled = false;
         attackTransform.gameObject.SetActive(false);
         energyAttackTransform.gameObject.SetActive(false);
         animator.SetBool(HashToAttack1, true);
@@ -172,6 +175,8 @@ public class Player : MonoBehaviour, IAttackable
             rigid2d.velocity = new Vector2(moveInput.x * dashForce, rigid2d.velocity.y);
 
             dashTime = dashDuration; // Start dash duration
+
+            StartCoroutine(DashEffect());
         }
 
         // Countdown dash time
@@ -179,6 +184,14 @@ public class Player : MonoBehaviour, IAttackable
         {
             dashTime -= Time.deltaTime;
         }
+    }
+
+    // 임시
+    private IEnumerator DashEffect()
+    {
+        trailRenderer.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        trailRenderer.enabled = false;
     }
 
     private void HandleAttack()
