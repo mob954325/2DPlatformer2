@@ -13367,3 +13367,1280 @@
 [09:39:39] Left Button x5
 [09:39:39] Left Button x5
 [09:39:39] Left Button x5
+[09:52:09] Left Button
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button x2
+[09:52:09] Left Button + A
+[09:52:09] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A + Space
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button + A
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:10] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button + D
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button + Alpha1
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:11] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button x2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:12] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button x3
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button x4
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:13] Left Button + Alpha2
+[09:52:14] Left Button + Alpha2
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:14] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5
+[09:52:15] Left Button x5

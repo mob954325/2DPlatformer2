@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2073863}
   - component: {fileID: 2073862}
   m_Layer: 0
-  m_Name: Test_02_PlayerAttack
+  m_Name: Test_00_PlayerAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

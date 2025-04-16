@@ -9,7 +9,7 @@ enum PlayerState
     Dead,
 }
 
-public class Player : MonoBehaviour, IAttackable
+public class Player : MonoBehaviour, IDamageable, IAttackable
 {
     private Rigidbody2D rigid2d;
     private SpriteRenderer spriteRenderer;
@@ -33,6 +33,34 @@ public class Player : MonoBehaviour, IAttackable
     // states
     private float attackDamage = 2f;
     public float AttackDamage { get => attackDamage; }
+
+    private float maxHp = 0;
+    public float MaxHp 
+    { 
+        get => maxHp; 
+        set
+        {
+            maxHp = value;
+            Hp = maxHp;
+        }
+    }
+
+    private float hp = 0;
+    public float Hp 
+    { 
+        get => hp; 
+        set
+        {
+            hp = Mathf.Clamp(value, 0.0f, MaxHp);
+            Debug.Log($"{this.gameObject.name} : {hp}");
+
+            if (hp <= 0)
+            {
+                // 사망
+                OnDead();
+            }
+        }
+    }
 
 
     // ground check
@@ -282,6 +310,27 @@ public class Player : MonoBehaviour, IAttackable
     public void OnAttack(IDamageable target)
     {
         target.TakeDamage(AttackDamage);
+    }
+
+    // IDamageable -------------------------------------------------------------------------------
+    public void TakeDamage(float damageValue)
+    {
+        Hp -= damageValue;
+        StartCoroutine(ColorChangeProcess());
+    }
+
+    public void OnDead()
+    {
+        // 사망 로직 작성
+        Debug.Log("플레이어 사망");
+    }
+
+    // 임시
+    IEnumerator ColorChangeProcess()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.05f);
+        spriteRenderer.color = Color.white;
     }
 
     // Debug ------------------------------------------------------------------------------------

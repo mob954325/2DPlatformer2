@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Test_01_EnemyBase : TestBase
+public class Test_00_EnemyBase : TestBase
 {
     public EnemyBase enemy;
 

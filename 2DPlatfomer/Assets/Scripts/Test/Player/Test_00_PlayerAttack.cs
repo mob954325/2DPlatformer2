@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Test_02_PlayerAttack : TestBase
+public class Test_00_PlayerAttack : TestBase
 {
     public GameObject enemyObject;
     public Transform spawnTransform;

@@ -26,7 +26,6 @@ public class Enemy_Test : EnemyBase
         StartCoroutine(ColorChangeProcess());
     }
 
-
     IEnumerator ColorChangeProcess()
     {
         spriteRenderer.color = Color.red;
