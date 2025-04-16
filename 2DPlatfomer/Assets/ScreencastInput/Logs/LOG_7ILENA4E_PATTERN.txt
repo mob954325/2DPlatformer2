@@ -2704,3 +2704,1353 @@
 [09:36:18] D
 [09:36:18] D
 [09:36:18] D
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Left Button
+[14:02:18] Alpha1
+[14:02:18] Alpha1
+[14:02:18] Alpha1
+[14:02:18] Alpha1
+[14:02:18] Alpha1
+[14:02:18] Alpha1
+[14:02:18] Alpha1
+[14:02:18] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:19] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha1 x2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:20] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x2
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x3
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:21] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x4
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:22] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:23] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5
+[14:02:24] Alpha2 x5

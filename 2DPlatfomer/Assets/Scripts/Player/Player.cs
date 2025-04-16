@@ -86,6 +86,8 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     private int HashToOnAttack = Animator.StringToHash("OnAttack");
     private int HashToAttack1 = Animator.StringToHash("Attack1");
     private int HashToAttack2 = Animator.StringToHash("Attack2");
+    private int HashToOnHit = Animator.StringToHash("OnHit");
+    private int HashToOnDead = Animator.StringToHash("OnDead");
 
 
     void Start()
@@ -316,21 +318,22 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     public void TakeDamage(float damageValue)
     {
         Hp -= damageValue;
-        StartCoroutine(ColorChangeProcess());
+        animator.SetTrigger(HashToOnHit);
     }
 
     public void OnDead()
     {
         // 사망 로직 작성
+        animator.SetTrigger(HashToOnDead);
         Debug.Log("플레이어 사망");
+
+        StartCoroutine(OnDeadProcess());
     }
 
-    // 임시
-    IEnumerator ColorChangeProcess()
+    private IEnumerator OnDeadProcess()
     {
-        spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.05f);
-        spriteRenderer.color = Color.white;
+        yield return new WaitForSeconds(0.5f);
+        this.gameObject.SetActive(false);
     }
 
     // Debug ------------------------------------------------------------------------------------
