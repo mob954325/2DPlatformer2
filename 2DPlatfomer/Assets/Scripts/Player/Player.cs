@@ -23,12 +23,12 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     PlayerState state;
 
     // states
-    private float baseSpeed = 5.0f;
-    private float currentSpeed = 5.0f;
-    private float walkSpeed = 2.0f;
-    private float jumpForce = 15.0f;
-    private float dashForce = 20.0f;
-    private float dashDuration = 0.2f; // dash Cooldown
+    [SerializeField] private float baseSpeed = 5.0f;
+    [SerializeField] private float currentSpeed = 5.0f;
+    [SerializeField] private float walkSpeed = 2.0f;
+    [SerializeField] private float jumpForce = 15.0f;
+    [SerializeField] private float dashForce = 20.0f;
+    [SerializeField] private float dashDuration = 0.2f; // dash Cooldown
 
     // states
     private float attackDamage = 2f;
@@ -93,6 +93,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     private int HashToOnHit = Animator.StringToHash("OnHit");
     private int HashToOnDead = Animator.StringToHash("OnDead");
 
+    public float checkRadius = 1;
 
     void Start()
     {
@@ -127,7 +128,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     void Update()
     {
         // Check for ground status
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
 
         // Handle movement and actions
         HandleMovement();
@@ -347,7 +348,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, 0.2f);
+            Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
         }
     }
 }
