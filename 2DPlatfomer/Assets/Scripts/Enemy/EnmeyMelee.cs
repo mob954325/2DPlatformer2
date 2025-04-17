@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -6,16 +6,19 @@ using UnityEngine.EventSystems;
 
 public class EnmeyMelee : EnemyBase
 {
-    [SerializeField]private Transform target;
+    // TODO : 공격 상태에서 벗어나면 계속 감지되는거 해제해야함
+
+    [SerializeField] private Transform target;
 
     [SerializeField] private Vector2 moveDirection = Vector2.zero;
-    private float attackRange = 2.0f;
+    [SerializeField] private float attackRange = 2.0f;
     [SerializeField] private float speed = 3;
+    [SerializeField] private bool isFaceingLeft = true;
 
     protected override void Start()
     {
         base.Start();
-        Initialize(10); // �ӽ�
+        Initialize(10); // 임시
         attackArea.OnActiveAttackArea += HandleTargetDetected;
     }
 
@@ -23,6 +26,7 @@ public class EnmeyMelee : EnemyBase
     {
         base.Update();
         spriteRenderer.flipX = moveDirection.x < 0;
+        isFaceingLeft = moveDirection.x < 0;
     }
 
     // State ---------------------------------------------------------------------------------------
@@ -35,12 +39,12 @@ public class EnmeyMelee : EnemyBase
 
     protected override void OnSearchStateStart() 
     { 
-        moveDirection = Vector2.left;
+        moveDirection = Vector2.left; // 처음 바라보는 위치
     }
 
     protected override void OnAttackStateStart() 
     {
-        Debug.Log($"{gameObject} attack ���� ����");
+        Debug.Log($"{gameObject} attack 상태 시작");
     }
 
     protected override void OnDeadStateStart() { }
@@ -51,8 +55,12 @@ public class EnmeyMelee : EnemyBase
     {
         if(target != null)
         {
-            moveDirection = (target.position - transform.position).normalized; // �ӽ�
-            rigid2d.velocity = new Vector2(moveDirection.x * speed, rigid2d.velocity.y);         
+            moveDirection = isFaceingLeft ? Vector2.left : Vector2.right;
+            //rigid2d.velocity = new Vector2(moveDirection.x * speed, rigid2d.velocity.y);         
+        }
+        else
+        {
+            CurrentState = EnemyState.Idle;
         }
     }
 
@@ -60,9 +68,8 @@ public class EnmeyMelee : EnemyBase
     {
         if(target != null)
         {
-            // ��Ÿ��ȿ� �÷��̾ ����
-            moveDirection = (target.position - transform.position).normalized;
-            Debug.Log($"{gameObject} �÷��̾� ����");
+            // 사거리안에 플레이어가 들어옴
+            moveDirection = isFaceingLeft ? Vector2.left : Vector2.right;
 
         }
     }
@@ -75,16 +82,19 @@ public class EnmeyMelee : EnemyBase
 
     private void HandleTargetDetected(IDamageable target, Transform targetTransform)
     {
-        this.target = targetTransform;
+        Vector2 enemyPos = new Vector2(transform.position.x, transform.position.y);
+        Vector2 targetPos = new Vector2(targetTransform.position.x, targetTransform.position.y);
+        float distance = Vector2.Distance(enemyPos, targetPos);
+        // 플레이어 위치에 따라 왼쪽 오른쪽 보기
 
+        isFaceingLeft = targetTransform.position.x - transform.position.x < 0 ? true : false;
+        Debug.Log(Vector2.Dot(targetTransform.position.normalized, transform.position.normalized));
+        Debug.Log($"cos {Mathf.Cos(sieghtAngle * 0.5f * Mathf.Deg2Rad)}");
+
+        // 시야각에 있는지 확인
         if (IsInSieght(targetTransform))
         {
-            Vector2 enemyPos = new Vector2(transform.position.x, transform.position.y);
-            Vector2 targetPos = new Vector2(targetTransform.position.x, targetTransform.position.y);
-            float distance = Vector2.Distance(enemyPos, targetPos);
-
-            moveDirection = (targetPos - enemyPos).normalized;
-
+            Debug.Log("시야각 안에 있음");
             if (distance < attackRange)
             {
                 if (CurrentState != EnemyState.Attack) CurrentState = EnemyState.Attack;
@@ -94,35 +104,34 @@ public class EnmeyMelee : EnemyBase
                 CurrentState = EnemyState.Search;
             }
         }
+
+        this.target = distance <= sieghtRadius ? targetTransform : null;
+
     }
 
+    /// <summary>
+    /// target이 시야에 들어왔는지 확인
+    /// </summary>
     bool IsInSieght(Transform target)
     {
         Vector2 directionToTarget = (target.position - transform.position).normalized;
-        float dot = Vector2.Dot(directionToTarget, Vector3.right); // �ӽ�
+        float dot = Vector2.Dot(directionToTarget, isFaceingLeft ? Vector2.left : Vector2.right); 
         
         if(dot > Mathf.Cos(sieghtAngle * 0.5f * Mathf.Deg2Rad))
         {
-            Debug.Log("Player ������");
+            Debug.Log("Player 감지됨");
             return true;
         }
 
         return false;
     }
 
-
-
     // Debug -------------------------------------------------------------------------------------------
     private void OnDrawGizmos()
     {
         if (attackArea != null)
         {
-            Handles.color = Color.red;
-            Handles.DrawLine(new Vector2(transform.position.x, transform.position.y + 1) , new Vector3(transform.position.x + moveDirection.x, transform.position.y + 1));
-
-            Handles.color = Color.blue;
-            Handles.DrawWireDisc(attackArea.transform.position, transform.forward, sieghtRadius);
-
+            // 시야각 
             Handles.color = CurrentState == EnemyState.Attack ? Color.red : Color.green;
 
             Vector3 origin = transform.position;
