@@ -23,13 +23,14 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     PlayerState state;
 
     // states
+    [Header("Values")]
     [SerializeField] private float baseSpeed = 5.0f;
     [SerializeField] private float currentSpeed = 5.0f;
     [SerializeField] private float walkSpeed = 2.0f;
     [SerializeField] private float jumpForce = 15.0f;
     [SerializeField] private float dashForce = 20.0f;
     [SerializeField] private float dashDuration = 0.2f; // dash Cooldown
-
+    [Space(10f)]
     // states
     private float attackDamage = 2f;
     public float AttackDamage { get => attackDamage; }
@@ -72,17 +73,23 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     private Transform groundCheck;
 
     // flag
-    private bool isGrounded;
-    private bool isAttack;
-    private bool canMove;
-    private float dashTime;
+    [Header("Flag")]
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isAttack;
+    [SerializeField] private bool canMove;
+    [SerializeField] private float dashTime;
+    [Space(10f)]
 
     // ray
     float rayLength = 0.1f;
 
     // timer
-    private float maxAttackComboDelayTime = 1f; // 다음 콤보까지 기다리는 시간
-    private float attackComboTimer = 0.0f;      
+    [Header("Timer")]
+    [SerializeField] private float maxAttackComboDelayTime = 1f; // 다음 콤보까지 기다리는 시간
+    [SerializeField] private float attackComboTimer = 0.0f;
+    [SerializeField] private float sitTimer = 0.0f;
+    [SerializeField] private float sitMaxTimer = 2.0f;
+    [Space(10f)]
 
     // Animator for animations (if you have an Animator for animations)
     private Animator animator;
@@ -95,6 +102,8 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     private int HashToAttack2 = Animator.StringToHash("Attack2");
     private int HashToOnHit = Animator.StringToHash("OnHit");
     private int HashToOnDead = Animator.StringToHash("OnDead");
+    private int HashToIsSit = Animator.StringToHash("IsSit");
+    private int HashToOnSit = Animator.StringToHash("OnSit");
 
     public float checkRadius = 1;
 
@@ -192,30 +201,49 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
             }
         }
     }
-
+    
     private void HandleBottomMove()
     {
         float inputY = Input.GetAxis("Vertical");
-        print($"{inputY}");
-        if (inputY < 0) // key s
+
+        // 임시 키 처리
+        if(Input.GetKeyDown(KeyCode.S))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
+            animator.SetTrigger(HashToOnSit);
+        }
 
-            if (hit.collider != null)
+        // S 누르면 실행
+        if (inputY < 0.0f)
+        {
+            sitTimer += Time.deltaTime;
+
+            //sittimer보다 길게 누르면 플랫폼 통과
+            if (sitTimer > sitMaxTimer)
             {
-                GameObject platform = hit.collider.gameObject;
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
 
-                // 하단 플랫폼인지 확인
-                if (platform.CompareTag("BottomPlatform"))
+                if (hit.collider != null)
                 {
-                    Debug.Log("맨 밑바닥이라 내려갈 수 없음");
-                    return;
-                }
+                    GameObject platform = hit.collider.gameObject;
 
-                // 내려가기 처리
-                StartCoroutine(DisablePlatformTemporarily(platform));
+                    // 하단 플랫폼인지 확인
+                    if (platform.CompareTag("BottomPlatform"))
+                    {
+                        //Debug.Log("맨 밑바닥이라 내려갈 수 없음");
+                        return;
+                    }
+
+                    // 내려가기 처리
+                    StartCoroutine(DisablePlatformTemporarily(platform));
+                }
             }
         }
+        else
+        {
+            sitTimer = 0.0f;
+        }
+
+        animator.SetBool(HashToIsSit, Input.GetKey(KeyCode.S));
     }
 
     private IEnumerator DisablePlatformTemporarily(GameObject platform)

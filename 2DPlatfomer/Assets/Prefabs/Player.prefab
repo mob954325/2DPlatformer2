@@ -57,6 +57,14 @@ MonoBehaviour:
   jumpForce: 15
   dashForce: 20
   dashDuration: 0.2
+  isGrounded: 0
+  isAttack: 0
+  canMove: 0
+  dashTime: 0
+  maxAttackComboDelayTime: 1
+  attackComboTimer: 0
+  sitTimer: 0
+  sitMaxTimer: 2
   checkRadius: 1
 --- !u!95 &675833840629744970
 Animator:
