@@ -77,6 +77,9 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     private bool canMove;
     private float dashTime;
 
+    // ray
+    float rayLength = 0.1f;
+
     // timer
     private float maxAttackComboDelayTime = 1f; // 다음 콤보까지 기다리는 시간
     private float attackComboTimer = 0.0f;      
@@ -132,6 +135,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
 
         // Handle movement and actions
         HandleMovement();
+        HandleBottomMove();
         HandleJump();
         HandleDash();
         HandleAttack();
@@ -160,7 +164,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     {
         if (!canMove) return;
 
-        // Get movement input
+        // Get Horizontal input
         float inputX = Input.GetAxis("Horizontal");
         moveInput = new Vector2(inputX, 0);
 
@@ -186,6 +190,45 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
                 animator.SetBool(HashToIsWalk, false);
                 currentSpeed = baseSpeed;
             }
+        }
+    }
+
+    private void HandleBottomMove()
+    {
+        float inputY = Input.GetAxis("Vertical");
+        print($"{inputY}");
+        if (inputY < 0) // key s
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
+
+            if (hit.collider != null)
+            {
+                GameObject platform = hit.collider.gameObject;
+
+                // 하단 플랫폼인지 확인
+                if (platform.CompareTag("BottomPlatform"))
+                {
+                    Debug.Log("맨 밑바닥이라 내려갈 수 없음");
+                    return;
+                }
+
+                // 내려가기 처리
+                StartCoroutine(DisablePlatformTemporarily(platform));
+            }
+        }
+    }
+
+    private IEnumerator DisablePlatformTemporarily(GameObject platform)
+    {
+        //PlatformEffector2D effector = platform.GetComponent<PlatformEffector2D>();
+        Collider2D col = platform.GetComponent<Collider2D>();
+
+        // ray로 찾은 플랫폼 오브젝트 비활성화
+        if (col != null)
+        {
+            col.enabled = false;
+            yield return new WaitForSeconds(0.5f);
+            col.enabled = true;
         }
     }
 

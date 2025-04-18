@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2166271531820919683}
   - component: {fileID: 675833840629744970}
   - component: {fileID: 162210333159722120}
-  - component: {fileID: 5140951830744227591}
+  - component: {fileID: 4670026614573018022}
   - component: {fileID: 4498122283104880491}
   m_Layer: 0
   m_Name: Player
@@ -51,6 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53eafdff8b2c8b4a8577bb85d7ce6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSpeed: 5
+  currentSpeed: 5
+  walkSpeed: 2
+  jumpForce: 15
+  dashForce: 20
+  dashDuration: 0.2
+  checkRadius: 1
 --- !u!95 &675833840629744970
 Animator:
   serializedVersion: 5
@@ -99,8 +106,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5140951830744227591
-BoxCollider2D:
+--- !u!70 &4670026614573018022
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,18 +139,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 1}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.558, y: 2.56}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_Direction: 0
 --- !u!212 &4498122283104880491
 SpriteRenderer:
   m_ObjectHideFlags: 0
