@@ -11,5 +11,5 @@ public interface IAttackable
     public bool CanAttack { get; set; }
     public void OnAttack(IDamageable target);
 
-    public Action OnAttackPerformed { get; set; }
+    public Action<IDamageable> OnAttackPerformed { get; set; }
 }

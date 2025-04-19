@@ -69,7 +69,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     public float AttackCooldown { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public float MaxAttackCooldown => throw new NotImplementedException();
     public bool CanAttack { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public Action OnAttackPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public Action<IDamageable> OnAttackPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
 
     // ground check
