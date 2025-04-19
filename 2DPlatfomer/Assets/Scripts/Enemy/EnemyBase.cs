@@ -7,7 +7,7 @@ public enum EnemyState
 {
     BeforeSpawn = 0,
     Idle,
-    Search,
+    Chasing,
     Attack,
     Dead,
 }
@@ -69,12 +69,12 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     private float hitDelay = 0.0f;
 
     // sight
-    [SerializeField] protected float sieghtAngle = 20.0f;
-    [SerializeField] protected float sieghtRadius = 5.0f;
+    [SerializeField] protected float sightAngle = 20.0f;
+    [SerializeField] protected float sightRadius = 5.0f;
 
     public Action OnHpChange { get; set; }
-    public Action OnHitAction { get; set; }
-    public Action OnDeadAction { get; set; }
+    public Action OnHitPerformed { get; set; }
+    public Action OnDeadPerformed { get; set; }
 
     virtual protected void Start()
     {
@@ -101,8 +101,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     virtual protected void OnDisable()
     {
         OnHpChange = null;
-        OnHitAction = null;
-        OnDeadAction = null;
+        OnHitPerformed = null;
+        OnDeadPerformed = null;
 
         if(attackArea != null) attackArea.OnActiveAttackArea = null;
     }
@@ -118,7 +118,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     {
         MaxHp = maxHp;
         CurrentState = EnemyState.BeforeSpawn;
-        if (attackArea != null) attackAreaCollider.radius = sieghtRadius;
+        if (attackArea != null) attackAreaCollider.radius = sightRadius;
 
         CurrentState = EnemyState.Idle;
     }
@@ -132,8 +132,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
             case EnemyState.Idle:
                 OnIdleState();
                 break;
-            case EnemyState.Search:
-                OnSearchState();
+            case EnemyState.Chasing:
+                OnChasingState();
                 break;
             case EnemyState.Attack:
                 OnAttackState();
@@ -155,7 +155,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
             case EnemyState.Idle:
                 OnIdleStateStart();
                 break;
-            case EnemyState.Search:
+            case EnemyState.Chasing:
                 OnSearchStateStart();
                 break;
             case EnemyState.Attack:
@@ -173,7 +173,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     protected virtual void OnDeadStateStart() { }
 
     protected virtual void OnIdleState() { } 
-    protected virtual void OnSearchState() { }
+    protected virtual void OnChasingState() { }
     protected virtual void OnAttackState() { }
     protected virtual void OnDeadState() { } // 상태 업데이트 용
 
@@ -185,7 +185,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
 
         hitDelay = maxHitDelay;
         Hp -= damageValue;
-        OnHitAction?.Invoke();
+        OnHitPerformed?.Invoke();
 
         Debug.Log($"{gameObject.name} hit!!!");
     }

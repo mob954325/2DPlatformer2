@@ -64,8 +64,12 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     }
 
     public Action OnHpChange { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public Action OnHitAction { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public Action OnDeadAction { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public Action OnHitPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public Action OnDeadPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public float AttackCooldown { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public float MaxAttackCooldown => throw new NotImplementedException();
+    public bool CanAttack { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public Action OnAttackPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
 
     // ground check

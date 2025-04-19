@@ -9,8 +9,8 @@ public interface IDamageable
     float Hp { get; set; }
     
     public Action OnHpChange { get; set; }
-    public Action OnHitAction { get; set; }
-    public Action OnDeadAction { get; set; }
+    public Action OnHitPerformed { get; set; }
+    public Action OnDeadPerformed { get; set; }
 
     /// <summary>
     /// 피격시 호출되는 함수

@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class TestIDamageable : MonoBehaviour, IDamageable
 {
-    public float MaxHp { get; set; }
-    public float Hp { get; set; }
+    float maxHp = 10000;
+    public float MaxHp { get => maxHp; set { maxHp = value; Hp = maxHp; } }
+    float hp = 0;
+    public float Hp { get => hp; set => hp = value; }
+
     public Action OnHpChange { get; set; }
-    public Action OnHitAction { get; set; }
-    public Action OnDeadAction { get; set; }
+    public Action OnHitPerformed { get; set; }
+    public Action OnDeadPerformed { get; set; }
 
     public void OnDead()
     {
@@ -18,6 +21,7 @@ public class TestIDamageable : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damageValue)
     {
-        
+        Hp -= damageValue;
+        Debug.Log($"테스트 플레이어 공격받음 | 현재 체력 : {Hp}, 받은 데미지 : {damageValue}");
     }
 }

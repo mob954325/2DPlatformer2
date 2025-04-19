@@ -10,7 +10,7 @@ public class EnemyTest : EnemyBase
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        OnHitAction += OnTestEnemyHit;
+        OnHitPerformed += OnTestEnemyHit;
         MaxHp = 10;
     }
 
