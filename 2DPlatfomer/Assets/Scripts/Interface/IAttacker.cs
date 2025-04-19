@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IAttackable
+public interface IAttacker
 {
     public float AttackDamage { get; }
     public float AttackCooldown { get; set; }

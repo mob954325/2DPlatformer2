@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 162210333159722120}
   - component: {fileID: 4670026614573018022}
   - component: {fileID: 4498122283104880491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53eafdff8b2c8b4a8577bb85d7ce6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveInput: {x: 0, y: 0}
   baseSpeed: 5
   currentSpeed: 5
   walkSpeed: 2
@@ -146,7 +147,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
+  m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
 --- !u!212 &4498122283104880491
@@ -190,12 +191,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 447103101, guid: 85cece76bd8732f4fb048053a1cb0063, type: 3}
+  m_Sprite: {fileID: 1700559427, guid: 85cece76bd8732f4fb048053a1cb0063, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -429,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 5144219474745569772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -463,7 +464,7 @@ Transform:
   m_GameObject: {fileID: 5702639657159254212}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -594,7 +595,7 @@ GameObject:
   - component: {fileID: 9112744388964393313}
   - component: {fileID: 8439351698886374185}
   m_Layer: 0
-  m_Name: AttackArea
+  m_Name: PlayerAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 7872993378992457739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.035, z: 0}
+  m_LocalPosition: {x: 0, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

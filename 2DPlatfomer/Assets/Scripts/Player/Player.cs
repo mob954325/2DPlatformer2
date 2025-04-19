@@ -9,7 +9,7 @@ enum PlayerState
     Dead,
 }
 
-public class Player : MonoBehaviour, IDamageable, IAttackable
+public class Player : MonoBehaviour, IDamageable, IAttacker
 {
     private Rigidbody2D rigid2d;
     private SpriteRenderer spriteRenderer;
@@ -17,8 +17,8 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     private Transform attackTransform;
     private Transform energyAttackTransform;
     private Transform attackPivot;
-    private AttackArea[] attackAreas = new AttackArea[2]; 
-    private Vector2 moveInput;
+    private AttackArea[] attackAreas = new AttackArea[2];
+    [SerializeField] private Vector2 moveInput;
 
     PlayerState state;
 
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
     [SerializeField] private float currentSpeed = 5.0f;
     [SerializeField] private float walkSpeed = 2.0f;
     [SerializeField] private float jumpForce = 15.0f;
-    [SerializeField] private float dashForce = 20.0f;
+    [SerializeField] private float dashForce = 23.0f;
     [SerializeField] private float dashDuration = 0.2f; // dash Cooldown
     [Space(10f)]
     // states
@@ -113,6 +113,9 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
 
     void Start()
     {
+        MaxHp = 20;
+        Hp = MaxHp;
+
         rigid2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -184,7 +187,7 @@ public class Player : MonoBehaviour, IDamageable, IAttackable
         // Move the character
         if (isGrounded && dashTime <= 0)
         {
-            rigid2d.velocity = new Vector2(moveInput.x * currentSpeed, rigid2d.velocity.y);
+            rigid2d.velocity = new Vector2(moveInput.x * currentSpeed, rigid2d.velocity.y);            
 
             if(moveInput != Vector2.zero)
             {

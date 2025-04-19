@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyTest : EnemyBase
 {
-    SpriteRenderer spriteRenderer;
+    SpriteRenderer sprite;
 
     protected override void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<SpriteRenderer>();
 
         OnHitPerformed += OnTestEnemyHit;
         MaxHp = 10;
@@ -28,8 +28,8 @@ public class EnemyTest : EnemyBase
 
     IEnumerator ColorChangeProcess()
     {
-        spriteRenderer.color = Color.red;
+        sprite.color = Color.red;
         yield return new WaitForSeconds(0.05f);
-        spriteRenderer.color = Color.white;
+        sprite.color = Color.white;
     }
 }

@@ -133,7 +133,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
                 OnIdleStateStart();
                 break;
             case EnemyState.Chasing:
-                OnSearchStateStart();
+                OnChaseStateStart();
                 break;
             case EnemyState.Attack:
                 OnAttackStateStart();
@@ -145,7 +145,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     }
 
     protected virtual void OnIdleStateStart() { }
-    protected virtual void OnSearchStateStart() { }
+    protected virtual void OnChaseStateStart() { }
     protected virtual void OnAttackStateStart() { }
     protected virtual void OnDeadStateStart() { }
 
@@ -170,6 +170,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     public void OnDead()
     {
         // 사망로직
+        OnDeadPerformed?.Invoke();
         Debug.Log($"{gameObject.name} 사망 ");
     }
 }
