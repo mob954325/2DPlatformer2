@@ -7,7 +7,8 @@ public interface IDamageable
 {
     float MaxHp { get; set; }
     float Hp { get; set; }
-    
+    bool IsDead { get; }
+
     public Action OnHpChange { get; set; }
     public Action OnHitPerformed { get; set; }
     public Action OnDeadPerformed { get; set; }

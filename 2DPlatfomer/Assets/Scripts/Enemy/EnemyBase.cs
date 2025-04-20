@@ -15,10 +15,11 @@ public enum EnemyState
 [RequireComponent(typeof(Rigidbody2D),typeof(Collider2D))]
 public abstract class EnemyBase : MonoBehaviour, IDamageable
 {
+    [SerializeField] protected EnemyDataSO data;
     protected SpriteRenderer spriteRenderer;
     protected Rigidbody2D rigid2d;
 
-    [SerializeField] private EnemyState currentState;
+    private EnemyState currentState;
     public EnemyState CurrentState
     {
         get => currentState;
@@ -63,6 +64,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         }
     }
 
+    public bool IsDead => Hp <= 0f;
+
     private float maxHitDelay = 0.25f;
     private float hitDelay = 0.0f;
 
@@ -70,10 +73,13 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     public Action OnHitPerformed { get; set; }
     public Action OnDeadPerformed { get; set; }
 
+
     virtual protected void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid2d = GetComponent<Rigidbody2D>();
+
+        Initialize(data); // 임시
     }
 
     virtual protected void OnEnable()
@@ -94,10 +100,25 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
         UpdateByState();
     }
 
-
-    public virtual void Initialize()
+    public void Initialize(EnemyDataSO data)
     {
+        CurrentState = EnemyState.BeforeSpawn;
+        SetData(data);
+        SetAdditionalData();
         CurrentState = EnemyState.Idle;
+    }
+
+    /// <summary>
+    /// 초기화 추가 설정 실행 함수
+    /// </summary>
+    protected virtual void SetAdditionalData()
+    {
+        
+    }
+
+    protected virtual void SetData(EnemyDataSO data)
+    {
+        MaxHp = data.maxHp;
     }
 
     // State ---------------------------------------------------------------------------------------
@@ -158,6 +179,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damageValue)
     {
+        if (IsDead) return;
         if (hitDelay > 0.0f) return;
 
         hitDelay = maxHitDelay;
@@ -170,6 +192,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     public void OnDead()
     {
         // 사망로직
+        if (IsDead) return;
+
         OnDeadPerformed?.Invoke();
         Debug.Log($"{gameObject.name} 사망 ");
     }

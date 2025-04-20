@@ -49,14 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41be9c3cdf73a224387912d3f022b870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  sightAngle: 20
-  sightRadius: 5
-  moveDirection: {x: 0, y: 0}
-  attackRange: 2
-  speed: 3
-  isFacingLeft: 1
-  distanceToTarget: 0
+  data: {fileID: 11400000, guid: 2b5b7e5cc5631f24e89a25be0e20a06b, type: 2}
 --- !u!95 &2408964571220088860
 Animator:
   serializedVersion: 5

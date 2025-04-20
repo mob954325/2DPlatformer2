@@ -15,30 +15,28 @@ public class EnemyMelee : EnemyCombat
 
     protected override void Start()
     {
-        base.Start();
-
         animator = GetComponent<Animator>();
         OnHitPerformed += () => { StartCoroutine(ColorChangeProcess()); };
 
-        Initialize(); // 임시
+        base.Start();
     }
 
     protected override void Update()
     {
-        base.Update();
-
         spriteRenderer.flipX = isFacingLeft;
+
+        base.Update();
     }
 
     // State ---------------------------------------------------------------------------------------
 
     protected override void OnIdleStateStart() 
     {
-        base.OnIdleStateStart();
-
         moveDirection = Vector2.zero;
         rigid2d.velocity = Vector2.zero;
         animator.SetFloat(HashToSpeed, 0.0f);
+
+        base.OnIdleStateStart();
     }
 
     protected override void OnChaseStateStart() 
@@ -70,9 +68,9 @@ public class EnemyMelee : EnemyCombat
 
     protected override void OnDeadState()
     {
-        base.OnDeadState();
-
         Debug.Log($"{gameObject.name} | 사망");
+
+        base.OnDeadState();
     }
 
     // Functions ---------------------------------------------------------------------------------------

@@ -48,8 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3943626ffca0e4483840451b95ce23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sieghtAngle: 20
-  sieghtRadius: 5
+  data: {fileID: 11400000, guid: 08bf6b8450ba198449887e1b253c2759, type: 2}
 --- !u!212 &1144339989146887987
 SpriteRenderer:
   m_ObjectHideFlags: 0

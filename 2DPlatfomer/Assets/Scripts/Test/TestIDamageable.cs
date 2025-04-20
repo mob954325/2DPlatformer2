@@ -14,6 +14,8 @@ public class TestIDamageable : MonoBehaviour, IDamageable
     public Action OnHitPerformed { get; set; }
     public Action OnDeadPerformed { get; set; }
 
+    public bool IsDead => Hp <= 0;
+
     public void OnDead()
     {
     

@@ -50,17 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab366b927e83ff4899a79b2d7be397e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  sightAngle: 20
-  sightRadius: 5
-  moveDirection: {x: 0, y: 0}
-  attackRange: 2
-  speed: 3
-  isFacingLeft: 1
-  distanceToTarget: 0
-  bulletPrefab: {fileID: 9069549259031325573, guid: 8741a579b091dec48b9dd961db283345, type: 3}
-  backStepSpeed: 2
-  closestDistance: 2
+  data: {fileID: 11400000, guid: 62aa959ff3401694b9ac12bc336bf32e, type: 2}
 --- !u!212 &1114388815907906906
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -71,6 +71,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     public bool CanAttack { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public Action<IDamageable> OnAttackPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+    public bool IsDead => throw new NotImplementedException();
+
 
     // ground check
     private LayerMask groundLayer;
@@ -89,7 +91,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     // timer
     [Header("Timer")]
-    [SerializeField] private float maxAttackComboDelayTime = 1f; // 다음 콤보까지 기다리는 시간
+    [SerializeField] private float maxAttackComboDelayTime = 0.2f; // 다음 콤보까지 기다리는 시간
     [SerializeField] private float attackComboTimer = 0.0f;
     [SerializeField] private float sitTimer = 0.0f;
     [SerializeField] private float sitMaxTimer = 2.0f;
@@ -310,7 +312,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void HandleAttack()
     {
         animator.SetFloat(HashToSpeed, 0);
-        if (Input.GetMouseButtonDown(0) && !isAttack) // 기본 공격
+        if (Input.GetMouseButtonDown(0) && !isAttack && isGrounded) // 기본 공격
         {
             animator.SetTrigger(HashToOnAttack);
             StartCoroutine(ComboAttackProcess());
@@ -331,9 +333,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         yield return new WaitForSeconds(0.2f);
 
         attackTransform.gameObject.SetActive(false);
-
-        isAttack = false;
-        canMove = true;
         
         // 다음 콤보 플래그 설정
         if (animator.GetBool(HashToAttack1))
@@ -347,6 +346,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             animator.SetBool(HashToAttack1, true);
             animator.SetBool(HashToAttack2, false);
         }
+
+        isAttack = false;
+        canMove = true;
     }
 
     IEnumerator EnergyAttackProcess()
@@ -372,7 +374,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if (animator != null)
         {
-            if(canMove) animator.SetFloat(HashToSpeed, Mathf.Abs(moveInput.x)); // abs -> need positive value
+            float moveValue = moveInput.x != 0 ? 1f : 0f;
+            if(canMove) animator.SetFloat(HashToSpeed, moveValue); 
             animator.SetBool(HashToIsGrounded, isGrounded);
         }
     }

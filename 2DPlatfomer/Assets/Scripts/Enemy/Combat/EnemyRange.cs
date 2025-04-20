@@ -7,10 +7,10 @@ public class EnemyRange : EnemyCombat
     private Animator animator;
 
     private Transform bulletTransform;
-    public GameObject bulletPrefab;
+    private GameObject bulletPrefab;
 
-    [SerializeField] private float backStepSpeed = 0f;
-    [SerializeField] private float closestDistance = 2f;
+    private float backStepSpeed = 0f;
+    private float minAttackDistance = 2f;
 
     int HashToSpeed = Animator.StringToHash("Speed");
     //int HashToOnAttack = Animator.StringToHash("OnAttack");
@@ -18,10 +18,6 @@ public class EnemyRange : EnemyCombat
 
     protected override void Start()
     {
-        backStepSpeed = speed * 0.5f;
-        sightRadius = 10f;
-        attackRange = 5f;
-
         base.Start();
 
         animator = GetComponent<Animator>();
@@ -33,9 +29,20 @@ public class EnemyRange : EnemyCombat
 
     protected override void Update()
     {
-        base.Update();
-
         spriteRenderer.flipX = isFacingLeft;
+
+        base.Update();
+    }
+
+    protected override void SetData(EnemyDataSO data)
+    {
+        if(data.isRanged)
+        {
+            minAttackDistance = data.minAttackDistance;
+            backStepSpeed = data.backstepSpeed;
+            bulletPrefab = data.bulletPrefab;
+        }
+        base.SetData(data);
     }
 
     // State ---------------------------------------------------------------------------------------
@@ -63,14 +70,14 @@ public class EnemyRange : EnemyCombat
 
     protected override void OnIdleState()
     {
-        base.OnIdleState();
         animator.SetFloat(HashToSpeed, 0.0f);
+        base.OnIdleState();
     }
 
     protected override void OnChasingState()
     {
-        base.OnChasingState();
         animator.SetFloat(HashToSpeed, 0.0f);
+        base.OnChasingState();
     }
 
     protected override void OnAttackState()
@@ -90,13 +97,14 @@ public class EnemyRange : EnemyCombat
 
     protected override void PerformAttack(IDamageable target)
     {
-        base.PerformAttack(target);
         Bullet bullet = Instantiate(bulletPrefab, bulletTransform.position, Quaternion.identity).GetComponent<Bullet>();
 
         if(bullet != null)
         {
             bullet.Initialize(this.gameObject, moveDirection, 10f, 1, 1, 0.5f);
         }
+
+        base.PerformAttack(target);
     }
 
     private void SetBulletPosition()
@@ -108,7 +116,7 @@ public class EnemyRange : EnemyCombat
 
     private void MaintainDistanceFromTarget()
     {
-        if (distanceToTarget < closestDistance)
+        if (distanceToTarget < minAttackDistance)
         {
             rigid2d.velocity = new Vector2(-moveDirection.x * backStepSpeed, rigid2d.velocity.y);
             animator.SetFloat(HashToSpeed, 1.0f);

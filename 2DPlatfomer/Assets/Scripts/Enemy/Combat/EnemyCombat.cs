@@ -18,14 +18,14 @@ public class EnemyCombat : EnemyBase, IAttacker
     protected AttackArea attackArea;
     protected CircleCollider2D attackAreaCollider;
 
-    [SerializeField] protected float sightAngle = 20.0f;
-    [SerializeField] protected float sightRadius = 5.0f;
+    protected float sightAngle = 20.0f;
+    protected float sightRadius = 5.0f;
 
-    [SerializeField] protected Vector2 moveDirection = Vector2.zero;
-    [SerializeField] protected float attackRange = 2.0f;
-    [SerializeField] protected float speed = 3;
-    [SerializeField] protected bool isFacingLeft = true;
-    [SerializeField] protected float distanceToTarget = 0;
+    protected Vector2 moveDirection = Vector2.zero;
+    protected float attackRange = 2.0f;
+    protected float speed = 3;
+    protected bool isFacingLeft = true;
+    protected float distanceToTarget = 0;
 
     private float attackDamage = 1f;
     public float AttackDamage => attackDamage;
@@ -82,22 +82,38 @@ public class EnemyCombat : EnemyBase, IAttacker
 
     protected override void Update()
     {
-        base.Update();
         HandleCooldown();
+        base.Update();
     }
+
+    protected override void SetData(EnemyDataSO data)
+    {
+        if(data.isCombat)
+        {
+            sightAngle = data.sightAngle;
+            sightRadius = data.sightRange;
+            attackRange = data.attackRange;
+            speed = data.moveSpeed;
+            attackRange = data.damage;
+            maxAttackCooldown = data.attackCooldown;
+        }
+        base.SetData(data);
+    }
+
+    // Functions ---------------------------------------------------------------------------------------
 
     /// <summary>
     /// Chasing Update 문 | base 갱신할 때 마지막에 갱신하기
     /// </summary>
     protected override void OnChasingState()
     {
-        base.OnChasingState();
         UpdateChasingTarget();
 
         if(targetTransform != null)
         {
             distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
         }
+        base.OnChasingState();
     }
 
     /// <summary>
@@ -105,13 +121,13 @@ public class EnemyCombat : EnemyBase, IAttacker
     /// </summary>
     protected override void OnAttackState()
     {
-        base.OnAttackState();
         UpdateAttackTarget();
 
         if(targetTransform != null)
         {
             distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
         }
+        base.OnAttackState();
     }
 
     // Functions ---------------------------------------------------------------------------------------

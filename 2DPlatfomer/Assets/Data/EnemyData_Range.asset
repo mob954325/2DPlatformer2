@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cffe88b023c399949ad35de02aaeddff, type: 3}
+  m_Name: EnemyData_Range
+  m_EditorClassIdentifier: 
+  maxHp: 5
+  isCombat: 1
+  sightAngle: 25
+  sightRange: 10
+  attackRange: 5
+  moveSpeed: 5
+  damage: 1
+  attackCooldown: 0.5
+  isRanged: 1
+  minAttackDistance: 2
+  backstepSpeed: 3
+  bulletPrefab: {fileID: 9069549259031325573, guid: 8741a579b091dec48b9dd961db283345, type: 3}
