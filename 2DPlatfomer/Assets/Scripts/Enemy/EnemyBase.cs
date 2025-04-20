@@ -13,7 +13,7 @@ public enum EnemyState
 }
 
 [RequireComponent(typeof(Rigidbody2D),typeof(Collider2D))]
-public abstract class EnemyBase : MonoBehaviour, IDamageable
+public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
 {
     [SerializeField] protected EnemyDataSO data;
     protected SpriteRenderer spriteRenderer;
@@ -72,7 +72,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     public Action OnHpChange { get; set; }
     public Action OnHitPerformed { get; set; }
     public Action OnDeadPerformed { get; set; }
-
+    public Action ReturnAction { get; set; }
 
     virtual protected void Start()
     {
@@ -88,10 +88,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     }
 
     virtual protected void OnDisable()
-    {
-        OnHpChange = null;
-        OnHitPerformed = null;
-        OnDeadPerformed = null;
+    {      
+        ReturnAction?.Invoke();
     }
 
     protected virtual void Update()
@@ -196,5 +194,18 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
 
         OnDeadPerformed?.Invoke();
         Debug.Log($"{gameObject.name} 사망 ");
+    }
+
+    public void OnSpawn()
+    {
+        Debug.Log("스폰");
+    }
+
+    public void OnDespawn()
+    {
+        Debug.Log("디스폰");
+        OnHpChange = null;
+        OnHitPerformed = null;
+        OnDeadPerformed = null;
     }
 }
