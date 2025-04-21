@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,16 +64,16 @@ public class Bullet : MonoBehaviour, IAttacker
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject == owner) return; // »ı¼ºÀÚ °ø°İ ¸·±â
+        if (collision.gameObject == owner) return; // ìƒì„±ì ê³µê²© ë§‰ê¸°
         if (collision.gameObject.layer == ownerLayer) return;
 
         collision.gameObject.TryGetComponent(out IDamageable target);
         OnAttack(target);
     }
-    public void Initialize(GameObject obj, Vector2 dir, float speedValue = 1, int dmg = 1, int pierceCount = 1, float maxCooldownTime = 1, float maxLifeTime = 1) // ÀÓ½Ã, ¿©±âµµ µ¥ÀÌÅÍ·Î ¹Ù²Ù±â
+    public void Initialize(GameObject obj, Vector2 dir, float speedValue = 1, int dmg = 1, int pierceCount = 1, float maxCooldownTime = 1, float maxLifeTime = 1) // ì„ì‹œ, ì—¬ê¸°ë„ ë°ì´í„°ë¡œ ë°”ê¾¸ê¸°
     {
         owner = obj;
-        ownerLayer = obj.layer;
+        if(owner != null) ownerLayer = obj.layer;
         direction = dir;
         speed = speedValue;
         attackDamage = dmg;

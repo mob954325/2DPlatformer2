@@ -87,7 +87,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [Space(10f)]
 
     // ray
-    float rayLength = 0.1f;
+    float rayLength = 1.5f;
 
     // timer
     [Header("Timer")]
@@ -214,6 +214,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void HandleBottomMove()
     {
         float inputY = Input.GetAxis("Vertical");
+        moveInput.y = inputY;
 
         // 임시 키 처리
         if(Input.GetKeyDown(KeyCode.S))
@@ -222,23 +223,26 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
 
         // S 누르면 실행
-        if (inputY < 0.0f)
+        if (moveInput.y < 0.0f)
         {
             sitTimer += Time.deltaTime;
+            Debug.Log("2");
 
             //sittimer보다 길게 누르면 플랫폼 통과
             if (sitTimer > sitMaxTimer)
             {
+                Debug.Log("1");
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
 
                 if (hit.collider != null)
                 {
+                    Debug.Log($"{hit.collider.gameObject.name}");
                     GameObject platform = hit.collider.gameObject;
 
                     // 하단 플랫폼인지 확인
                     if (platform.CompareTag("BottomPlatform"))
                     {
-                        //Debug.Log("맨 밑바닥이라 내려갈 수 없음");
+                        Debug.Log("맨 밑바닥이라 내려갈 수 없음");
                         return;
                     }
 
