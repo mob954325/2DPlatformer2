@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 
 
 /// <summary>
-/// ¸ğµç ÀüÅõÇÏ´Â ÀûÀÌ °øÅëÀ¸·Î ¹Ş´Â Å¬·¡½º
+/// ëª¨ë“  ì „íˆ¬í•˜ëŠ” ì ì´ ê³µí†µìœ¼ë¡œ ë°›ëŠ” í´ë˜ìŠ¤
 /// </summary>
 public class EnemyCombat : EnemyBase, IAttacker
 {
@@ -22,7 +22,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     protected float sightRadius = 5.0f;
 
     protected Vector2 moveDirection = Vector2.zero;
-    protected float attackRange = 2.0f;
+    protected float attackRange = 5.0f;
     protected float speed = 3;
     protected bool isFacingLeft = true;
     protected float distanceToTarget = 0;
@@ -52,7 +52,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     }
 
     /// <summary>
-    /// °ø°İ ÁßÀÎÁö È®ÀÎÇÏ´Â º¯¼ö
+    /// ê³µê²© ì¤‘ì¸ì§€ í™•ì¸í•˜ëŠ” ë³€ìˆ˜
     /// </summary>
     protected bool IsAttack = false;
 
@@ -77,7 +77,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     {
         base.OnDisable();
 
-        // attackArea.OnActiveAttackArea = null; //remove listener ÇüÅÂ »ç¿ëÇÏ±â AttackArea¿¡¼­
+        // attackArea.OnActiveAttackArea = null; //remove listener í˜•íƒœ ì‚¬ìš©í•˜ê¸° AttackAreaì—ì„œ
     }
 
     protected override void Update()
@@ -94,7 +94,7 @@ public class EnemyCombat : EnemyBase, IAttacker
             sightRadius = data.sightRange;
             attackRange = data.attackRange;
             speed = data.moveSpeed;
-            attackRange = data.damage;
+            attackDamage = data.damage;
             maxAttackCooldown = data.attackCooldown;
         }
         base.SetData(data);
@@ -103,7 +103,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     // Functions ---------------------------------------------------------------------------------------
 
     /// <summary>
-    /// Chasing Update ¹® | base °»½ÅÇÒ ¶§ ¸¶Áö¸·¿¡ °»½ÅÇÏ±â
+    /// Chasing Update ë¬¸ | base ê°±ì‹ í•  ë•Œ ë§ˆì§€ë§‰ì— ê°±ì‹ í•˜ê¸°
     /// </summary>
     protected override void OnChasingState()
     {
@@ -117,7 +117,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     }
 
     /// <summary>
-    /// Attack Update ¹® | base °»½ÅÇÒ ¶§ ¸¶Áö¸· °»½ÅÇÏ±â
+    /// Attack Update ë¬¸ | base ê°±ì‹ í•  ë•Œ ë§ˆì§€ë§‰ ê°±ì‹ í•˜ê¸°
     /// </summary>
     protected override void OnAttackState()
     {
@@ -136,13 +136,13 @@ public class EnemyCombat : EnemyBase, IAttacker
     {
         if (gameObject.layer == targetTransform.gameObject.layer) return;
 
-        isFacingLeft = targetTransform.position.x - transform.position.x < 0 ? true : false; // ÇÃ·¹ÀÌ¾î°¡ ¹üÀ§ ¾È¿¡ ÀÖÀ» ¶§¸¸ ¹Ù¶óº¸´Â À§Ä¡ °»½Å
+        isFacingLeft = targetTransform.position.x - transform.position.x < 0 ? true : false; // í”Œë ˆì´ì–´ê°€ ë²”ìœ„ ì•ˆì— ìˆì„ ë•Œë§Œ ë°”ë¼ë³´ëŠ” ìœ„ì¹˜ ê°±ì‹ 
         moveDirection = isFacingLeft ? Vector2.left : Vector2.right;
 
         this.targetTransform = targetTransform;
         this.target = target;
 
-        // ½Ã¾ß°¢¿¡ ÀÖ´ÂÁö È®ÀÎ
+        // ì‹œì•¼ê°ì— ìˆëŠ”ì§€ í™•ì¸
         if (IsInsight(targetTransform))
         {
             CurrentState = EnemyState.Chasing;
@@ -155,7 +155,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     }
 
     /// <summary>
-    /// targetÀÌ ½Ã¾ß¿¡ µé¾î¿Ô´ÂÁö È®ÀÎ
+    /// targetì´ ì‹œì•¼ì— ë“¤ì–´ì™”ëŠ”ì§€ í™•ì¸
     /// </summary>
     bool IsInsight(Transform target)
     {
@@ -176,7 +176,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     {
         if (targetTransform == null || ShouldStopChase())
         {
-            // Å¸°ÙÀÌ ¹üÀ§¿¡ ¹ş¾î³²
+            // íƒ€ê²Ÿì´ ë²”ìœ„ì— ë²—ì–´ë‚¨
             targetTransform = null;
             target = null;
             CurrentState = EnemyState.Idle;
@@ -200,7 +200,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     {
         if (targetTransform != null)
         {
-            // »ç°Å¸®¾È¿¡ ÇÃ·¹ÀÌ¾î°¡ µé¾î¿È
+            // ì‚¬ê±°ë¦¬ì•ˆì— í”Œë ˆì´ì–´ê°€ ë“¤ì–´ì˜´
             if(distanceToTarget < attackRange)
             {
                 OnAttack(target);
@@ -210,14 +210,14 @@ public class EnemyCombat : EnemyBase, IAttacker
                 CurrentState = EnemyState.Chasing;
             }
         }
-        else // ½Ã¾ß ¹ÛÀ¸·Î ¹ş¾î³²
+        else // ì‹œì•¼ ë°–ìœ¼ë¡œ ë²—ì–´ë‚¨
         {
             CurrentState = EnemyState.Idle;
         }
     }
 
     /// <summary>
-    /// CanAttack ºñÈ°¼ºÈ­, attack cooldown ÃÊ±âÈ­ ÇÏ´Â ÇÔ¼ö
+    /// CanAttack ë¹„í™œì„±í™”, attack cooldown ì´ˆê¸°í™” í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
     protected void StartAttackCoolDown()
     {
@@ -237,7 +237,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     }
 
     /// <summary>
-    /// °ø°İ ½Ã ½ÇÇàÇÏ´Â Ãß°¡·Î ½ÇÇàµÇ´Â ³»¿ë
+    /// ê³µê²© ì‹œ ì‹¤í–‰í•˜ëŠ” ì¶”ê°€ë¡œ ì‹¤í–‰ë˜ëŠ” ë‚´ìš©
     /// </summary>
     protected virtual void PerformAttack(IDamageable target)
     {
@@ -262,7 +262,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     {
         if (attackArea != null)
         {
-            // ½Ã¾ß°¢ 
+            // ì‹œì•¼ê° 
             Handles.color = CurrentState == EnemyState.Attack ? Color.red : Color.green;
 
             Vector3 origin = transform.position;
