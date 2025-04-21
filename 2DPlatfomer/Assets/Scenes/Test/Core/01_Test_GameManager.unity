@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTransform: {fileID: 394335363}
-  type: 1
+  type: 0
 --- !u!1 &394335362
 GameObject:
   m_ObjectHideFlags: 0

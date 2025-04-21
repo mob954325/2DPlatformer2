@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,6 +42,7 @@ public class EnemyRange : EnemyCombat
             backStepSpeed = data.backstepSpeed;
             bulletPrefab = data.bulletPrefab;
         }
+
         base.SetData(data);
     }
 
@@ -65,7 +66,7 @@ public class EnemyRange : EnemyCombat
     protected override void OnDeadStateStart()
     {
         animator.SetTrigger(HashToOnDead);
-        Destroy(this.gameObject, 0.5f); // �ӽ�
+        Destroy(this.gameObject, 0.5f); // 임시
     }
 
     protected override void OnIdleState()

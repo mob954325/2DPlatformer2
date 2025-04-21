@@ -88,6 +88,7 @@ public class EnemyCombat : EnemyBase, IAttacker
 
     protected override void SetData(EnemyDataSO data)
     {
+
         if(data.isCombat)
         {
             sightAngle = data.sightAngle;
@@ -97,6 +98,7 @@ public class EnemyCombat : EnemyBase, IAttacker
             attackDamage = data.damage;
             maxAttackCooldown = data.attackCooldown;
         }
+
         base.SetData(data);
     }
 
