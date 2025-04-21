@@ -59,7 +59,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
             }
             else
             {
-                OnHpChange?.Invoke();
+                OnHpChange?.Invoke(hp);
             }
         }
     }
@@ -69,7 +69,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
     private float maxHitDelay = 0.25f;
     private float hitDelay = 0.0f;
 
-    public Action OnHpChange { get; set; }
+    public Action<float> OnHpChange { get; set; }
     public Action OnHitPerformed { get; set; }
     public Action OnDeadPerformed { get; set; }
     public Action ReturnAction { get; set; }

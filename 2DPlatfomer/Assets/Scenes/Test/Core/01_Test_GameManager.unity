@@ -135,6 +135,10 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6175784022775706687, guid: 19e2b9f80f8bfd947bdf1a8d3b0687d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175784022775706687, guid: 19e2b9f80f8bfd947bdf1a8d3b0687d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -268,6 +272,14 @@ PrefabInstance:
     - target: {fileID: 755749039379158295, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166271531820919683, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
+      propertyPath: dashPower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166271531820919683, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
+      propertyPath: jumpPower
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4659973880254621356, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
       propertyPath: m_LocalPosition.x

@@ -9,7 +9,7 @@ public interface IDamageable
     float Hp { get; set; }
     bool IsDead { get; }
 
-    public Action OnHpChange { get; set; }
+    public Action<float> OnHpChange { get; set; }
     public Action OnHitPerformed { get; set; }
     public Action OnDeadPerformed { get; set; }
 

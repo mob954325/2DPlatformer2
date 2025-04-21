@@ -5,33 +5,54 @@ using UnityEngine;
 enum PlayerState
 {
     Idle = 0,
+    Move,
+    Dash,
+    Jump,
     Hit,
+    Attack,
+    Sit,
     Dead,
 }
 
+[RequireComponent(typeof(PlayerInput))]
 public class Player : MonoBehaviour, IDamageable, IAttacker
 {
-    private Rigidbody2D rigid2d;
-    private SpriteRenderer spriteRenderer;
-    private TrailRenderer trailRenderer;
-    private Transform attackTransform;
-    private Transform energyAttackTransform;
-    private Transform attackPivot;
-    private AttackArea[] attackAreas = new AttackArea[2];
-    [SerializeField] private Vector2 moveInput;
+    PlayerInput input;
+    AttackArea attackArea;
+    Vector3 attackAreaVec = Vector3.zero;
 
-    PlayerState state;
+    Collider2D playerCollider;
+    Rigidbody2D rigid2d;
+    SpriteRenderer spriteRenderer;
+    TrailRenderer dashTrail;
+    Animator anim;
 
-    // states
+    // ground check
+    private LayerMask groundLayer;
+    private Transform groundCheck;
+
+    [SerializeField] PlayerState state;
+    PlayerState State
+    {
+        get => state;
+        set
+        {
+            StateEnd(state);
+            state = value;
+            StateStart(state);
+        }
+    }
+
+    // States
     [Header("Values")]
     [SerializeField] private float baseSpeed = 5.0f;
     [SerializeField] private float currentSpeed = 5.0f;
     [SerializeField] private float walkSpeed = 2.0f;
-    [SerializeField] private float jumpForce = 15.0f;
-    [SerializeField] private float dashForce = 23.0f;
-    [SerializeField] private float dashDuration = 0.2f; // dash Cooldown
+    [SerializeField] private float jumpPower = 10.0f;
+    [SerializeField] private float dashPower = 10.0f;
+    [SerializeField] private float dashDuration = 0.8f; // dash Cooldown
     [Space(10f)]
-    // states
+
     private float attackDamage = 2f;
     public float AttackDamage { get => attackDamage; }
 
@@ -46,221 +67,486 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
     }
 
-    private float hp = 0;
+    private float currentHp = 0;
     public float Hp 
     { 
-        get => hp; 
+        get => currentHp; 
         set
         {
-            hp = Mathf.Clamp(value, 0.0f, MaxHp);
-            Debug.Log($"{this.gameObject.name} : {hp}");
+            currentHp = Mathf.Clamp(value, 0.0f, MaxHp);
+            OnHpChange?.Invoke(currentHp);
 
-            if (hp <= 0)
+            if (currentHp <= 0)
             {
                 // 사망
-                OnDead();
+                State = PlayerState.Dead;
             }
         }
     }
 
-    public Action OnHpChange { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public Action OnHitPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public Action OnDeadPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public float AttackCooldown { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public float MaxAttackCooldown => throw new NotImplementedException();
-    public bool CanAttack { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public Action<IDamageable> OnAttackPerformed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-    public bool IsDead => throw new NotImplementedException();
-
-
-    // ground check
-    private LayerMask groundLayer;
-    private Transform groundCheck;
-
     // flag
     [Header("Flag")]
-    [SerializeField] private bool isGrounded;
-    [SerializeField] private bool isAttack;
-    [SerializeField] private bool canMove;
-    [SerializeField] private float dashTime;
+    [SerializeField] private bool isGrounded = true;
+    [SerializeField] private bool isAttacking = false;
+    [SerializeField] private bool isJumping = false;
+    [SerializeField] private bool isDashing = false;
+    [SerializeField] private bool isSitting = false;
+    [SerializeField] private bool isHit = false;
     [Space(10f)]
+
+    // Timer
+    private float dashTimer = 0f;
 
     // ray
     float rayLength = 1.5f;
 
-    // timer
-    [Header("Timer")]
-    [SerializeField] private float maxAttackComboDelayTime = 0.2f; // 다음 콤보까지 기다리는 시간
-    [SerializeField] private float attackComboTimer = 0.0f;
-    [SerializeField] private float sitTimer = 0.0f;
-    [SerializeField] private float sitMaxTimer = 2.0f;
-    [Space(10f)]
+    public float checkGroundRadius = 0.2f;
 
-    // Animator for animations (if you have an Animator for animations)
-    private Animator animator;
-    private int HashToIsWalk = Animator.StringToHash("IsWalk");
-    private int HashToSpeed = Animator.StringToHash("Speed");
-    private int HashToIsGrounded = Animator.StringToHash("IsGrounded");
-    private int HashToOnJump = Animator.StringToHash("OnJump");
-    private int HashToOnAttack = Animator.StringToHash("OnAttack");
-    private int HashToAttack1 = Animator.StringToHash("Attack1");
-    private int HashToAttack2 = Animator.StringToHash("Attack2");
-    private int HashToOnHit = Animator.StringToHash("OnHit");
-    private int HashToOnDead = Animator.StringToHash("OnDead");
-    private int HashToIsSit = Animator.StringToHash("IsSit");
-    private int HashToOnSit = Animator.StringToHash("OnSit");
+    private Vector2 lastInputVec = Vector2.zero;
+    private float stateTimer = 0f;
+    private int attackCount = 1;
+    private int maxAttackCount = 2;
 
-    public float checkRadius = 1;
-
-    void Start()
+    private float attackCooldown = 0.1f;
+    public float AttackCooldown
     {
-        MaxHp = 20;
-        Hp = MaxHp;
+        get => attackCooldown;
+        set => attackCooldown = Mathf.Clamp(value, 0, MaxAttackCooldown);
+    }
 
+    private float maxAttackCooldown = 0.1f;
+    public float MaxAttackCooldown => maxAttackCooldown;
+
+    private bool canAttack = true;
+    public bool CanAttack { get => canAttack; set => canAttack = value; }
+    public Action<IDamageable> OnAttackPerformed { get; set; }
+
+
+    public Action<float> OnHpChange { get; set; }
+    public Action OnHitPerformed { get; set; }
+    public Action OnDeadPerformed { get; set; }
+
+    public bool IsDead => Hp <= 0;
+
+    private void Start()
+    {
+        input = GetComponent<PlayerInput>();
+        playerCollider = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
         rigid2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        trailRenderer = GetComponentInChildren<TrailRenderer>();
+        dashTrail = GetComponentInChildren<TrailRenderer>();
+        attackArea = GetComponentInChildren<AttackArea>();
+        attackAreaVec = attackArea.transform.localPosition;
 
+        groundCheck = transform.GetChild(0);
         groundLayer = LayerMask.GetMask("Ground");
 
-        Transform child = transform.GetChild(0);
-        groundCheck = child;
-        child = transform.GetChild(1);
-        attackPivot = child;
-        attackTransform = attackPivot.GetChild(0);
-        child = attackPivot.GetChild(1);
-        energyAttackTransform = child;
+        dashTrail.enabled = false;
 
-        attackAreas = GetComponentsInChildren<AttackArea>();
-        foreach(AttackArea comp in attackAreas)
-        {
-            comp.OnActiveAttackArea += (target, _) => { OnAttack(target); };
-        }
-
-        trailRenderer.enabled = false;
-        attackTransform.gameObject.SetActive(false);
-        energyAttackTransform.gameObject.SetActive(false);
-        animator.SetBool(HashToAttack1, true);
-        animator.SetBool(HashToAttack2, false);
+        attackArea.OnActiveAttackArea += (target, _) => { OnAttack(target); };
+        attackArea.gameObject.SetActive(false);
+        MaxHp = 20;
     }
 
-    void Update()
+    private void FixedUpdate()
+    {
+        StateUpdate(State);
+    }
+
+    private void Update()
+    {
+        KeyUpdate();
+        AnimationUpdate();
+        TimerUpdate();
+    }
+
+    private void TimerUpdate()
+    {
+        if (dashTimer > 0f) dashTimer -= Time.deltaTime;    
+    }
+
+    private void KeyUpdate()
+    {
+        if (IsDead || isHit) return;
+
+        // dash
+        if (input.IsDash)
+        {
+            if(!isDashing && dashTimer <= 0f) State = PlayerState.Dash;
+        }
+
+        // attack
+        if (input.IsAttack)
+        {
+            if(!isAttacking) State = PlayerState.Attack;
+        }
+
+        // jump
+        if(input.IsJump)
+        {
+            if(!isJumping) State = PlayerState.Jump;
+        }
+
+        // sit
+        if(input.IsCrouch)
+        {
+            if(!isSitting) State = PlayerState.Sit;
+        }
+
+        // move
+        if (!isAttacking && !isDashing && !isSitting && !isJumping)
+        {
+            if (input.InputVec.x != 0)
+            {
+                State = PlayerState.Move;
+            }
+            else
+            {
+                State = PlayerState.Idle;
+            }
+        }
+    }
+
+    private void AnimationUpdate()
+    {
+        if( input.InputVec.x != 0 )spriteRenderer.flipX = input.InputVec.x < 0f;
+    }
+
+    private void StateStart(PlayerState state)
+    {
+        switch (state)
+        {
+            case PlayerState.Idle:
+                IdleStateStart();
+                break;
+            case PlayerState.Move:
+                MoveStateStart();
+                break;
+            case PlayerState.Dash:
+                DashStateStart();
+                break;
+            case PlayerState.Jump:
+                JumpStateStart();
+                break;
+            case PlayerState.Hit:
+                HitStateStart();
+                break;
+            case PlayerState.Attack:
+                AttackStateStart();
+                break;
+            case PlayerState.Sit:
+                SitStateStart();
+                break;
+            case PlayerState.Dead:
+                DeadStateStart();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void StateUpdate(PlayerState state)
+    {
+        switch (state)
+        {
+            case PlayerState.Idle:
+                IdleState();
+                break;
+            case PlayerState.Move:
+                MoveState();
+                break;
+            case PlayerState.Dash:
+                DashState();
+                break;
+            case PlayerState.Jump:
+                JumpState();
+                break;
+            case PlayerState.Hit:
+                HitState();
+                break;
+            case PlayerState.Attack:
+                AttackState();
+                break;
+            case PlayerState.Sit:
+                SitState();
+                break;
+            case PlayerState.Dead:
+                DeadState();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void StateEnd(PlayerState state)
+    {
+        switch (state)
+        {
+            case PlayerState.Idle:
+                IdleStateEnd();
+                break;
+            case PlayerState.Move:
+                MoveStateEnd();
+                break;
+            case PlayerState.Dash:
+                DashStateEnd();
+                break;
+            case PlayerState.Jump:
+                JumpStateEnd();
+                break;
+            case PlayerState.Hit:
+                HitStateEnd();
+                break;
+            case PlayerState.Attack:
+                AttackStateEnd();
+                break;
+            case PlayerState.Sit:
+                SitStateEnd();
+                break;
+            case PlayerState.Dead:
+                DeadStateEnd();
+                break;
+            default:
+                break;
+        }
+    }
+
+    // State Update -------------------------------------------------------------------------------------------------------
+
+    #region State Start
+    private void IdleStateStart()
+    {
+        anim.Play("Idle", 0);
+    }
+
+    private void MoveStateStart()
+    {
+        anim.Play("Run", 0);
+    }
+
+    private void DashStateStart()
+    {
+        isDashing = true;
+
+        if(dashTimer <= 0f)
+        {
+            if (input.InputVec.x != 0f) rigid2d.AddForce(input.InputVec * dashPower, ForceMode2D.Impulse);
+            else rigid2d.AddForce(lastInputVec * dashPower, ForceMode2D.Impulse);
+
+            dashTrail.enabled = true;
+        }
+
+        dashTimer = dashDuration;
+    }
+
+    private void JumpStateStart()
+    {
+        isJumping = true;
+        anim.Play("Jump", 0);
+        rigid2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+    }
+
+    private void HitStateStart()
+    {
+        isHit = true;
+        anim.Play("Hit", 0);
+    }
+
+    private void AttackStateStart()
+    {
+        isAttacking = true;
+        anim.Play("Attack" + attackCount, 0);
+        attackCount++;
+
+        if (attackCount > maxAttackCount) attackCount = 1;
+
+        AttackCooldown = MaxAttackCooldown;
+
+        SetAttackAreaPosition();
+        attackArea.gameObject.SetActive(true);
+    }
+
+    private void SitStateStart()
+    {
+        isSitting = true;
+        anim.Play("Sit", 0);
+        Debug.Log("1");
+    }
+
+    private void DeadStateStart()
+    {
+        OnDead();
+    }
+    #endregion
+
+    #region State Update
+    private void IdleState()
+    {
+        rigid2d.velocity = new Vector2(0f, rigid2d.velocity.y);
+    }
+
+    private void MoveState()
+    {
+        rigid2d.velocity = new Vector2(input.InputVec.x * baseSpeed, rigid2d.velocity.y);
+        lastInputVec = input.InputVec;
+    }
+
+    private void DashState()
+    {
+        if (CheckAnimationEnd())
+        {
+            State = PlayerState.Idle;
+        }
+    }
+
+    private void JumpState()
     {
         // Check for ground status
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer);
 
-        // Handle movement and actions
-        HandleMovement();
-        HandleBottomMove();
-        HandleJump();
-        HandleDash();
-        HandleAttack();
-        AttackAreaUpate();
-
-        // anim
-        AnimationPramaterUpdate();
-        AttackComboDelayUpdate();
-    }
-
-    private void AttackAreaUpate()
-    {
-        if(moveInput.x > 0)
+        if(isGrounded)
         {
-            attackPivot.rotation = Quaternion.Euler(0, 0, 0);
-        }
-        else if(moveInput.x < 0)
-        {
-            attackPivot.rotation = Quaternion.Euler(0, 180, 0);
+            State = PlayerState.Idle;
         }
     }
 
-    // Movement, Action Handle -----------------------------------------------------------------------
-
-    private void HandleMovement()
+    private void HitState()
     {
-        if (!canMove) return;
-
-        // Get Horizontal input
-        float inputX = Input.GetAxis("Horizontal");
-        moveInput = new Vector2(inputX, 0);
-
-        // Move the character
-        if (isGrounded && dashTime <= 0)
+        if (CheckAnimationEnd())
         {
-            rigid2d.velocity = new Vector2(moveInput.x * currentSpeed, rigid2d.velocity.y);            
-
-            if(moveInput != Vector2.zero)
-            {
-                if (inputX > 0) spriteRenderer.flipX = false;
-                else spriteRenderer.flipX = true;
-            }
-
-            // 앉기
-            if (Input.GetKey(KeyCode.LeftControl))
-            {
-                currentSpeed = walkSpeed;
-                animator.SetBool(HashToIsWalk, true);
-            }
-            else if (Input.GetKeyUp(KeyCode.LeftControl))
-            {
-                animator.SetBool(HashToIsWalk, false);
-                currentSpeed = baseSpeed;
-            }
+            State = PlayerState.Idle;
         }
     }
-    
-    private void HandleBottomMove()
+
+    private void AttackState()
     {
-        float inputY = Input.GetAxis("Vertical");
-        moveInput.y = inputY;
+        AttackCooldown -= Time.deltaTime;
 
-        // 임시 키 처리
-        if(Input.GetKeyDown(KeyCode.S))
+        if (CheckAnimationEnd())
         {
-            animator.SetTrigger(HashToOnSit);
+            State = PlayerState.Idle;
+        }
+    }
+
+    private void SitState()
+    {
+        Debug.Log("2");
+
+        if (input.IsJump)
+        {
+            GoToPlatform();
         }
 
-        // S 누르면 실행
-        if (moveInput.y < 0.0f)
+        if(!input.IsCrouch)
         {
-            sitTimer += Time.deltaTime;
-            Debug.Log("2");
+            State = PlayerState.Idle;
+            Debug.Log("3");
+        }
+    }
 
-            //sittimer보다 길게 누르면 플랫폼 통과
-            if (sitTimer > sitMaxTimer)
+    private void DeadState()
+    {
+        if (CheckAnimationEnd())
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+    #endregion
+
+    #region State End
+
+    private void IdleStateEnd()
+    {
+
+    }
+    private void MoveStateEnd()
+    {
+
+    }
+    private void DashStateEnd()
+    {
+        isDashing = false;
+        dashTrail.enabled = false;
+    }
+
+    private void JumpStateEnd()
+    {
+        isJumping = false;
+    }
+
+    private void HitStateEnd()
+    {
+        isHit = false;
+    }
+
+    private void AttackStateEnd()
+    {
+        isAttacking = false;
+        attackArea.gameObject.SetActive(false);
+    }
+
+    private void SitStateEnd()
+    {
+        isSitting = false;
+    }
+
+    private void DeadStateEnd()
+    {
+
+    }
+    #endregion
+
+    #region Functions
+    private bool CheckAnimationEnd()
+    {
+        stateTimer += Time.deltaTime;
+
+        if (stateTimer > anim.GetCurrentAnimatorClipInfo(0)[0].clip.length)
+        {
+            stateTimer = 0f;
+            return true;
+        }
+
+        return false;
+    }
+
+    private void SetAttackAreaPosition()
+    {
+        if (input.InputVec.x > 0)
+        {
+            attackArea.gameObject.transform.localPosition = new Vector3(attackAreaVec.x, attackAreaVec.y, attackAreaVec.z);
+
+        }
+        else if (input.InputVec.x < 0)
+        {
+            attackArea.gameObject.transform.localPosition = new Vector3(-attackAreaVec.x, attackAreaVec.y, attackAreaVec.z);
+        }
+    }
+
+    private void GoToPlatform()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
+
+        if (hit.collider != null)
+        {
+            Debug.Log($"{hit.collider.gameObject.name}");
+            GameObject platform = hit.collider.gameObject;
+
+            // 하단 플랫폼인지 확인
+            if (platform.CompareTag("BottomPlatform"))
             {
-                Debug.Log("1");
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
-
-                if (hit.collider != null)
-                {
-                    Debug.Log($"{hit.collider.gameObject.name}");
-                    GameObject platform = hit.collider.gameObject;
-
-                    // 하단 플랫폼인지 확인
-                    if (platform.CompareTag("BottomPlatform"))
-                    {
-                        Debug.Log("맨 밑바닥이라 내려갈 수 없음");
-                        return;
-                    }
-
-                    // 내려가기 처리
-                    StartCoroutine(DisablePlatformTemporarily(platform));
-                }
+                Debug.Log("맨 밑바닥이라 내려갈 수 없음");
+                return;
             }
-        }
-        else
-        {
-            sitTimer = 0.0f;
-        }
 
-        animator.SetBool(HashToIsSit, Input.GetKey(KeyCode.S));
+            // 내려가기 처리
+            StartCoroutine(DisablePlatformTemporarily(platform));
+        }
     }
 
     private IEnumerator DisablePlatformTemporarily(GameObject platform)
-    {
+    { 
         //PlatformEffector2D effector = platform.GetComponent<PlatformEffector2D>();
         Collider2D col = platform.GetComponent<Collider2D>();
 
@@ -273,131 +559,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
     }
 
-    private void HandleJump()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            animator.SetBool(HashToAttack1, true); // 임시, 나중에 함수로 하나로 수정하기
-            animator.SetBool(HashToAttack2, false);
+    #endregion
 
-            rigid2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            animator.SetTrigger(HashToOnJump);
-        }
-    }
-
-    private void HandleDash()
-    {
-        // Dash only when grounded or in mid-air
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashTime <= 0)
-        {
-            // Dash in the direction the player is facing
-            rigid2d.velocity = new Vector2(moveInput.x * dashForce, rigid2d.velocity.y);
-
-            dashTime = dashDuration; // Start dash duration
-
-            StartCoroutine(DashEffect());
-        }
-
-        // Countdown dash time
-        if (dashTime > 0)
-        {
-            dashTime -= Time.deltaTime;
-        }
-    }
-
-    // 임시
-    private IEnumerator DashEffect()
-    {
-        trailRenderer.enabled = true;
-        yield return new WaitForSeconds(0.2f);
-        trailRenderer.enabled = false;
-    }
-
-    private void HandleAttack()
-    {
-        animator.SetFloat(HashToSpeed, 0);
-        if (Input.GetMouseButtonDown(0) && !isAttack && isGrounded) // 기본 공격
-        {
-            animator.SetTrigger(HashToOnAttack);
-            StartCoroutine(ComboAttackProcess());
-        }
-
-        if(Input.GetMouseButtonDown(1)) // 에너지파
-        {
-            StartCoroutine(EnergyAttackProcess());
-        }
-    }
-
-    IEnumerator ComboAttackProcess()
-    {
-        canMove = false;
-        isAttack = true;
-        attackTransform.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(0.2f);
-
-        attackTransform.gameObject.SetActive(false);
-        
-        // 다음 콤보 플래그 설정
-        if (animator.GetBool(HashToAttack1))
-        {
-            attackComboTimer = maxAttackComboDelayTime;
-            animator.SetBool(HashToAttack1, false);
-            animator.SetBool(HashToAttack2, true);
-        }
-        else if(animator.GetBool(HashToAttack2))
-        {
-            animator.SetBool(HashToAttack1, true);
-            animator.SetBool(HashToAttack2, false);
-        }
-
-        isAttack = false;
-        canMove = true;
-    }
-
-    IEnumerator EnergyAttackProcess()
-    {
-        canMove = false;
-        isAttack = true;
-        energyAttackTransform.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(2f);
-
-        energyAttackTransform.gameObject.SetActive(false);
-
-        isAttack = false;
-        canMove = true;
-    }
-
-    // Animation ------------------------------------------------------------------------------------
-
-    /// <summary>
-    /// Update animator parameters if using animation
-    /// </summary>
-    private void AnimationPramaterUpdate()
-    {
-        if (animator != null)
-        {
-            float moveValue = moveInput.x != 0 ? 1f : 0f;
-            if(canMove) animator.SetFloat(HashToSpeed, moveValue); 
-            animator.SetBool(HashToIsGrounded, isGrounded);
-        }
-    }
-
-    private void AttackComboDelayUpdate()
-    {
-        if (attackComboTimer < 0.0f)
-        {
-            animator.SetBool(HashToAttack1, true);
-            animator.SetBool(HashToAttack2, false);
-            attackComboTimer = 0.0f;
-            return;
-        }
-
-        attackComboTimer -= Time.deltaTime; 
-    }
-
-    // IAttackalb -------------------------------------------------------------------------------
+    // IAttackable -------------------------------------------------------------------------------
 
     public void OnAttack(IDamageable target)
     {
@@ -407,23 +571,17 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     // IDamageable -------------------------------------------------------------------------------
     public void TakeDamage(float damageValue)
     {
+        if (IsDead) return;
+
+        State = PlayerState.Hit;
         Hp -= damageValue;
-        animator.SetTrigger(HashToOnHit);
     }
 
     public void OnDead()
     {
         // 사망 로직 작성
-        animator.SetTrigger(HashToOnDead);
         Debug.Log("플레이어 사망");
-
-        StartCoroutine(OnDeadProcess());
-    }
-
-    private IEnumerator OnDeadProcess()
-    {
-        yield return new WaitForSeconds(0.5f);
-        this.gameObject.SetActive(false);
+        anim.Play("Dead", 0);
     }
 
     // Debug ------------------------------------------------------------------------------------
@@ -433,7 +591,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+            Gizmos.DrawWireSphere(groundCheck.position, checkGroundRadius);
         }
     }
 }

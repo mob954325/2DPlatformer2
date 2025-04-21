@@ -10,7 +10,7 @@ public class TestIDamageable : MonoBehaviour, IDamageable
     float hp = 0;
     public float Hp { get => hp; set => hp = value; }
 
-    public Action OnHpChange { get; set; }
+    public Action<float> OnHpChange { get; set; }
     public Action OnHitPerformed { get; set; }
     public Action OnDeadPerformed { get; set; }
 
