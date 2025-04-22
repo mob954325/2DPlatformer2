@@ -10,7 +10,7 @@ enum PlayerState
     Jump,
     Hit,
     Attack,
-    Sit,
+    Crouch,
     Dead,
 }
 
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     Vector3 attackAreaVec = Vector3.zero;
 
     Collider2D playerCollider;
+    Collider2D crouchCollider;
     Rigidbody2D rigid2d;
     SpriteRenderer spriteRenderer;
     TrailRenderer dashTrail;
@@ -90,7 +91,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [SerializeField] private bool isAttacking = false;
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool isDashing = false;
-    [SerializeField] private bool isSitting = false;
+    [SerializeField] private bool isCrouching = false;
     [SerializeField] private bool isHit = false;
     [Space(10f)]
 
@@ -131,15 +132,18 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void Start()
     {
         input = GetComponent<PlayerInput>();
+        attackArea = GetComponentInChildren<AttackArea>();
+        attackAreaVec = attackArea.transform.localPosition;
+
         playerCollider = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         rigid2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         dashTrail = GetComponentInChildren<TrailRenderer>();
-        attackArea = GetComponentInChildren<AttackArea>();
-        attackAreaVec = attackArea.transform.localPosition;
+        playerCollider = GetComponent<Collider2D>();
+        crouchCollider = transform.GetChild(3).GetComponent<Collider2D>(); //
 
-        groundCheck = transform.GetChild(0);
+        groundCheck = transform.GetChild(0); //
         groundLayer = LayerMask.GetMask("Ground");
 
         dashTrail.enabled = false;
@@ -185,17 +189,17 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         // jump
         if(input.IsJump)
         {
-            if(!isJumping) State = PlayerState.Jump;
+            if(!isJumping || !isCrouching) State = PlayerState.Jump;
         }
 
         // sit
         if(input.IsCrouch)
         {
-            if(!isSitting) State = PlayerState.Sit;
+            if(!isCrouching) State = PlayerState.Crouch;
         }
 
         // move
-        if (!isAttacking && !isDashing && !isSitting && !isJumping)
+        if (!isAttacking && !isDashing && !isCrouching && !isJumping)
         {
             if (input.InputVec.x != 0)
             {
@@ -235,8 +239,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Attack:
                 AttackStateStart();
                 break;
-            case PlayerState.Sit:
-                SitStateStart();
+            case PlayerState.Crouch:
+                CrouchStateStart();
                 break;
             case PlayerState.Dead:
                 DeadStateStart();
@@ -268,8 +272,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Attack:
                 AttackState();
                 break;
-            case PlayerState.Sit:
-                SitState();
+            case PlayerState.Crouch:
+                CrouchState();
                 break;
             case PlayerState.Dead:
                 DeadState();
@@ -301,8 +305,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Attack:
                 AttackStateEnd();
                 break;
-            case PlayerState.Sit:
-                SitStateEnd();
+            case PlayerState.Crouch:
+                CrouchStateEnd();
                 break;
             case PlayerState.Dead:
                 DeadStateEnd();
@@ -345,6 +349,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         isJumping = true;
         anim.Play("Jump", 0);
         rigid2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+
     }
 
     private void HitStateStart()
@@ -367,11 +372,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         attackArea.gameObject.SetActive(true);
     }
 
-    private void SitStateStart()
+    private void CrouchStateStart()
     {
-        isSitting = true;
+        isCrouching = true;
         anim.Play("Sit", 0);
-        Debug.Log("1");
+        ChangeToCrouchCollider(true);
     }
 
     private void DeadStateStart()
@@ -429,10 +434,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
     }
 
-    private void SitState()
+    private void CrouchState()
     {
-        Debug.Log("2");
-
         if (input.IsJump)
         {
             GoToPlatform();
@@ -441,7 +444,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         if(!input.IsCrouch)
         {
             State = PlayerState.Idle;
-            Debug.Log("3");
         }
     }
 
@@ -486,9 +488,10 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         attackArea.gameObject.SetActive(false);
     }
 
-    private void SitStateEnd()
+    private void CrouchStateEnd()
     {
-        isSitting = false;
+        isCrouching = false;
+        ChangeToCrouchCollider(false);
     }
 
     private void DeadStateEnd()
@@ -521,6 +524,20 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         else if (input.InputVec.x < 0)
         {
             attackArea.gameObject.transform.localPosition = new Vector3(-attackAreaVec.x, attackAreaVec.y, attackAreaVec.z);
+        }
+    }
+
+    private void ChangeToCrouchCollider(bool value)
+    {
+        if(value)
+        {
+            playerCollider.enabled = false;
+            crouchCollider.enabled = true;
+        }
+        else
+        {
+            playerCollider.enabled = true;
+            crouchCollider.enabled = false;
         }
     }
 
