@@ -160,6 +160,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer);
+
         KeyUpdate();
         AnimationUpdate();
         TimerUpdate();
@@ -187,13 +189,14 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
 
         // jump
-        if(input.IsJump)
+        if (input.IsJump && isGrounded && !isCrouching && !isJumping) // TODO : getkeydown 스타일 추가하기
         {
-            if(!isJumping || !isCrouching) State = PlayerState.Jump;
+            State = PlayerState.Jump;
+            Debug.Log("asdf");
         }
 
         // sit
-        if(input.IsCrouch)
+        if (input.IsCrouch)
         {
             if(!isCrouching) State = PlayerState.Crouch;
         }
@@ -331,6 +334,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void DashStateStart()
     {
+        if (isDashing) return;
+
         isDashing = true;
 
         if(dashTimer <= 0f)
@@ -346,10 +351,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void JumpStateStart()
     {
-        isJumping = true;
+        if (isJumping) return;
+
         anim.Play("Jump", 0);
         rigid2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-
+        isJumping = true;
     }
 
     private void HitStateStart()
@@ -408,8 +414,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void JumpState()
     {
         // Check for ground status
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer);
-
         if(isGrounded)
         {
             State = PlayerState.Idle;
