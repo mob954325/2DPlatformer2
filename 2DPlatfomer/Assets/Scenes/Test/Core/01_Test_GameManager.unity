@@ -279,19 +279,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2166271531820919683, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
       propertyPath: dashPower
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2166271531820919683, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
       propertyPath: jumpPower
-      value: 5
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166271531820919683, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
+      propertyPath: dashDuration
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4659973880254621356, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.58
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4659973880254621356, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.49
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 4659973880254621356, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
       propertyPath: m_LocalPosition.z

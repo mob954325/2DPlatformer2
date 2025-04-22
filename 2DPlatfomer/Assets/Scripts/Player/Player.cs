@@ -38,6 +38,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         get => state;
         set
         {
+            if (state == value) return;
             StateEnd(state);
             state = value;
             StateStart(state);
@@ -51,7 +52,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [SerializeField] private float walkSpeed = 2.0f;
     [SerializeField] private float jumpPower = 10.0f;
     [SerializeField] private float dashPower = 10.0f;
-    [SerializeField] private float dashDuration = 0.8f; // dash Cooldown
+    [SerializeField] private float dashDuration = 0.6f; // dash Cooldown
     [Space(10f)]
 
     private float attackDamage = 2f;
@@ -169,7 +170,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void TimerUpdate()
     {
-        if (dashTimer > 0f) dashTimer -= Time.deltaTime;    
+/*        if (dashTimer > 0f) dashTimer -= Time.deltaTime;
+        dashTimer = Mathf.Clamp(dashTimer, 0.0f, dashDuration);*/
     }
 
     private void KeyUpdate()
@@ -177,9 +179,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         if (IsDead || isHit) return;
 
         // dash
-        if (input.IsDash)
+        if (input.IsDash && !isDashing)
         {
-            if(!isDashing && dashTimer <= 0f) State = PlayerState.Dash;
+            State = PlayerState.Dash;
         }
 
         // attack
@@ -189,10 +191,10 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
 
         // jump
-        if (input.IsJump && isGrounded && !isCrouching && !isJumping) // TODO : getkeydown 스타일 추가하기
+        if (input.IsJump && isGrounded && !isCrouching && !isJumping) // TODO : 점프가 어려번 눌림
         {
             State = PlayerState.Jump;
-            Debug.Log("asdf");
+            Debug.Log("Jumped\n");
         }
 
         // sit
@@ -334,19 +336,17 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void DashStateStart()
     {
-        if (isDashing) return;
+        if (isDashing || dashTimer > 0f) return;
 
         isDashing = true;
-
-        if(dashTimer <= 0f)
-        {
-            if (input.InputVec.x != 0f) rigid2d.AddForce(input.InputVec * dashPower, ForceMode2D.Impulse);
-            else rigid2d.AddForce(lastInputVec * dashPower, ForceMode2D.Impulse);
-
-            dashTrail.enabled = true;
-        }
-
         dashTimer = dashDuration;
+
+        Vector2 dashDirection = input.InputVec.x != 0f ? input.InputVec : lastInputVec;
+        rigid2d.velocity = Vector2.zero; // 이전 힘 제거
+        rigid2d.AddForce(dashDirection * dashPower, ForceMode2D.Impulse);
+
+        dashTrail.enabled = true;
+
     }
 
     private void JumpStateStart()
@@ -405,8 +405,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void DashState()
     {
-        if (CheckAnimationEnd())
+        dashTimer -= Time.deltaTime;
+
+        if (dashTimer < 0f)
         {
+            dashTimer = 0.0f;
             State = PlayerState.Idle;
         }
     }
@@ -414,7 +417,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void JumpState()
     {
         // Check for ground status
-        if(isGrounded)
+
+        if (isGrounded && rigid2d.velocity.y <= 0.01f)
         {
             State = PlayerState.Idle;
         }
@@ -449,6 +453,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         {
             State = PlayerState.Idle;
         }
+
+        MoveWhileCrouch();
     }
 
     private void DeadState()
@@ -577,6 +583,15 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             col.enabled = false;
             yield return new WaitForSeconds(0.5f);
             col.enabled = true;
+        }
+    }
+
+    // NOTE 책임 복잡해지면 리펙토링 고려하기
+    private void MoveWhileCrouch()  
+    {
+        if(input.InputVec.x != 0)
+        {
+            rigid2d.velocity = new Vector2(input.InputVec.x * walkSpeed, rigid2d.velocity.y);
         }
     }
 
