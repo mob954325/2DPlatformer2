@@ -53,7 +53,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [SerializeField] private float walkSpeed = 2.0f;
     [SerializeField] private float jumpPower = 10.0f;
     [SerializeField] private float dashPower = 10.0f;
-    [SerializeField] private float dashDuration = 0.6f; // dash Cooldown
+    [SerializeField] private float dashDuration = 0.6f; // 대쉬 지속시간
+    [SerializeField] private float maxDashCoolDown = 1f; // 대쉬 후 다음 대쉬사용하기 까지 기다려야하는 시간
     [Space(10f)]
 
     private float attackDamage = 2f;
@@ -99,6 +100,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     // Timer
     private float dashTimer = 0f;
+    private float dashCooldownTimer = 0f;
 
     // ray
     float rayLength = 1.5f;
@@ -171,8 +173,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void TimerUpdate()
     {
-/*        if (dashTimer > 0f) dashTimer -= Time.deltaTime;
-        dashTimer = Mathf.Clamp(dashTimer, 0.0f, dashDuration);*/
+        if (dashCooldownTimer > 0f) dashCooldownTimer -= Time.deltaTime;
     }
 
     private void KeyUpdate()
@@ -180,7 +181,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         if (IsDead || isHit) return;
 
         // dash
-        if (input.IsDash && !isDashing)
+        if (input.IsDash && !isDashing && dashCooldownTimer <= 0f)
         {
             State = PlayerState.Dash;
         }
@@ -341,7 +342,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
         isDashing = true;
         dashTimer = dashDuration;
-
+        dashCooldownTimer = maxDashCoolDown;
         Vector2 dashDirection = input.InputVec.x != 0f ? input.InputVec : lastInputVec;
         rigid2d.velocity = Vector2.zero; // 이전 힘 제거
         rigid2d.AddForce(dashDirection * dashPower, ForceMode2D.Impulse);
