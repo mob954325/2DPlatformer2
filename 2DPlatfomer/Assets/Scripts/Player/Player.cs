@@ -41,6 +41,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             if (state == value) return;
             StateEnd(state);
             state = value;
+
+            rigid2d.velocity = Vector2.zero;
             StateStart(state);
         }
     }

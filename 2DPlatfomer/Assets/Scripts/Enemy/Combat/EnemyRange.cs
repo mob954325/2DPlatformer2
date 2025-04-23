@@ -77,7 +77,6 @@ public class EnemyRange : EnemyCombat
 
     protected override void OnChasingState()
     {
-        animator.SetFloat(HashToSpeed, 0.0f);
         base.OnChasingState();
     }
 
