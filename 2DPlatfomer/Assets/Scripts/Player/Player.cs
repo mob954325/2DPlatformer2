@@ -49,7 +49,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [Header("Values")]
     [SerializeField] private float baseSpeed = 5.0f;
     [SerializeField] private float currentSpeed = 5.0f;
-    [SerializeField] private float currentSpeedWhileJump = 7.0f;
+    [SerializeField] private float currentSpeedWhileJump = 8.0f; // ?
     [SerializeField] private float walkSpeed = 2.0f;
     [SerializeField] private float jumpPower = 10.0f;
     [SerializeField] private float dashPower = 10.0f;
@@ -162,7 +162,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer | LayerMask.GetMask("Default"));
 
         KeyUpdate();
         AnimationUpdate();
@@ -345,6 +345,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         Vector2 dashDirection = input.InputVec.x != 0f ? input.InputVec : lastInputVec;
         rigid2d.velocity = Vector2.zero; // 이전 힘 제거
         rigid2d.AddForce(dashDirection * dashPower, ForceMode2D.Impulse);
+        rigid2d.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
         dashTrail.enabled = true;
 
@@ -410,8 +411,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void DashState()
     {
         dashTimer -= Time.deltaTime;
-
-        MoveWhileOtherState(currentSpeed);
 
         if (dashTimer < 0f)
         {
@@ -488,6 +487,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         isDashing = false;
         dashTrail.enabled = false;
+        rigid2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     private void JumpStateEnd()
@@ -599,7 +599,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if(input.InputVec.x != 0)
         {
-            rigid2d.velocity = new Vector2(input.InputVec.x * walkSpeed, rigid2d.velocity.y);
+            rigid2d.velocity = new Vector2(input.InputVec.x * value, rigid2d.velocity.y);
         }
     }
 
