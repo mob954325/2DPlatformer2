@@ -49,6 +49,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [Header("Values")]
     [SerializeField] private float baseSpeed = 5.0f;
     [SerializeField] private float currentSpeed = 5.0f;
+    [SerializeField] private float currentSpeedWhileJump = 7.0f;
     [SerializeField] private float walkSpeed = 2.0f;
     [SerializeField] private float jumpPower = 10.0f;
     [SerializeField] private float dashPower = 10.0f;
@@ -399,13 +400,18 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void MoveState()
     {
-        rigid2d.velocity = new Vector2(input.InputVec.x * baseSpeed, rigid2d.velocity.y);
-        lastInputVec = input.InputVec;
+        if(input.InputVec.x != 0)
+        {
+            rigid2d.velocity = new Vector2(input.InputVec.x * baseSpeed, rigid2d.velocity.y);
+            lastInputVec = input.InputVec;
+        }
     }
 
     private void DashState()
     {
         dashTimer -= Time.deltaTime;
+
+        MoveWhileOtherState(currentSpeed);
 
         if (dashTimer < 0f)
         {
@@ -422,6 +428,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         {
             State = PlayerState.Idle;
         }
+
+        MoveWhileOtherState(currentSpeedWhileJump);
     }
 
     private void HitState()
@@ -454,7 +462,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             State = PlayerState.Idle;
         }
 
-        MoveWhileCrouch();
+        MoveWhileOtherState(walkSpeed);
     }
 
     private void DeadState()
@@ -587,7 +595,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     }
 
     // NOTE 책임 복잡해지면 리펙토링 고려하기
-    private void MoveWhileCrouch()  
+    private void MoveWhileOtherState(float value)  
     {
         if(input.InputVec.x != 0)
         {
