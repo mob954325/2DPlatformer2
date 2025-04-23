@@ -61,6 +61,7 @@ public class EnemyMelee : EnemyCombat
     protected override void OnChasingState()
     {
         rigid2d.velocity = new Vector2(moveDirection.x * speed, rigid2d.velocity.y);
+        Debug.Log(rigid2d.velocity);
         animator.SetFloat(HashToSpeed, Mathf.Abs(moveDirection.x));
 
         base.OnChasingState();
