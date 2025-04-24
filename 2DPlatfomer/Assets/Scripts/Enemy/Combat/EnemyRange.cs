@@ -92,6 +92,8 @@ public class EnemyRange : EnemyCombat
     protected override void OnAttackState()
     {
         MaintainDistanceFromTarget();
+
+        if (AttackCooldown <= 0.0f) OnAttack(attackArea.Info.target);
         if(distanceToTarget > attackRange) CurrentState = EnemyState.Chasing;
         base.OnAttackState();
     }

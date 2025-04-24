@@ -49,7 +49,11 @@ public class AttackArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        info.targetObj = null;
-        info.target = null;
+        collision.gameObject.TryGetComponent(out IDamageable damageable);
+        if (damageable != null && damageable != GetComponentInParent<IDamageable>())
+        {
+            info.targetObj = null;
+            info.target = null;
+        }
     }
 }

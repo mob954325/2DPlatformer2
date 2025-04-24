@@ -73,7 +73,7 @@ public class EnemyMelee : EnemyCombat
 
         if(CheckAnimationEnd() || distanceToTarget > attackRange)
         {
-            CurrentState = EnemyState.Chasing;
+            //CurrentState = EnemyState.Idle;
         }
     }
 

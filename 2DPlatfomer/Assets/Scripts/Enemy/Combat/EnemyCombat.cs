@@ -104,9 +104,9 @@ public class EnemyCombat : EnemyBase, IAttacker
     /// </summary>
     protected override void OnChasingState()
     {
-        if(targetTransform != null) // 거리 업데이트
+        if(attackArea.Info.targetObj != null) // 거리 업데이트
         {
-            distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
+            distanceToTarget = Vector2.Distance(attackArea.Info.targetObj.transform.position, (transform.position));
         }
     }
 
@@ -115,9 +115,9 @@ public class EnemyCombat : EnemyBase, IAttacker
     /// </summary>
     protected override void OnAttackState()
     {
-        if(targetTransform != null)
+        if(attackArea.Info.targetObj != null)
         {
-            distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
+            distanceToTarget = Vector2.Distance(attackArea.Info.targetObj.transform.position, (transform.position));
         }
     }
 
@@ -131,19 +131,11 @@ public class EnemyCombat : EnemyBase, IAttacker
         moveDirection = isFacingLeft ? Vector2.left : Vector2.right;
 
         //
-        this.targetTransform = targetTransform;
-        this.target = target;
 
         // 시야각에 있는지 확인
         if (IsInsight(targetTransform))
         {
             OnTargetInSight();
-        }
-        else
-        {
-            //
-            this.targetTransform = null;
-            this.target = null;
         }
     }
 
