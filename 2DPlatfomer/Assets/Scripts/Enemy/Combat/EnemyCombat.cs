@@ -109,13 +109,10 @@ public class EnemyCombat : EnemyBase, IAttacker
     /// </summary>
     protected override void OnChasingState()
     {
-        UpdateChasingTarget();
-
-        if(targetTransform != null)
+        if(targetTransform != null) // 거리 업데이트
         {
             distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
         }
-        base.OnChasingState();
     }
 
     /// <summary>
@@ -129,7 +126,6 @@ public class EnemyCombat : EnemyBase, IAttacker
         {
             distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
         }
-        base.OnAttackState();
     }
 
     // Functions ---------------------------------------------------------------------------------------
@@ -147,7 +143,7 @@ public class EnemyCombat : EnemyBase, IAttacker
         // 시야각에 있는지 확인
         if (IsInsight(targetTransform))
         {
-            CurrentState = EnemyState.Chasing;
+            OnTargetInSight();
         }
         else
         {
@@ -169,6 +165,19 @@ public class EnemyCombat : EnemyBase, IAttacker
         return dot > Mathf.Cos(sightAngle * 0.5f * Mathf.Deg2Rad);
     }
 
+    protected virtual void OnTargetInSight()
+    {
+        Debug.Log("OnTargetInsight");
+        if(distanceToTarget > attackRange)
+        {
+            CurrentState = EnemyState.Chasing;
+        }
+        else
+        {
+            CurrentState = EnemyState.Attack;
+        }
+    }
+
     Vector2 GetFactingDirection()
     {
         return isFacingLeft ? Vector2.left : Vector2.right;
@@ -176,7 +185,7 @@ public class EnemyCombat : EnemyBase, IAttacker
 
     void UpdateChasingTarget()
     {
-        if (targetTransform == null || ShouldStopChase())
+        if (attackArea.Info.targetObj == null)
         {
             // 타겟이 범위에 벗어남
             targetTransform = null;
@@ -189,14 +198,14 @@ public class EnemyCombat : EnemyBase, IAttacker
         }
     }
 
-    bool ShouldStopChase()
+/*    bool ShouldStopChase()
     {
         if (targetTransform == null) return false;
 
         Vector2 dir = targetTransform.position - transform.position;
 
         return dir.sqrMagnitude > sightRadius * sightRadius;
-    }
+    }*/
 
     void UpdateAttackTarget()
     {

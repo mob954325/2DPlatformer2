@@ -3,22 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.U2D;
 
 public class EnemyMelee : EnemyCombat
 {
-    private Animator animator;
+    protected Animator animator;
 
     int HashToSpeed = Animator.StringToHash("Speed");
     int HashToOnAttack = Animator.StringToHash("OnAttack");
     int HashToOnDead = Animator.StringToHash("OnDead");
 
-    protected override void Start()
+    protected override void OnEnable()
     {
+        base.OnEnable();
+
         animator = GetComponent<Animator>();
         OnHitPerformed += () => { StartCoroutine(ColorChangeProcess()); };
 
-        base.Start();
+        CurrentState = EnemyState.Idle;
     }
 
     protected override void Update()
@@ -55,16 +56,17 @@ public class EnemyMelee : EnemyCombat
     protected override void OnDeadStateStart()
     {
         animator.SetTrigger(HashToOnDead);
-        Destroy(this.gameObject, 0.5f); // 임시
+        gameObject.SetActive(false);
     }
 
     protected override void OnChasingState()
     {
+        base.OnChasingState();
+
         rigid2d.velocity = new Vector2(moveDirection.x * speed, rigid2d.velocity.y);
-        Debug.Log(rigid2d.velocity);
         animator.SetFloat(HashToSpeed, Mathf.Abs(moveDirection.x));
 
-        base.OnChasingState();
+        if (attackArea.Info.targetObj == null) CurrentState = EnemyState.Idle;
     }
 
     protected override void OnDeadState()
@@ -75,6 +77,11 @@ public class EnemyMelee : EnemyCombat
     }
 
     // Functions ---------------------------------------------------------------------------------------
+
+    protected override void OnTargetInSight()
+    {
+        base.OnTargetInSight();
+    }
 
     protected override void PerformAttack(IDamageable target)
     {

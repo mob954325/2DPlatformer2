@@ -16,15 +16,16 @@ public class EnemyRange : EnemyCombat
     //int HashToOnAttack = Animator.StringToHash("OnAttack");
     int HashToOnDead = Animator.StringToHash("OnDead");
 
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
 
         animator = GetComponent<Animator>();
-
         bulletTransform = transform.GetChild(1);
 
         OnHitPerformed += () => { StartCoroutine(ColorChangeProcess()); };
+
+        CurrentState = EnemyState.Idle;
     }
 
     protected override void Update()
@@ -66,7 +67,7 @@ public class EnemyRange : EnemyCombat
     protected override void OnDeadStateStart()
     {
         animator.SetTrigger(HashToOnDead);
-        Destroy(this.gameObject, 0.5f); // 임시
+        gameObject.SetActive(false);
     }
 
     protected override void OnIdleState()
@@ -94,6 +95,11 @@ public class EnemyRange : EnemyCombat
     }
 
     // Functions ---------------------------------------------------------------------------------------
+
+    protected override void OnTargetInSight()
+    {
+        CurrentState = EnemyState.Chasing;
+    }
 
     protected override void PerformAttack(IDamageable target)
     {
