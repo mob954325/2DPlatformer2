@@ -16,15 +16,16 @@ public class EnemyRange : EnemyCombat
     //int HashToOnAttack = Animator.StringToHash("OnAttack");
     int HashToOnDead = Animator.StringToHash("OnDead");
 
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
 
         animator = GetComponent<Animator>();
-
         bulletTransform = transform.GetChild(1);
 
         OnHitPerformed += () => { StartCoroutine(ColorChangeProcess()); };
+
+        CurrentState = EnemyState.Idle;
     }
 
     protected override void Update()
@@ -61,31 +62,37 @@ public class EnemyRange : EnemyCombat
     protected override void OnAttackStateStart()
     {
         base.OnAttackStateStart();
+        OnAttack(attackArea.Info.target);
+        SpawnBullet();
     }
 
     protected override void OnDeadStateStart()
     {
         animator.SetTrigger(HashToOnDead);
-        Destroy(this.gameObject, 0.5f); // 임시
+        gameObject.SetActive(false);
     }
 
     protected override void OnIdleState()
     {
         animator.SetFloat(HashToSpeed, 0.0f);
-        base.OnIdleState();
+        if(attackArea.Info.target != null) 
+        {
+            CurrentState = EnemyState.Chasing;
+        }
     }
 
     protected override void OnChasingState()
     {
-        animator.SetFloat(HashToSpeed, 0.0f);
         base.OnChasingState();
+
+        if (attackArea.Info.target == null) CurrentState = EnemyState.Idle;
+        if (distanceToTarget <= attackRange && CanAttack) CurrentState = EnemyState.Attack;
     }
 
     protected override void OnAttackState()
     {
-        SetBulletPosition();
         MaintainDistanceFromTarget();
-
+        if(distanceToTarget > attackRange) CurrentState = EnemyState.Chasing;
         base.OnAttackState();
     }
 
@@ -98,7 +105,7 @@ public class EnemyRange : EnemyCombat
 
     protected override void PerformAttack(IDamageable target)
     {
-        Bullet bullet = Instantiate(bulletPrefab, bulletTransform.position, Quaternion.identity).GetComponent<Bullet>();
+        Bullet bullet = Instantiate(bulletPrefab, bulletTransform.position, Quaternion.identity).GetComponent<Bullet>(); // 오브젝트 생성
 
         if(bullet != null)
         {
@@ -108,7 +115,7 @@ public class EnemyRange : EnemyCombat
         base.PerformAttack(target);
     }
 
-    private void SetBulletPosition()
+    private void SpawnBullet()
     {
         Vector3 localPosition = bulletTransform.localPosition;
         float desiredDirection = isFacingLeft ? -1f : 1f;

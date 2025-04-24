@@ -6,12 +6,15 @@ public class EnemyTest : EnemyBase
 {
     SpriteRenderer sprite;
 
-    protected override void Start()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         sprite = GetComponent<SpriteRenderer>();
 
         OnHitPerformed += OnTestEnemyHit;
         MaxHp = 10;
+
+        CurrentState = EnemyState.Idle;
     }
 
     protected override void OnDeadState()

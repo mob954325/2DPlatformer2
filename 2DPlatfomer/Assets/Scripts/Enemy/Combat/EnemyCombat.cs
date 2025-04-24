@@ -43,18 +43,13 @@ public class EnemyCombat : EnemyBase, IAttacker
     private float maxAttackCooldown = 2f;
     public float MaxAttackCooldown => maxAttackCooldown;
 
-    private bool canAttack = true;
+    [SerializeField] private bool canAttack = true;
     public bool CanAttack
     {
         get => canAttack;
         set => canAttack = value;
 
     }
-
-    /// <summary>
-    /// 공격 중인지 확인하는 변수
-    /// </summary>
-    protected bool IsAttack = false;
 
     protected float attackDelayTimer = 0.0f;
     protected float maxAttackDelayTime = 1.0f;
@@ -109,13 +104,10 @@ public class EnemyCombat : EnemyBase, IAttacker
     /// </summary>
     protected override void OnChasingState()
     {
-        UpdateChasingTarget();
-
-        if(targetTransform != null)
+        if(targetTransform != null) // 거리 업데이트
         {
             distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
         }
-        base.OnChasingState();
     }
 
     /// <summary>
@@ -123,13 +115,10 @@ public class EnemyCombat : EnemyBase, IAttacker
     /// </summary>
     protected override void OnAttackState()
     {
-        UpdateAttackTarget();
-
         if(targetTransform != null)
         {
             distanceToTarget = Vector2.Distance(targetTransform.position, (transform.position));
         }
-        base.OnAttackState();
     }
 
     // Functions ---------------------------------------------------------------------------------------
@@ -141,16 +130,18 @@ public class EnemyCombat : EnemyBase, IAttacker
         isFacingLeft = targetTransform.position.x - transform.position.x < 0 ? true : false; // 플레이어가 범위 안에 있을 때만 바라보는 위치 갱신
         moveDirection = isFacingLeft ? Vector2.left : Vector2.right;
 
+        //
         this.targetTransform = targetTransform;
         this.target = target;
 
         // 시야각에 있는지 확인
         if (IsInsight(targetTransform))
         {
-            CurrentState = EnemyState.Chasing;
+            OnTargetInSight();
         }
         else
         {
+            //
             this.targetTransform = null;
             this.target = null;
         }
@@ -169,53 +160,22 @@ public class EnemyCombat : EnemyBase, IAttacker
         return dot > Mathf.Cos(sightAngle * 0.5f * Mathf.Deg2Rad);
     }
 
-    Vector2 GetFactingDirection()
+    protected virtual void OnTargetInSight()
     {
-        return isFacingLeft ? Vector2.left : Vector2.right;
-    }
-
-    void UpdateChasingTarget()
-    {
-        if (targetTransform == null || ShouldStopChase())
+        Debug.Log("OnTargetInsight");
+        if (distanceToTarget > attackRange)
         {
-            // 타겟이 범위에 벗어남
-            targetTransform = null;
-            target = null;
-            CurrentState = EnemyState.Idle;
+            CurrentState = EnemyState.Chasing;
         }
-        else if(distanceToTarget < attackRange)
+        else
         {
             CurrentState = EnemyState.Attack;
         }
     }
 
-    bool ShouldStopChase()
+    Vector2 GetFactingDirection()
     {
-        if (targetTransform == null) return false;
-
-        Vector2 dir = targetTransform.position - transform.position;
-
-        return dir.sqrMagnitude > sightRadius * sightRadius;
-    }
-
-    void UpdateAttackTarget()
-    {
-        if (targetTransform != null)
-        {
-            // 사거리안에 플레이어가 들어옴
-            if(distanceToTarget < attackRange)
-            {
-                OnAttack(target);
-            }
-            else
-            {
-                CurrentState = EnemyState.Chasing;
-            }
-        }
-        else // 시야 밖으로 벗어남
-        {
-            CurrentState = EnemyState.Idle;
-        }
+        return isFacingLeft ? Vector2.left : Vector2.right;
     }
 
     /// <summary>

@@ -41,6 +41,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             if (state == value) return;
             StateEnd(state);
             state = value;
+
+            rigid2d.velocity = Vector2.zero;
             StateStart(state);
         }
     }
@@ -49,10 +51,12 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [Header("Values")]
     [SerializeField] private float baseSpeed = 5.0f;
     [SerializeField] private float currentSpeed = 5.0f;
+    [SerializeField] private float currentSpeedWhileJump = 8.0f; // ?
     [SerializeField] private float walkSpeed = 2.0f;
     [SerializeField] private float jumpPower = 10.0f;
     [SerializeField] private float dashPower = 10.0f;
-    [SerializeField] private float dashDuration = 0.6f; // dash Cooldown
+    [SerializeField] private float dashDuration = 0.6f; // 대쉬 지속시간
+    [SerializeField] private float maxDashCoolDown = 1f; // 대쉬 후 다음 대쉬사용하기 까지 기다려야하는 시간
     [Space(10f)]
 
     private float attackDamage = 2f;
@@ -98,6 +102,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     // Timer
     private float dashTimer = 0f;
+    private float dashCooldownTimer = 0f;
 
     // ray
     float rayLength = 1.5f;
@@ -161,7 +166,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer | LayerMask.GetMask("Default"));
 
         KeyUpdate();
         AnimationUpdate();
@@ -170,8 +175,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void TimerUpdate()
     {
-/*        if (dashTimer > 0f) dashTimer -= Time.deltaTime;
-        dashTimer = Mathf.Clamp(dashTimer, 0.0f, dashDuration);*/
+        if (dashCooldownTimer > 0f) dashCooldownTimer -= Time.deltaTime;
     }
 
     private void KeyUpdate()
@@ -179,7 +183,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         if (IsDead || isHit) return;
 
         // dash
-        if (input.IsDash && !isDashing)
+        if (input.IsDash && !isDashing && dashCooldownTimer <= 0f)
         {
             State = PlayerState.Dash;
         }
@@ -340,10 +344,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
         isDashing = true;
         dashTimer = dashDuration;
-
+        dashCooldownTimer = maxDashCoolDown;
         Vector2 dashDirection = input.InputVec.x != 0f ? input.InputVec : lastInputVec;
         rigid2d.velocity = Vector2.zero; // 이전 힘 제거
         rigid2d.AddForce(dashDirection * dashPower, ForceMode2D.Impulse);
+        rigid2d.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
         dashTrail.enabled = true;
 
@@ -381,7 +386,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void CrouchStateStart()
     {
         isCrouching = true;
-        anim.Play("Sit", 0);
+        anim.Play("Crouch", 0);
         ChangeToCrouchCollider(true);
     }
 
@@ -399,8 +404,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void MoveState()
     {
-        rigid2d.velocity = new Vector2(input.InputVec.x * baseSpeed, rigid2d.velocity.y);
-        lastInputVec = input.InputVec;
+        if(input.InputVec.x != 0)
+        {
+            rigid2d.velocity = new Vector2(input.InputVec.x * baseSpeed, rigid2d.velocity.y);
+            lastInputVec = input.InputVec;
+        }
     }
 
     private void DashState()
@@ -422,6 +430,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         {
             State = PlayerState.Idle;
         }
+
+        MoveWhileOtherState(currentSpeedWhileJump);
     }
 
     private void HitState()
@@ -454,7 +464,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             State = PlayerState.Idle;
         }
 
-        MoveWhileCrouch();
+        MoveWhileOtherState(walkSpeed);
     }
 
     private void DeadState()
@@ -480,6 +490,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         isDashing = false;
         dashTrail.enabled = false;
+        rigid2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     private void JumpStateEnd()
@@ -587,11 +598,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     }
 
     // NOTE 책임 복잡해지면 리펙토링 고려하기
-    private void MoveWhileCrouch()  
+    private void MoveWhileOtherState(float value)  
     {
         if(input.InputVec.x != 0)
         {
-            rigid2d.velocity = new Vector2(input.InputVec.x * walkSpeed, rigid2d.velocity.y);
+            rigid2d.velocity = new Vector2(input.InputVec.x * value, rigid2d.velocity.y);
         }
     }
 
