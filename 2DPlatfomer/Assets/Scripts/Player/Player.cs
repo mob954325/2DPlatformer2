@@ -386,7 +386,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void CrouchStateStart()
     {
         isCrouching = true;
-        anim.Play("Sit", 0);
+        anim.Play("Crouch", 0);
         ChangeToCrouchCollider(true);
     }
 
