@@ -56,6 +56,14 @@ public class EnemyMelee : EnemyCombat
         gameObject.SetActive(false);
     }
 
+    protected override void OnIdleState()
+    {
+        if (attackArea.Info.target != null && IsInsight(attackArea.Info.targetObj.transform))
+        {
+            CurrentState = EnemyState.Chasing;
+        }
+    }
+
     protected override void OnChasingState()
     {
         base.OnChasingState();
@@ -63,7 +71,7 @@ public class EnemyMelee : EnemyCombat
         rigid2d.velocity = new Vector2(moveDirection.x * speed, rigid2d.velocity.y);
         animator.SetFloat(HashToSpeed, Mathf.Abs(moveDirection.x));
 
-        if (attackArea.Info.targetObj == null) CurrentState = EnemyState.Idle;
+        if (attackArea.Info.targetObj == null || !IsInsight(attackArea.Info.targetObj.transform)) CurrentState = EnemyState.Idle;
         if (distanceToTarget <= attackRange && CanAttack) CurrentState = EnemyState.Attack;
     }
 
@@ -71,9 +79,11 @@ public class EnemyMelee : EnemyCombat
     {
         base.OnAttackState();
 
-        if(CheckAnimationEnd() || distanceToTarget > attackRange)
+        if(CheckAnimationEnd())
         {
-            //CurrentState = EnemyState.Idle;
+            if(AttackCooldown <= 0.0f) OnAttack(attackArea.Info.target);
+
+            else if (distanceToTarget > attackRange) CurrentState = EnemyState.Chasing;
         }
     }
 

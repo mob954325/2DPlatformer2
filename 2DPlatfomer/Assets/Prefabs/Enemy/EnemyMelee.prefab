@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 2b5b7e5cc5631f24e89a25be0e20a06b, type: 2}
+  currentState: 0
+  canAttack: 1
 --- !u!95 &2408964571220088860
 Animator:
   serializedVersion: 5

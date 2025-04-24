@@ -11,10 +11,6 @@ using Unity.VisualScripting;
 /// </summary>
 public class EnemyCombat : EnemyBase, IAttacker
 {
-
-    protected Transform targetTransform;
-    protected IDamageable target;
-
     protected AttackArea attackArea;
     protected CircleCollider2D attackAreaCollider;
 
@@ -129,24 +125,16 @@ public class EnemyCombat : EnemyBase, IAttacker
 
         isFacingLeft = targetTransform.position.x - transform.position.x < 0 ? true : false; // 플레이어가 범위 안에 있을 때만 바라보는 위치 갱신
         moveDirection = isFacingLeft ? Vector2.left : Vector2.right;
-
-        //
-
-        // 시야각에 있는지 확인
-        if (IsInsight(targetTransform))
-        {
-            OnTargetInSight();
-        }
     }
 
     /// <summary>
     /// target이 시야에 들어왔는지 확인
     /// </summary>
-    bool IsInsight(Transform target)
+    protected bool IsInsight(Transform target)
     {
-        if (targetTransform == null) return false ;
+        if (target == null) return false ;
 
-        Vector2 dir = targetTransform.position - (transform.position);
+        Vector2 dir = target.position - (transform.position);
         float dot = Vector2.Dot(dir.normalized, GetFactingDirection());
 
         return dot > Mathf.Cos(sightAngle * 0.5f * Mathf.Deg2Rad);
