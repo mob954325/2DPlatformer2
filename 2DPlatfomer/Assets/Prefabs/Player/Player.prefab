@@ -57,9 +57,9 @@ MonoBehaviour:
   baseSpeed: 5
   currentSpeed: 5
   walkSpeed: 2
-  jumpPower: 10
-  dashPower: 10
-  dashDuration: 0.2
+  jumpPower: 20
+  dashPower: 20
+  dashDuration: 0.6
   isGrounded: 0
   isAttacking: 0
   isJumping: 0
