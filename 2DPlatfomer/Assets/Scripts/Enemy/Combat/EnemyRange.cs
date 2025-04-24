@@ -69,7 +69,6 @@ public class EnemyRange : EnemyCombat
     protected override void OnDeadStateStart()
     {
         animator.SetTrigger(HashToOnDead);
-        gameObject.SetActive(false);
     }
 
     protected override void OnIdleState()
@@ -101,6 +100,10 @@ public class EnemyRange : EnemyCombat
     protected override void OnDeadState()
     {
         base.OnDeadState();
+        if (CheckAnimationEnd())
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Functions ---------------------------------------------------------------------------------------
@@ -136,6 +139,10 @@ public class EnemyRange : EnemyCombat
             rigid2d.velocity = new Vector2(0.0f, rigid2d.velocity.y);
             animator.SetFloat(HashToSpeed, 0.0f);
         }
+    }
+    private bool CheckAnimationEnd()
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f;
     }
 
     IEnumerator ColorChangeProcess()

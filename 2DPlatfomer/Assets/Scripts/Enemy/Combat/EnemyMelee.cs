@@ -53,7 +53,6 @@ public class EnemyMelee : EnemyCombat
     protected override void OnDeadStateStart()
     {
         animator.SetTrigger(HashToOnDead);
-        gameObject.SetActive(false);
     }
 
     protected override void OnIdleState()
@@ -82,7 +81,6 @@ public class EnemyMelee : EnemyCombat
         if(CheckAnimationEnd())
         {
             if(AttackCooldown <= 0.0f) OnAttack(attackArea.Info.target);
-
             else if (distanceToTarget > attackRange) CurrentState = EnemyState.Chasing;
         }
     }
@@ -91,15 +89,13 @@ public class EnemyMelee : EnemyCombat
     {
         Debug.Log($"{gameObject.name} | 사망");
 
-        base.OnDeadState();
+        if(CheckAnimationEnd())
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Functions ---------------------------------------------------------------------------------------
-
-    protected override void OnTargetInSight()
-    {
-        base.OnTargetInSight();
-    }
 
     protected override void PerformAttack(IDamageable target)
     {

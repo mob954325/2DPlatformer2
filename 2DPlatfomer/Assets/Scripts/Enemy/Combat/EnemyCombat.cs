@@ -17,11 +17,12 @@ public class EnemyCombat : EnemyBase, IAttacker
     protected float sightAngle = 20.0f;
     protected float sightRadius = 5.0f;
 
-    protected Vector2 moveDirection = Vector2.zero;
+    [SerializeField] protected Vector2 moveDirection = Vector2.zero;
     protected float attackRange = 5.0f;
     protected float speed = 3;
-    protected bool isFacingLeft = true;
     protected float distanceToTarget = 0;
+    protected bool isFacingLeft = true;
+    protected bool isFacingLock = false; // 시선 고정 여부
 
     private float attackDamage = 1f;
     public float AttackDamage => attackDamage;
@@ -56,7 +57,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     {
         base.Start();
 
-        attackArea = GetComponentInChildren<AttackArea>();
+        attackArea = transform.GetChild(0).GetComponent<AttackArea>();
         attackAreaCollider = attackArea.gameObject.GetComponent<CircleCollider2D>();
 
         attackArea.OnActiveAttackArea += HandleTargetDetected;
@@ -119,12 +120,16 @@ public class EnemyCombat : EnemyBase, IAttacker
 
     // Functions ---------------------------------------------------------------------------------------
 
+    // 계속 업데이트됨
     private void HandleTargetDetected(IDamageable target, Transform targetTransform)
     {
         if (gameObject.layer == targetTransform.gameObject.layer) return;
 
-        isFacingLeft = targetTransform.position.x - transform.position.x < 0 ? true : false; // 플레이어가 범위 안에 있을 때만 바라보는 위치 갱신
-        moveDirection = isFacingLeft ? Vector2.left : Vector2.right;
+        if(!isFacingLock) // 임시
+        {
+            isFacingLeft = attackArea.Info.targetObj.transform.position.x - transform.position.x < 0 ? true : false; // 플레이어가 범위 안에 있을 때만 바라보는 위치 갱신
+            moveDirection = isFacingLeft ? Vector2.left : Vector2.right;
+        }
     }
 
     /// <summary>
@@ -132,25 +137,12 @@ public class EnemyCombat : EnemyBase, IAttacker
     /// </summary>
     protected bool IsInsight(Transform target)
     {
-        if (target == null) return false ;
+        if (target == null) return false;
 
         Vector2 dir = target.position - (transform.position);
         float dot = Vector2.Dot(dir.normalized, GetFactingDirection());
 
         return dot > Mathf.Cos(sightAngle * 0.5f * Mathf.Deg2Rad);
-    }
-
-    protected virtual void OnTargetInSight()
-    {
-        Debug.Log("OnTargetInsight");
-        if (distanceToTarget > attackRange)
-        {
-            CurrentState = EnemyState.Chasing;
-        }
-        else
-        {
-            CurrentState = EnemyState.Attack;
-        }
     }
 
     Vector2 GetFactingDirection()

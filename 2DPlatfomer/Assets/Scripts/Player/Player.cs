@@ -80,6 +80,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         set
         {
             currentHp = Mathf.Clamp(value, 0.0f, MaxHp);
+            Debug.Log($"player {currentHp}");
             OnHpChange?.Invoke(currentHp);
 
             if (currentHp <= 0)

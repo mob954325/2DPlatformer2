@@ -19,7 +19,7 @@ MonoBehaviour:
   attackRange: 2
   moveSpeed: 4
   damage: 1
-  attackCooldown: 0.8
+  attackCooldown: 0.6
   isRanged: 0
   minAttackDistance: 0
   backstepSpeed: 0
