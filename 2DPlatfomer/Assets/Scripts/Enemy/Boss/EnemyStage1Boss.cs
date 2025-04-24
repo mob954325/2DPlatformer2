@@ -12,19 +12,13 @@ public class EnemyStage1Boss : EnemyMelee
     public float restTimer = 0;
     public float maxRestTimer = 2.0f;
 
+    private bool isAttacking = false;
+
     protected override void OnAttackStateStart()
     {
         base.OnAttackStateStart();
-
-        int prev = currentAttackedCount;
-        if(currentAttackedCount == prev) currentAttackedCount++; // 임시 
-
-        if(currentAttackedCount > maxAttackedCount)
-        {
-            restTimer = maxRestTimer;
-            currentAttackedCount = 0;
-            CurrentState = EnemyState.Idle;
-        }
+        isAttacking = true;
+        currentAttackedCount++; // 임시 
     }
 
     protected override void OnIdleState()
@@ -37,7 +31,14 @@ public class EnemyStage1Boss : EnemyMelee
         {
             if(attackArea.Info.target != null)
             {
-                CurrentState = EnemyState.Chasing;
+                if(distanceToTarget <= attackRange && !isAttacking)
+                { 
+                    CurrentState = EnemyState.Attack;
+                }
+                else
+                {
+                    CurrentState = EnemyState.Chasing;
+                }
             }
         }
     }
@@ -49,9 +50,22 @@ public class EnemyStage1Boss : EnemyMelee
 
         if (CheckAnimationEnd())
         {
-            Debug.Log("Asdf");
+            //if(currentAttackedCount > maxAttackedCount)
+            //{
+            //    restTimer = maxRestTimer;
+            //    currentAttackedCount = 0;
+            //
+            //}
+
             CurrentState = EnemyState.Idle;
         }
+    }
+
+    protected override void OnAttackStateEnd()
+    {
+        isAttacking = false;
+
+        Debug.Log("End");
     }
 
     // Functions ---------------------------------------------------------------------------------------

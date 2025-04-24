@@ -19,7 +19,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
     protected SpriteRenderer spriteRenderer;
     protected Rigidbody2D rigid2d;
 
-    private EnemyState currentState;
+    [SerializeField] private EnemyState currentState;
     public EnemyState CurrentState
     {
         get => currentState;
@@ -80,13 +80,19 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
 
     }
 
+    /// <summary>
+    /// 상속받은 스크립트는 State Idle로 초기화 해주기
+    /// </summary>
     virtual protected void OnEnable()
     {
         Initialize(data);
     }
 
     virtual protected void OnDisable()
-    {      
+    {
+        StopAllCoroutines();
+        OnHitPerformed = null;
+
         ReturnAction?.Invoke();
     }
 

@@ -36,21 +36,18 @@ public class EnemyMelee : EnemyCombat
         moveDirection = Vector2.zero;
         rigid2d.velocity = Vector2.zero;
         animator.SetFloat(HashToSpeed, 0.0f);
-
-        base.OnIdleStateStart();
     }
 
     protected override void OnChaseStateStart() 
     {
-        base.OnChaseStateStart();
     }
 
     protected override void OnAttackStateStart() 
     {
         rigid2d.velocity = new Vector2(0.0f, rigid2d.velocity.y);
         animator.SetFloat(HashToSpeed, 0.0f);
-
-        base.OnAttackStateStart();
+        animator.SetTrigger(HashToOnAttack);
+        OnAttack(attackArea.Info.target);
     }
 
     protected override void OnDeadStateStart()
@@ -67,6 +64,17 @@ public class EnemyMelee : EnemyCombat
         animator.SetFloat(HashToSpeed, Mathf.Abs(moveDirection.x));
 
         if (attackArea.Info.targetObj == null) CurrentState = EnemyState.Idle;
+        if (distanceToTarget <= attackRange && CanAttack) CurrentState = EnemyState.Attack;
+    }
+
+    protected override void OnAttackState()
+    {
+        base.OnAttackState();
+
+        if(CheckAnimationEnd() || distanceToTarget > attackRange)
+        {
+            CurrentState = EnemyState.Chasing;
+        }
     }
 
     protected override void OnDeadState()
@@ -95,5 +103,10 @@ public class EnemyMelee : EnemyCombat
         spriteRenderer.color = Color.blue;
         yield return new WaitForSeconds(0.05f);
         spriteRenderer.color = Color.white;
+    }
+
+    private bool CheckAnimationEnd()
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f;
     }
 }
