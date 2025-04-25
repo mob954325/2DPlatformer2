@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 2b5b7e5cc5631f24e89a25be0e20a06b, type: 2}
   currentState: 0
+  moveDirection: {x: 0, y: 0}
   canAttack: 1
 --- !u!95 &2408964571220088860
 Animator:
@@ -187,7 +188,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 1700559427, guid: 85cece76bd8732f4fb048053a1cb0063, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
