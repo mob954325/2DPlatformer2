@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -19,6 +19,10 @@ public class PlayerInput : MonoBehaviour
     bool isCrouch = false;
     public bool IsCrouch { get => isCrouch; }
 
+    bool isRoll = false;
+    public bool IsRoll { get => isRoll; }
+
+
     private void Awake()
     {
         actions = new PlayerInputActions();
@@ -37,6 +41,9 @@ public class PlayerInput : MonoBehaviour
 
         actions.Player.Crouch.performed += Crouch_performed;
         actions.Player.Crouch.canceled += Crouch_canceled;
+
+        actions.Player.Roll.performed += Roll_performed;
+        actions.Player.Roll.canceled += Roll_canceled;
     }
 
     private void OnEnable()
@@ -59,6 +66,15 @@ public class PlayerInput : MonoBehaviour
         actions.Player.Crouch.Disable();
 
         actions.Player.Disable();
+    }
+    private void Roll_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        isRoll = false;
+    }
+
+    private void Roll_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        isRoll = true;
     }
 
     private void Crouch_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)

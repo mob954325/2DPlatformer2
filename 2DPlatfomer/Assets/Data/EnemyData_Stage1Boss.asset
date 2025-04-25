@@ -17,7 +17,7 @@ MonoBehaviour:
   sightAngle: 55
   sightRange: 20
   attackRange: 2
-  moveSpeed: 4
+  moveSpeed: 8
   damage: 1
   attackCooldown: 0.6
   isRanged: 0

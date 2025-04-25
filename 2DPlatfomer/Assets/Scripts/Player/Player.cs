@@ -11,6 +11,7 @@ enum PlayerState
     Hit,
     Attack,
     Crouch,
+    Roll,
     Dead,
 }
 
@@ -57,6 +58,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [SerializeField] private float dashPower = 10.0f;
     [SerializeField] private float dashDuration = 0.6f; // 대쉬 지속시간
     [SerializeField] private float maxDashCoolDown = 1f; // 대쉬 후 다음 대쉬사용하기 까지 기다려야하는 시간
+    [SerializeField] private float rollPower = 5f;
+
     [Space(10f)]
 
     private float attackDamage = 2f;
@@ -99,6 +102,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [SerializeField] private bool isDashing = false;
     [SerializeField] private bool isCrouching = false;
     [SerializeField] private bool isHit = false;
+    [SerializeField] private bool isRolling = false;
     [Space(10f)]
 
     // Timer
@@ -182,7 +186,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void KeyUpdate()
     {
-        if (IsDead || isHit) return;
+        if (IsDead || isHit || isRolling) return;
 
         // dash
         if (input.IsDash && !isDashing && dashCooldownTimer <= 0f)
@@ -200,7 +204,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         if (input.IsJump && isGrounded && !isCrouching && !isJumping) // TODO : 점프가 어려번 눌림
         {
             State = PlayerState.Jump;
-            Debug.Log("Jumped\n");
         }
 
         // sit
@@ -253,6 +256,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Crouch:
                 CrouchStateStart();
                 break;
+            case PlayerState.Roll:
+                RollStateStart();
+                break;
             case PlayerState.Dead:
                 DeadStateStart();
                 break;
@@ -286,6 +292,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Crouch:
                 CrouchState();
                 break;
+            case PlayerState.Roll:
+                RollState();
+                break;
             case PlayerState.Dead:
                 DeadState();
                 break;
@@ -318,6 +327,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
                 break;
             case PlayerState.Crouch:
                 CrouchStateEnd();
+                break;
+            case PlayerState.Roll:
+                RollStateEnd();
                 break;
             case PlayerState.Dead:
                 DeadStateEnd();
@@ -399,6 +411,15 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         ChangeToCrouchCollider(true);
     }
 
+    private void RollStateStart()
+    {
+        isRolling = true;
+        anim.Play("Roll", 0);
+        rigid2d.AddForce(lastInputVec * rollPower, ForceMode2D.Impulse);
+        playerCollider.enabled = false;
+        rigid2d.bodyType = RigidbodyType2D.Kinematic;
+    }
+
     private void DeadStateStart()
     {
         OnDead();
@@ -417,6 +438,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         {
             rigid2d.velocity = new Vector2(input.InputVec.x * baseSpeed, rigid2d.velocity.y);
             lastInputVec = input.InputVec;
+
+            if(input.IsRoll && !isRolling)
+            {
+                State = PlayerState.Roll;                
+            }
         }
     }
 
@@ -476,6 +502,14 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         MoveWhileOtherState(walkSpeed);
     }
 
+    private void RollState()
+    {
+        if(CheckAnimationEnd())
+        {
+            State = PlayerState.Idle;
+        }
+    }
+
     private void DeadState()
     {
         if (CheckAnimationEnd())
@@ -523,6 +557,14 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         isCrouching = false;
         ChangeToCrouchCollider(false);
+    }
+
+    private void RollStateEnd()
+    {
+        isRolling = false;
+        playerCollider.enabled = true;
+        rigid2d.velocity = Vector2.zero;
+        rigid2d.bodyType = RigidbodyType2D.Dynamic;
     }
 
     private void DeadStateEnd()

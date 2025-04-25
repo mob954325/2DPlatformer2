@@ -95,7 +95,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 954755806, guid: 43759104d7bc9d04b90d23cfe16950f4, type: 3}
+  m_Sprite: {fileID: 1596718872, guid: cdae363c95b206945b6cce9c64bbd24e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,8 +138,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.2155804, y: -0.35452384}
+  m_Size: {x: 1.0479068, y: 1.7909523}
   m_Direction: 0
 --- !u!50 &1261878846444326527
 Rigidbody2D:
@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 7708818077597520392}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2000003, y: 0.25, z: 0}
+  m_LocalPosition: {x: 1.2000003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -230,7 +230,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6999227522562205562, guid: c31063646f0ea714ea77a5360f958ca1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6999227522562205562, guid: c31063646f0ea714ea77a5360f958ca1, type: 3}
       propertyPath: m_LocalPosition.y

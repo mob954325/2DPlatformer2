@@ -13,7 +13,7 @@ public class EnemyRange : EnemyCombat
     private float minAttackDistance = 2f;
 
     int HashToSpeed = Animator.StringToHash("Speed");
-    //int HashToOnAttack = Animator.StringToHash("OnAttack");
+    int HashToOnAttack = Animator.StringToHash("OnAttack");
     int HashToOnDead = Animator.StringToHash("OnDead");
 
     protected override void OnEnable()
@@ -63,6 +63,7 @@ public class EnemyRange : EnemyCombat
     {
         base.OnAttackStateStart();
         OnAttack(attackArea.Info.target);
+        animator.SetTrigger(HashToOnAttack);
         SpawnBullet();
     }
 
@@ -84,6 +85,9 @@ public class EnemyRange : EnemyCombat
     {
         base.OnChasingState();
 
+        rigid2d.velocity = new Vector2(moveDirection.x * speed, rigid2d.velocity.y);
+        animator.SetFloat(HashToSpeed, Mathf.Abs(moveDirection.x));
+
         if (attackArea.Info.target == null) CurrentState = EnemyState.Idle;
         if (distanceToTarget <= attackRange && CanAttack) CurrentState = EnemyState.Attack;
     }
@@ -92,8 +96,13 @@ public class EnemyRange : EnemyCombat
     {
         MaintainDistanceFromTarget();
 
-        if (AttackCooldown <= 0.0f) OnAttack(attackArea.Info.target);
-        if(distanceToTarget > attackRange) CurrentState = EnemyState.Chasing;
+        if (AttackCooldown <= 0.0f)
+        {
+            OnAttack(attackArea.Info.target);
+            animator.SetTrigger(HashToOnAttack);
+        }
+
+        if (distanceToTarget > attackRange) CurrentState = EnemyState.Chasing;
         base.OnAttackState();
     }
 
