@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 enum PlayerState
 {
@@ -62,6 +63,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [SerializeField] private float dashDuration = 0.6f; // 대쉬 지속시간
     [SerializeField] private float maxDashCoolDown = 1f; // 대쉬 후 다음 대쉬사용하기 까지 기다려야하는 시간
     [SerializeField] private float rollPower = 5f;
+
+    public GameObject specialAttackFX; // 임시
 
     [Space(10f)]
 
@@ -433,10 +436,23 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         else if (input.IsSpecialAttack && hasSpecialAttack)
         {
             // 특수 공격
-            hasSpecialAttack = false;
+            hasSpecialAttack = false;            
             specialAttackArea.gameObject.SetActive(true);
             specialAttackTimer = maxSpecialAttackTime;
             isSpecialAttacking = true;
+
+            GameObject fxObj = Instantiate(specialAttackFX, this.gameObject.transform);
+
+            if (lastInputVec.x < 0f)
+            {
+                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+                fxObj.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
+            }
+            else
+            {
+                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                fxObj.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            }
         }
     }
 
