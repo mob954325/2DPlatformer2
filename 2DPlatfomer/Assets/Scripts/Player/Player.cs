@@ -9,7 +9,6 @@ enum PlayerState
     Move,
     Dash,
     Jump,
-    Hit,
     Attack,
     Crouch,
     Roll,
@@ -126,8 +125,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private float stateTimer = 0f;
     private int attackCount = 1;
     private int maxAttackCount = 2;
-    private float specialAttackTimer = 0f;
-    private float maxSpecialAttackTime = 3f; // 임시
+    public float specialAttackTimer = 0f;
+    private float maxSpecialAttackTime = 2f; // 임시
 
     private float attackCooldown = 0.1f;
     public float AttackCooldown
@@ -161,7 +160,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         rigid2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         dashTrail = GetComponentInChildren<TrailRenderer>();
-        playerCollider = GetComponent<Collider2D>();
 
         crouchCollider = transform.GetChild(3).GetComponent<Collider2D>(); // 
         specialAttackAreaPivot = transform.GetChild(4).gameObject;
@@ -202,40 +200,62 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void TimerUpdate()
     {
         if (dashCooldownTimer > 0f) dashCooldownTimer -= Time.deltaTime;
+
+        if (specialAttackTimer > 0f) specialAttackTimer -= Time.deltaTime;
+        else if (specialAttackTimer <= 0.0f)
+        {
+            isSpecialAttacking = false;
+            specialAttackArea.gameObject.SetActive(false);
+        }
     }
 
     private void KeyUpdate()
     {
-        if (IsDead || isHit || isRolling) return;
+        if (IsDead || isHit || isRolling || isSpecialAttacking) return;
 
         // dash
         if (input.IsDash && !isDashing && dashCooldownTimer <= 0f)
         {
             State = PlayerState.Dash;
+            return;
         }
 
         // attack
         if (input.IsAttack)
         {
-            if(!isAttacking) State = PlayerState.Attack;
+            if(!isAttacking)
+            {
+                isAttacking = true;
+                State = PlayerState.Attack;
+                return;
+            }
         }
 
         // sAttack
-        if(input.IsSpecialAttack)
+        if(input.IsSpecialAttack && hasSpecialAttack)
         {
-            if (!isAttacking) State = PlayerState.Attack;
+            if (!isSpecialAttacking)
+            {
+                isSpecialAttacking = true;
+                hasSpecialAttack = false;
+                anim.Play("Idle", 0);
+                State = PlayerState.Attack;
+                return;
+            }
         }
 
         // jump
         if (input.IsJump && isGrounded && !isCrouching && !isJumping) // TODO : 점프가 어려번 눌림
         {
             State = PlayerState.Jump;
+            return;
         }
 
         // sit
         if (input.IsCrouch)
         {
             if(!isCrouching) State = PlayerState.Crouch;
+            return;
         }
 
         // move
@@ -249,12 +269,14 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             {
                 State = PlayerState.Idle;
             }
+
+            return;
         }
     }
 
     private void AnimationUpdate()
     {
-        if( input.InputVec.x != 0 )spriteRenderer.flipX = input.InputVec.x < 0f;
+        if(!isSpecialAttacking && input.InputVec.x != 0) spriteRenderer.flipX = input.InputVec.x < 0f;
     }
 
     private void StateStart(PlayerState state)
@@ -273,9 +295,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Jump:
                 JumpStateStart();
                 break;
-            case PlayerState.Hit:
+/*            case PlayerState.Hit:
                 HitStateStart();
-                break;
+                break*/;
             case PlayerState.Attack:
                 AttackStateStart();
                 break;
@@ -309,9 +331,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Jump:
                 JumpState();
                 break;
-            case PlayerState.Hit:
+/*            case PlayerState.Hit:
                 HitState();
-                break;
+                break;*/
             case PlayerState.Attack:
                 AttackState();
                 break;
@@ -345,9 +367,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Jump:
                 JumpStateEnd();
                 break;
-            case PlayerState.Hit:
+/*            case PlayerState.Hit:
                 HitStateEnd();
-                break;
+                break;*/
             case PlayerState.Attack:
                 AttackStateEnd();
                 break;
@@ -412,15 +434,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         isJumping = false;
         isDashing = false;
         isCrouching = false;
-
-        anim.Play("Hit", 0);
     }
 
     private void AttackStateStart()
     {
-        isAttacking = true;
-
-        if(input.IsAttack)
+        if(isAttacking)
         {
             // 일반 공격
             anim.Play("Attack" + attackCount, 0);
@@ -433,13 +451,11 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             SetAttackAreaPosition();
             attackArea.gameObject.SetActive(true);
         }
-        else if (input.IsSpecialAttack && hasSpecialAttack)
+        else if (isSpecialAttacking)
         {
-            // 특수 공격
-            hasSpecialAttack = false;            
+            // 특수 공격        
             specialAttackArea.gameObject.SetActive(true);
             specialAttackTimer = maxSpecialAttackTime;
-            isSpecialAttacking = true;
 
             GameObject fxObj = Instantiate(specialAttackFX, this.gameObject.transform);
 
@@ -537,13 +553,12 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         {
             if (CheckAnimationEnd())
             {
+                isAttacking = false;
                 State = PlayerState.Idle;
             }
         }
         else if(isSpecialAttacking)
         {
-            specialAttackTimer -= Time.deltaTime;
-
             if(specialAttackTimer <= 0.0f)
             {
                 State = PlayerState.Idle;
@@ -614,8 +629,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void AttackStateEnd()
     {
         isAttacking = false;
-        isSpecialAttacking = false;
-        specialAttackArea.gameObject.SetActive(false);
         attackArea.gameObject.SetActive(false);
     }
 
@@ -738,7 +751,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if (IsDead) return;
 
-        State = PlayerState.Hit;
+        anim.Play("Hit", 0);
         Hp -= damageValue;
     }
 
