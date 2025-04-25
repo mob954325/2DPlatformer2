@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+// note : 나중에 파라미터 조절 제거
+
 public class EnemyMelee : EnemyCombat
 {
     protected Animator animator;
@@ -80,7 +82,11 @@ public class EnemyMelee : EnemyCombat
 
         if(CheckAnimationEnd())
         {
-            if(AttackCooldown <= 0.0f) OnAttack(attackArea.Info.target);
+            if(AttackCooldown <= 0.0f)
+            {
+                OnAttack(attackArea.Info.target);
+                animator.SetTrigger(HashToOnAttack);
+            }
             else if (distanceToTarget > attackRange) CurrentState = EnemyState.Chasing;
         }
     }
@@ -100,7 +106,6 @@ public class EnemyMelee : EnemyCombat
     protected override void PerformAttack(IDamageable target)
     {
         base.PerformAttack(target);
-        animator.SetTrigger(HashToOnAttack);
         target.TakeDamage(AttackDamage);
     }
 

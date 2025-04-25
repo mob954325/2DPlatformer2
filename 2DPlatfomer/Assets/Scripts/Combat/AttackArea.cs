@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// NOTE: 반드시 부모 오브젝트와 같은 레이어를 등록할 것
+
 /// <summary>
 /// IDamageable을 가진 오브젝트 정보
 /// </summary>
@@ -30,6 +32,8 @@ public class AttackArea : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.TryGetComponent(out IDamageable damageable);
+        if (IsSameTeam(collision)) return;
+
         if (damageable != null && damageable != GetComponentInParent<IDamageable>())
         {
             info.targetObj = collision.gameObject;
@@ -40,6 +44,8 @@ public class AttackArea : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         collision.gameObject.TryGetComponent(out IDamageable damageable);
+        if (IsSameTeam(collision)) return;
+
         if (damageable != null && damageable != GetComponentInParent<IDamageable>())
         {
             OnActiveAttackArea?.Invoke(damageable, collision.transform);
@@ -50,10 +56,18 @@ public class AttackArea : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         collision.gameObject.TryGetComponent(out IDamageable damageable);
+        if (IsSameTeam(collision)) return;
+
         if (damageable != null && damageable != GetComponentInParent<IDamageable>())
         {
             info.targetObj = null;
             info.target = null;
         }
+    }
+
+    private bool IsSameTeam(Collider2D other)
+    {
+        Transform parent = transform.parent;
+        return parent != null && parent.tag == other.gameObject.tag;
     }
 }

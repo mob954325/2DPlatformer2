@@ -157,6 +157,7 @@ public class EnemyStage1Boss : EnemyCombat
 
                     rigid2d.AddForce(moveDirection * 8f, ForceMode2D.Impulse);
                     restTimer = maxRestTimer;
+
                     CurrentState = EnemyState.Idle;
                 }
                 else

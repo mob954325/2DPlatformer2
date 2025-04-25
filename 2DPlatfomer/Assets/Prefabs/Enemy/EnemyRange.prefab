@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8690740910488622817}
   m_Layer: 8
   m_Name: EnemyRange
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 62aa959ff3401694b9ac12bc336bf32e, type: 2}
+  currentState: 0
+  moveDirection: {x: 0, y: 0}
+  canAttack: 1
 --- !u!212 &1114388815907906906
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -267,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9097217106325824408, guid: c31063646f0ea714ea77a5360f958ca1, type: 3}
       propertyPath: m_Name
-      value: AttackArea
+      value: EnemyAttackArea
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -932,12 +932,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 6d1b196b954c0e640b7f6fdd95d46e8c, type: 2}
   currentState: 0
+  moveDirection: {x: 0, y: 0}
   canAttack: 1
+  specialAttackAreaPivot: {fileID: 0}
+  specialAttackArea: {fileID: 0}
+  specialAttackAreaLocalPosition: {x: 0, y: 0}
   attackComboCount: 1
   attackMaxComboCount: 2
   restTimer: 0
   maxRestTimer: 2
   maxSpecialAttackTimer: 5
+  specialAttackRange: 4
   UseSpecialAttackPhase: 0000
   isSpecialAttackPhase: 0
 --- !u!1660057539 &9223372036854775807

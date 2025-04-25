@@ -122,8 +122,8 @@ public class EnemyCombat : EnemyBase, IAttacker
 
     // 계속 업데이트됨
     private void HandleTargetDetected(IDamageable target, Transform targetTransform)
-    {
-        if (gameObject.layer == targetTransform.gameObject.layer) return;
+    {       
+        if (attackArea.Info.target == null || attackArea.Info.targetObj == null) return;
 
         if(!isFacingLock) // 임시
         {

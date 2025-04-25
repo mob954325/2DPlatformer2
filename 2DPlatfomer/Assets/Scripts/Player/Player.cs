@@ -157,6 +157,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
         attackArea.OnActiveAttackArea += (target, _) => { OnAttack(target); };
         attackArea.gameObject.SetActive(false);
+        ChangeToCrouchCollider(false);
         MaxHp = 20;
     }
 
@@ -367,6 +368,13 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void HitStateStart()
     {
         isHit = true;
+
+        // 모든 플래그 비활성화
+        isAttacking = false;
+        isJumping = false;
+        isDashing = false;
+        isCrouching = false;
+
         anim.Play("Hit", 0);
     }
 
@@ -491,6 +499,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         isDashing = false;
         dashTrail.enabled = false;
+        dashTimer = 0.0f;
         rigid2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
