@@ -65,6 +65,12 @@ public class AttackArea : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        info.targetObj = null;
+        info.target = null;
+    }
+
     private bool IsSameTeam(Collider2D other)
     {
         Transform parent = transform.parent;

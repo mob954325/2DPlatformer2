@@ -22,6 +22,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     AttackArea attackArea;
     Vector3 attackAreaVec = Vector3.zero;
 
+    GameObject specialAttackAreaPivot;
+    AttackArea specialAttackArea;
+
     Collider2D playerCollider;
     Collider2D crouchCollider;
     Rigidbody2D rigid2d;
@@ -62,7 +65,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     [Space(10f)]
 
-    private float attackDamage = 2f;
+    private float attackDamage = 1f;
     public float AttackDamage { get => attackDamage; }
 
     private float maxHp = 0;
@@ -103,6 +106,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [SerializeField] private bool isCrouching = false;
     [SerializeField] private bool isHit = false;
     [SerializeField] private bool isRolling = false;
+    [SerializeField] private bool isSpecialAttacking = false;
+    [SerializeField] private bool hasSpecialAttack = true;
     [Space(10f)]
 
     // Timer
@@ -118,6 +123,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private float stateTimer = 0f;
     private int attackCount = 1;
     private int maxAttackCount = 2;
+    private float specialAttackTimer = 0f;
+    private float maxSpecialAttackTime = 3f; // 임시
 
     private float attackCooldown = 0.1f;
     public float AttackCooldown
@@ -152,7 +159,10 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         spriteRenderer = GetComponent<SpriteRenderer>();
         dashTrail = GetComponentInChildren<TrailRenderer>();
         playerCollider = GetComponent<Collider2D>();
-        crouchCollider = transform.GetChild(3).GetComponent<Collider2D>(); //
+
+        crouchCollider = transform.GetChild(3).GetComponent<Collider2D>(); // 
+        specialAttackAreaPivot = transform.GetChild(4).gameObject;
+        specialAttackArea = specialAttackAreaPivot.GetComponentInChildren<AttackArea>(); //
 
         groundCheck = transform.GetChild(0); //
         groundLayer = LayerMask.GetMask("Ground");
@@ -160,8 +170,15 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         dashTrail.enabled = false;
 
         attackArea.OnActiveAttackArea += (target, _) => { OnAttack(target); };
+        specialAttackArea.OnActiveAttackArea += (target, _) => {
+            target.TakeDamage(AttackDamage * 2);
+        };
+
         attackArea.gameObject.SetActive(false);
+        specialAttackArea.gameObject.SetActive(false);
+
         ChangeToCrouchCollider(false);
+        hasSpecialAttack = true;
         MaxHp = 20;
     }
 
@@ -198,6 +215,12 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         if (input.IsAttack)
         {
             if(!isAttacking) State = PlayerState.Attack;
+        }
+
+        // sAttack
+        if(input.IsSpecialAttack)
+        {
+            if (!isAttacking) State = PlayerState.Attack;
         }
 
         // jump
@@ -393,15 +416,28 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void AttackStateStart()
     {
         isAttacking = true;
-        anim.Play("Attack" + attackCount, 0);
-        attackCount++;
 
-        if (attackCount > maxAttackCount) attackCount = 1;
+        if(input.IsAttack)
+        {
+            // 일반 공격
+            anim.Play("Attack" + attackCount, 0);
+            attackCount++;
 
-        AttackCooldown = MaxAttackCooldown;
+            if (attackCount > maxAttackCount) attackCount = 1;
 
-        SetAttackAreaPosition();
-        attackArea.gameObject.SetActive(true);
+            AttackCooldown = MaxAttackCooldown;
+
+            SetAttackAreaPosition();
+            attackArea.gameObject.SetActive(true);
+        }
+        else if (input.IsSpecialAttack && hasSpecialAttack)
+        {
+            // 특수 공격
+            hasSpecialAttack = false;
+            specialAttackArea.gameObject.SetActive(true);
+            specialAttackTimer = maxSpecialAttackTime;
+            isSpecialAttacking = true;
+        }
     }
 
     private void CrouchStateStart()
@@ -481,9 +517,21 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         AttackCooldown -= Time.deltaTime;
 
-        if (CheckAnimationEnd())
+        if(isAttacking)
         {
-            State = PlayerState.Idle;
+            if (CheckAnimationEnd())
+            {
+                State = PlayerState.Idle;
+            }
+        }
+        else if(isSpecialAttacking)
+        {
+            specialAttackTimer -= Time.deltaTime;
+
+            if(specialAttackTimer <= 0.0f)
+            {
+                State = PlayerState.Idle;
+            }
         }
     }
 
@@ -550,6 +598,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void AttackStateEnd()
     {
         isAttacking = false;
+        isSpecialAttacking = false;
+        specialAttackArea.gameObject.SetActive(false);
         attackArea.gameObject.SetActive(false);
     }
 

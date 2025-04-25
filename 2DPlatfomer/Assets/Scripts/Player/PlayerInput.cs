@@ -10,6 +10,9 @@ public class PlayerInput : MonoBehaviour
     bool isAttack = false;
     public bool IsAttack { get => isAttack; }
 
+    bool isSpecialAttack = false;
+    public bool IsSpecialAttack { get => isSpecialAttack; }
+
     bool isDash = false;
     public bool IsDash { get => isDash; }
 
@@ -44,6 +47,9 @@ public class PlayerInput : MonoBehaviour
 
         actions.Player.Roll.performed += Roll_performed;
         actions.Player.Roll.canceled += Roll_canceled;
+
+        actions.Player.SpecialAttack.performed += SpecialAttack_performed;
+        actions.Player.SpecialAttack.canceled += SpecialAttack_canceled;
     }
 
     private void OnEnable()
@@ -67,6 +73,17 @@ public class PlayerInput : MonoBehaviour
 
         actions.Player.Disable();
     }
+
+    private void SpecialAttack_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        isSpecialAttack = false;
+    }
+
+    private void SpecialAttack_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        isSpecialAttack = true;
+    }
+
     private void Roll_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         isRoll = false;

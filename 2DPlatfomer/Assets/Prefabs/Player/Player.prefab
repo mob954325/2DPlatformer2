@@ -71,6 +71,7 @@ MonoBehaviour:
   isCrouching: 0
   isHit: 0
   isRolling: 0
+  isSpecialAttacking: 0
   checkGroundRadius: 0.2
 --- !u!95 &675833840629744970
 Animator:
@@ -316,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4175942496150323396}
   - component: {fileID: 2274592265150659678}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +547,7 @@ GameObject:
   - component: {fileID: 625471648944960604}
   - component: {fileID: 962303350768257551}
   - component: {fileID: 8402207897464650379}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SpecialAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3938888623755301134}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SpecialAttackPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,8 +772,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9085012098567908875}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.24, y: -1.99, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

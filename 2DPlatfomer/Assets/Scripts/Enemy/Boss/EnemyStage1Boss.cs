@@ -9,7 +9,6 @@ public class EnemyStage1Boss : EnemyCombat
     protected Animator animator;
     public GameObject specialAttackAreaPivot;
     public AttackArea specialAttackArea;
-    public Vector2 specialAttackAreaLocalPosition;
 
     [SerializeField] int attackComboCount = 1;
     [SerializeField] int attackMaxComboCount = 2;
@@ -30,7 +29,6 @@ public class EnemyStage1Boss : EnemyCombat
 
         specialAttackAreaPivot = transform.GetChild(1).gameObject;
         specialAttackArea = specialAttackAreaPivot.transform.GetChild(0).GetComponent<AttackArea>();
-        specialAttackAreaLocalPosition = specialAttackArea.transform.localPosition;
 
         OnHitPerformed += () => { StartCoroutine(ColorChangeProcess()); };
         OnAttackPerformed = PlayerAttack;
