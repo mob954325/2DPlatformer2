@@ -88,6 +88,9 @@ internal sealed class ScreencastInputText : MonoBehaviour
     {
         foreach (KeyCode code in _keyCodes)
         {
+            if (code == KeyCode.LeftWindows || code == KeyCode.RightWindows || code.ToString().Contains("Command") || code.ToString().Contains("Apple"))
+                continue;
+
             string name = code.ToString();
             if (name == KeyCode.Mouse0.ToString()) name = "Left Button";
             else if (name == KeyCode.Mouse1.ToString()) name = "Right Button";
