@@ -6,5 +6,6 @@ public enum PoolType
 {
     EnemyMelee = 0,
     EnemyRange,
+    Beam,
     PoolTypeCount
 }

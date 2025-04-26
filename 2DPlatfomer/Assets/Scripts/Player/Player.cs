@@ -36,7 +36,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private LayerMask groundLayer;
     private Transform groundCheck;
 
-    [SerializeField] PlayerState state;
+    PlayerState state;
     PlayerState State
     {
         get => state;
@@ -53,15 +53,15 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     // States
     [Header("Values")]
-    [SerializeField] private float baseSpeed = 5.0f;
-    [SerializeField] private float currentSpeed = 5.0f;
-    [SerializeField] private float currentSpeedWhileJump = 8.0f; // ?
-    [SerializeField] private float walkSpeed = 2.0f;
-    [SerializeField] private float jumpPower = 10.0f;
-    [SerializeField] private float dashPower = 10.0f;
-    [SerializeField] private float dashDuration = 0.6f; // 대쉬 지속시간
-    [SerializeField] private float maxDashCoolDown = 1f; // 대쉬 후 다음 대쉬사용하기 까지 기다려야하는 시간
-    [SerializeField] private float rollPower = 5f;
+    private float baseSpeed = 5.0f;
+    //private float currentSpeed = 5.0f;
+    private float currentSpeedWhileJump = 8.0f; // ?
+    //private float walkSpeed = 2.0f;
+    private float jumpPower = 15.0f;
+    private float dashPower = 17.0f;
+    private float dashDuration = 0.6f; // 대쉬 지속시간
+    private float maxDashCoolDown = 1f; // 대쉬 후 다음 대쉬사용하기 까지 기다려야하는 시간
+    private float rollPower = 5f;
 
     public GameObject specialAttackFX; // 임시
 
@@ -101,16 +101,16 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     // flag
     [Header("Flag")]
-    [SerializeField] private bool isGrounded = true;
-    [SerializeField] private bool isAttacking = false;
-    [SerializeField] private bool isJumping = false;
-    [SerializeField] private bool isDashing = false;
-    [SerializeField] private bool isCrouching = false;
-    [SerializeField] private bool isHit = false;
-    [SerializeField] private bool isRolling = false;
-    [SerializeField] private bool isSpecialAttacking = false;
-    [SerializeField] private bool hasSpecialAttack = true;
-    [Space(10f)]
+    private bool isGrounded = true;
+    private bool isAttacking = false;
+    private bool isJumping = false;
+    private bool isDashing = false;
+    private bool isCrouching = false;
+    private bool isHit = false;
+    private bool isRolling = false;
+    private bool isSpecialAttacking = false;
+    private bool hasSpecialAttack = true;
+    private bool isImmune = false; // true면 무적
 
     // Timer
     private float dashTimer = 0f;
@@ -295,9 +295,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Jump:
                 JumpStateStart();
                 break;
-/*            case PlayerState.Hit:
-                HitStateStart();
-                break*/;
             case PlayerState.Attack:
                 AttackStateStart();
                 break;
@@ -331,9 +328,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Jump:
                 JumpState();
                 break;
-/*            case PlayerState.Hit:
-                HitState();
-                break;*/
             case PlayerState.Attack:
                 AttackState();
                 break;
@@ -367,9 +361,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             case PlayerState.Jump:
                 JumpStateEnd();
                 break;
-/*            case PlayerState.Hit:
-                HitStateEnd();
-                break;*/
             case PlayerState.Attack:
                 AttackStateEnd();
                 break;
@@ -425,17 +416,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         isJumping = true;
     }
 
-    private void HitStateStart()
-    {
-        isHit = true;
-
-        // 모든 플래그 비활성화
-        isAttacking = false;
-        isJumping = false;
-        isDashing = false;
-        isCrouching = false;
-    }
-
     private void AttackStateStart()
     {
         if(isAttacking)
@@ -457,17 +437,16 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             specialAttackArea.gameObject.SetActive(true);
             specialAttackTimer = maxSpecialAttackTime;
 
-            GameObject fxObj = Instantiate(specialAttackFX, this.gameObject.transform);
-
+            specialAttackFX = PoolManager.Instacne.Pop(PoolType.Beam, transform.position, Quaternion.identity);
             if (lastInputVec.x < 0f)
             {
                 specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-                fxObj.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
+                specialAttackFX.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
             }
             else
             {
                 specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-                fxObj.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+                specialAttackFX.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             }
         }
     }
@@ -484,8 +463,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         isRolling = true;
         anim.Play("Roll", 0);
         rigid2d.AddForce(lastInputVec * rollPower, ForceMode2D.Impulse);
-        playerCollider.enabled = false;
-        rigid2d.bodyType = RigidbodyType2D.Kinematic;
+        isImmune = true;
     }
 
     private void DeadStateStart()
@@ -538,14 +516,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         MoveWhileOtherState(currentSpeedWhileJump);
     }
 
-    private void HitState()
-    {
-        if (CheckAnimationEnd())
-        {
-            State = PlayerState.Idle;
-        }
-    }
-
     private void AttackState()
     {
         AttackCooldown -= Time.deltaTime;
@@ -562,6 +532,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         {
             if(specialAttackTimer <= 0.0f)
             {
+                specialAttackFX.SetActive(false);
+                specialAttackFX = null;
                 State = PlayerState.Idle;
             }
         }
@@ -619,12 +591,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         isJumping = false;
     }
-
-    private void HitStateEnd()
-    {
-        isHit = false;
-    }
-
     private void AttackStateEnd()
     {
         isAttacking = false;
@@ -640,9 +606,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private void RollStateEnd()
     {
         isRolling = false;
-        playerCollider.enabled = true;
-        rigid2d.velocity = Vector2.zero;
-        rigid2d.bodyType = RigidbodyType2D.Dynamic;
+        isImmune = false;
     }
 
     private void DeadStateEnd()
@@ -746,7 +710,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     // IDamageable -------------------------------------------------------------------------------
     public void TakeDamage(float damageValue)
     {
-        if (IsDead) return;
+        if (IsDead || isImmune) return;
 
         Hp -= damageValue;
         rigid2d.velocity = Vector2.zero; // 가속도 없애서 경직만들기
@@ -756,6 +720,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private IEnumerator HitAnimationProcess()
     {
         isHit = true;
+        State = PlayerState.Idle;
         anim.Play("Hit", 0);
 
         yield return new WaitForSeconds(0.25f);
