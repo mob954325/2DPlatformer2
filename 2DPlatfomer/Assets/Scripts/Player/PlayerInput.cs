@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PlayerInput : MonoBehaviour
     bool isRoll = false;
     public bool IsRoll { get => isRoll; }
 
+    public Action OnInteract;
 
     private void Awake()
     {
@@ -50,6 +52,8 @@ public class PlayerInput : MonoBehaviour
 
         actions.Player.SpecialAttack.performed += SpecialAttack_performed;
         actions.Player.SpecialAttack.canceled += SpecialAttack_canceled;
+
+        actions.Player.Interact.started += Interact_performed;
     }
 
     private void OnEnable()
@@ -65,6 +69,8 @@ public class PlayerInput : MonoBehaviour
 
     private void OnDisable()
     {
+        OnInteract = null;
+
         actions.Player.Dash.Disable();
         actions.Player.Attack.Disable();
         actions.Player.Move.Disable();
@@ -73,7 +79,10 @@ public class PlayerInput : MonoBehaviour
 
         actions.Player.Disable();
     }
-
+    private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnInteract?.Invoke();
+    }
     private void SpecialAttack_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         isSpecialAttack = false;

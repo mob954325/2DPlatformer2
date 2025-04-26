@@ -4,8 +4,10 @@ using UnityEngine;
 
 public enum PoolType
 {
-    EnemyMelee = 0,
+    Player = 0,
+    EnemyMelee,
     EnemyRange,
     Beam,
+    Stage1Boss,
     PoolTypeCount
 }

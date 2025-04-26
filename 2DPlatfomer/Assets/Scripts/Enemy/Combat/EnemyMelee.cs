@@ -24,6 +24,12 @@ public class EnemyMelee : EnemyCombat
         CurrentState = EnemyState.Idle;
     }
 
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        OnHitPerformed = null;
+    }
+
     protected override void Update()
     {
         spriteRenderer.flipX = isFacingLeft;

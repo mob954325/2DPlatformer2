@@ -53,9 +53,9 @@ public class EnemyCombat : EnemyBase, IAttacker
 
     public Action<IDamageable> OnAttackPerformed { get; set; }
 
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
 
         attackArea = transform.GetChild(0).GetComponent<AttackArea>();
         attackAreaCollider = attackArea.gameObject.GetComponent<CircleCollider2D>();
@@ -65,11 +65,16 @@ public class EnemyCombat : EnemyBase, IAttacker
         CanAttack = true;
     }
 
+    protected override void Start()
+    {
+        base.Start();
+    }
+
     protected override void OnDisable()
     {
         base.OnDisable();
 
-        // attackArea.OnActiveAttackArea = null; //remove listener 형태 사용하기 AttackArea에서
+        attackArea.OnActiveAttackArea = null; //remove listener 형태 사용하기 AttackArea에서
     }
 
     protected override void Update()

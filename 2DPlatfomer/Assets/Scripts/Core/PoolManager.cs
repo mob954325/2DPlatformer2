@@ -19,6 +19,8 @@ public interface IPoolable
 // 오브젝트 꺼내기
 // 배열 확장
 // 모든 오브젝트 제거
+// NOTE 만약 씬로드가 Additive라면 풀 매니저 초기화가 필요할 수 도 있음
+
 
 public class PoolManager : Singleton<PoolManager>
 {
@@ -142,6 +144,19 @@ public class PoolManager : Singleton<PoolManager>
         }
 
         return obj;
+    }
+
+    public void ClearAll()
+    {
+        foreach (var list in poolDictionary)
+        {
+            foreach(var obj in list.Value.objectList)
+            {
+                ReturnToPool(list.Key, obj);
+            }
+            list.Value.readyQueue.Clear();
+            list.Value.objectList.Clear();
+        }
     }
 
     public void ClearPool(string key)

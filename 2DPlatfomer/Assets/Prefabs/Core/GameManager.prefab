@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a544201dd2091fd408d503b69fb45f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCam: {fileID: 6859719950270807317, guid: 98422dfd13763264c881d7a1c46087b7, type: 3}
+  player: {fileID: 2166271531820919683, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
   poolPrefab:
+  - {fileID: 755749039379158295, guid: 5e8f0ec2ee5dd334e9b37c358eb53881, type: 3}
   - {fileID: 8974940982376356728, guid: 9950373c6fd76954fa4afda2aa0a61f1, type: 3}
   - {fileID: 6287505356065172537, guid: e4a46f03dc3ff8249b0b478e15731b11, type: 3}
   - {fileID: 1526619761181518552, guid: 8aadc0d15c7b86347a3b6ae9f782392a, type: 3}
+  - {fileID: 2497315127908041364, guid: 1d91e22f0f2ae894081b31c41192bbd3, type: 3}

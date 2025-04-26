@@ -19,6 +19,7 @@ enum PlayerState
 public class Player : MonoBehaviour, IDamageable, IAttacker
 {
     PlayerInput input;
+    PlayerInteractDetect interactDectect;
     AttackArea attackArea;
     Vector3 attackAreaVec = Vector3.zero;
 
@@ -55,15 +56,15 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     [Header("Values")]
     private float baseSpeed = 5.0f;
     //private float currentSpeed = 5.0f;
-    private float currentSpeedWhileJump = 8.0f; // ?
+    private float currentSpeedWhileJump = 8.0f;
     //private float walkSpeed = 2.0f;
-    private float jumpPower = 15.0f;
-    private float dashPower = 17.0f;
+    private float jumpPower = 17.0f;
+    private float dashPower = 12.0f;
     private float dashDuration = 0.6f; // 대쉬 지속시간
     private float maxDashCoolDown = 1f; // 대쉬 후 다음 대쉬사용하기 까지 기다려야하는 시간
     private float rollPower = 5f;
 
-    public GameObject specialAttackFX; // 임시
+    public GameObject specialAttackFX;
 
     [Space(10f)]
 
@@ -112,6 +113,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private bool hasSpecialAttack = true;
     private bool isImmune = false; // true면 무적
 
+    public bool HasSpecialAttack { get => hasSpecialAttack; } // UI확인용
+
     // Timer
     private float dashTimer = 0f;
     private float dashCooldownTimer = 0f;
@@ -148,11 +151,10 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     public Action OnDeadPerformed { get; set; }
 
     public bool IsDead => Hp <= 0;
-
-    private void Start()
+    private void OnEnable()
     {
         input = GetComponent<PlayerInput>();
-        attackArea = GetComponentInChildren<AttackArea>();
+        attackArea = GetComponentInChildren<AttackArea>(true);
         attackAreaVec = attackArea.transform.localPosition;
 
         playerCollider = GetComponent<Collider2D>();
@@ -163,9 +165,10 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
         crouchCollider = transform.GetChild(3).GetComponent<Collider2D>(); // 
         specialAttackAreaPivot = transform.GetChild(4).gameObject;
-        specialAttackArea = specialAttackAreaPivot.GetComponentInChildren<AttackArea>(); //
+        specialAttackArea = specialAttackAreaPivot.GetComponentInChildren<AttackArea>(true); //
+        interactDectect = GetComponentInChildren<PlayerInteractDetect>();
 
-        groundCheck = transform.GetChild(0); //
+        groundCheck = transform.GetChild(0); 
         groundLayer = LayerMask.GetMask("Ground");
 
         dashTrail.enabled = false;
@@ -175,12 +178,21 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             target.TakeDamage(AttackDamage * 2);
         };
 
+        input.OnInteract += () => { if(interactDectect.Target != null) interactDectect.Target.Interact(); };
+
         attackArea.gameObject.SetActive(false);
         specialAttackArea.gameObject.SetActive(false);
 
         ChangeToCrouchCollider(false);
         hasSpecialAttack = true;
         MaxHp = 20;
+    }    
+
+    private void OnDisable()
+    {
+        attackArea.OnActiveAttackArea = null;
+        specialAttackArea.OnActiveAttackArea = null;
+        input.OnInteract = null;
     }
 
     private void FixedUpdate()
@@ -541,6 +553,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void CrouchState()
     {
+        MoveWhileOtherState(currentSpeedWhileJump);
+
         if (input.IsJump)
         {
             GoToPlatform();
@@ -564,6 +578,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if (CheckAnimationEnd())
         {
+            OnDeadPerformed?.Invoke();
             this.gameObject.SetActive(false);
         }
     }
@@ -692,10 +707,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void MoveWhileOtherState(float value)  
     {
-        if(input.InputVec.x != 0)
-        {
-            rigid2d.velocity = new Vector2(input.InputVec.x * value, rigid2d.velocity.y);
-        }
+        rigid2d.velocity = new Vector2(input.InputVec.x * value, rigid2d.velocity.y);
     }
 
     #endregion
@@ -712,9 +724,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if (IsDead || isImmune) return;
 
-        Hp -= damageValue;
         rigid2d.velocity = Vector2.zero; // 가속도 없애서 경직만들기
         StartCoroutine(HitAnimationProcess());
+        Hp -= damageValue;
     }
 
     private IEnumerator HitAnimationProcess()

@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 62aa959ff3401694b9ac12bc336bf32e, type: 2}
   currentState: 0
+  hitDelay: 0
   moveDirection: {x: 0, y: 0}
   canAttack: 1
 --- !u!212 &1114388815907906906
@@ -94,7 +95,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1596718872, guid: cdae363c95b206945b6cce9c64bbd24e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
