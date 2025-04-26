@@ -116,6 +116,37 @@ Transform:
   - {fileID: 5905733767787175223}
   m_Father: {fileID: 1167723855458954484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1217177951445972553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6259362057815663365}
+  m_Layer: 8
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6259362057815663365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217177951445972553}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1167723855458954484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2497315127908041364
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +163,7 @@ GameObject:
   - component: {fileID: 4807181989326313567}
   m_Layer: 8
   m_Name: EnemyStage1Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +183,7 @@ Transform:
   m_Children:
   - {fileID: 8668121642831725635}
   - {fileID: 5498205954136682260}
+  - {fileID: 6259362057815663365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &278397611035692139
@@ -168,19 +200,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 6d1b196b954c0e640b7f6fdd95d46e8c, type: 2}
   currentState: 0
+  hitDelay: 0
   moveDirection: {x: 0, y: 0}
   canAttack: 1
   specialAttackAreaPivot: {fileID: 0}
   specialAttackArea: {fileID: 0}
-  specialAttackAreaLocalPosition: {x: 0, y: 0}
   attackComboCount: 1
   attackMaxComboCount: 2
   restTimer: 0
   maxRestTimer: 2
   maxSpecialAttackTimer: 5
   specialAttackRange: 4
-  UseSpecialAttackPhase: 0000
-  isSpecialAttackPhase: 0
+  isGrounded: 0
 --- !u!95 &5488977647440562091
 Animator:
   serializedVersion: 5
@@ -404,7 +435,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1, y: -0.25}
+  m_Offset: {x: 1.33, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

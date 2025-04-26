@@ -68,7 +68,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
     public bool IsDead => Hp <= 0f;
 
     private float maxHitDelay = 0.25f;
-    private float hitDelay = 0.0f;
+    [SerializeField] protected float hitDelay = 0.0f;
 
     public Action<float> OnHpChange { get; set; }
     public Action OnHitPerformed { get; set; }

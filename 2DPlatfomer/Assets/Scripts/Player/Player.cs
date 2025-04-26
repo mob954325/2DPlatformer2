@@ -190,7 +190,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer | LayerMask.GetMask("Default"));
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, groundLayer);
 
         KeyUpdate();
         AnimationUpdate();
@@ -748,15 +748,20 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if (IsDead) return;
 
-        StartCoroutine(HitAnimationProcess());
         Hp -= damageValue;
+        rigid2d.velocity = Vector2.zero; // 가속도 없애서 경직만들기
+        StartCoroutine(HitAnimationProcess());
     }
 
     private IEnumerator HitAnimationProcess()
     {
+        isHit = true;
         anim.Play("Hit", 0);
-        yield return new WaitForSeconds(0.2f);
+
+        yield return new WaitForSeconds(0.25f);
+
         anim.Play("Idle", 0);
+        isHit = false;
     }
 
     public void OnDead()
