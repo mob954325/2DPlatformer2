@@ -7,6 +7,7 @@ public class EnemyRange : EnemyCombat
     private Animator animator;
 
     private Transform bulletTransform;
+    private Vector3 bulletLocalPosition;
     private GameObject bulletPrefab;
 
     private float backStepSpeed = 0f;
@@ -22,6 +23,7 @@ public class EnemyRange : EnemyCombat
 
         animator = GetComponent<Animator>();
         bulletTransform = transform.GetChild(1);
+        bulletLocalPosition = bulletTransform.localPosition;
 
         OnHitPerformed += () => { StartCoroutine(ColorChangeProcess()); };
 
@@ -70,6 +72,10 @@ public class EnemyRange : EnemyCombat
         base.OnAttackStateStart();
         OnAttack(attackArea.Info.target);
         animator.SetTrigger(HashToOnAttack);
+
+        bulletTransform.localPosition = isFacingLeft ? new Vector3(bulletLocalPosition.x * -1, bulletLocalPosition.y, 0f) :
+                                                         new Vector3(bulletLocalPosition.x, bulletLocalPosition.y, 0f);
+
         SpawnBullet();
     }
 
@@ -104,6 +110,9 @@ public class EnemyRange : EnemyCombat
 
         if (AttackCooldown <= 0.0f)
         {
+            bulletTransform.localPosition = isFacingLeft ? new Vector3(bulletLocalPosition.x * -1, bulletLocalPosition.y, 0f) :
+                                                           new Vector3(bulletLocalPosition.x, bulletLocalPosition.y, 0f);
+
             OnAttack(attackArea.Info.target);
             animator.SetTrigger(HashToOnAttack);
         }
