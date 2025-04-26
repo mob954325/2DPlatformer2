@@ -232,7 +232,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
 
         // sAttack
-        if(input.IsSpecialAttack && hasSpecialAttack)
+        if(!input.IsAttack && input.IsSpecialAttack && hasSpecialAttack)
         {
             if (!isSpecialAttacking)
             {
@@ -504,6 +504,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if(input.InputVec.x != 0)
         {
+            anim.Play("Run");
             rigid2d.velocity = new Vector2(input.InputVec.x * baseSpeed, rigid2d.velocity.y);
             lastInputVec = input.InputVec;
 
@@ -527,7 +528,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     private void JumpState()
     {
-        // Check for ground status
+        anim.Play("Jump", 0);
 
         if (isGrounded && rigid2d.velocity.y <= 0.01f)
         {
@@ -577,8 +578,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         {
             State = PlayerState.Idle;
         }
-
-        MoveWhileOtherState(walkSpeed);
     }
 
     private void RollState()
@@ -699,7 +698,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
         if (hit.collider != null)
         {
-            Debug.Log($"{hit.collider.gameObject.name}");
             GameObject platform = hit.collider.gameObject;
 
             // 하단 플랫폼인지 확인
@@ -728,7 +726,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         }
     }
 
-    // NOTE 책임 복잡해지면 리펙토링 고려하기
     private void MoveWhileOtherState(float value)  
     {
         if(input.InputVec.x != 0)
@@ -751,8 +748,15 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         if (IsDead) return;
 
-        anim.Play("Hit", 0);
+        StartCoroutine(HitAnimationProcess());
         Hp -= damageValue;
+    }
+
+    private IEnumerator HitAnimationProcess()
+    {
+        anim.Play("Hit", 0);
+        yield return new WaitForSeconds(0.2f);
+        anim.Play("Idle", 0);
     }
 
     public void OnDead()
