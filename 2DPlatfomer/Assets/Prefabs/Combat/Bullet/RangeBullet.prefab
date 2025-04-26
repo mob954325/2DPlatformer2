@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8463445538494038050}
   - component: {fileID: 887636716834235116}
   m_Layer: 0
-  m_Name: TestBullet
+  m_Name: RangeBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
