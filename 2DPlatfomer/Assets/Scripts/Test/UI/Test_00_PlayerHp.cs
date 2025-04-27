@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Test_00_PlayerHp : TestBase
 {
+#if UNITY_EDITOR
+
     public Player player;
     public float damage = 1f;
 
@@ -26,4 +28,5 @@ public class Test_00_PlayerHp : TestBase
     {
         player.TakeDamage(damage);
     }
+#endif
 }

@@ -4,4 +4,6 @@ using UnityEngine;
 
 public class Test_03_EnemyStage1Boss : TestBase
 {
+#if UNITY_EDITOR
+#endif
 }

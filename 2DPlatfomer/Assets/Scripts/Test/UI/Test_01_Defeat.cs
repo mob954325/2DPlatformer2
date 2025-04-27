@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Test_01_Defeat : Test_00_PlayerHp
 {
+#if UNITY_EDITOR
+
     public DefeatPanel dp;
     private void Start()
     {
@@ -11,4 +13,5 @@ public class Test_01_Defeat : Test_00_PlayerHp
         hpUI.Initialize(player);
         skillUI.Initialize(player);
     }
+#endif
 }

@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Test_01_GameManager : TestBase
 {
+#if UNITY_EDITOR
+
     public Transform spawnTransform;
     public PoolType type;
 
@@ -13,4 +15,5 @@ public class Test_01_GameManager : TestBase
     {
         PoolManager.Instacne.Pop(type, spawnTransform.position, Quaternion.identity);
     }
+#endif
 }

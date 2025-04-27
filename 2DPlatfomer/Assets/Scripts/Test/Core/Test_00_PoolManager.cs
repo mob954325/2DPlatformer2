@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Test_00_PoolManager : TestBase
 {
+#if UNITY_EDITOR
+
     public Transform spawnPosition;
     public GameObject[] enemyPrefabs;
 
@@ -20,4 +22,5 @@ public class Test_00_PoolManager : TestBase
     {
         PoolManager.Instacne.Pop(type.ToString(), spawnPosition.position);
     }
+#endif
 }
