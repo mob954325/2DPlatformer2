@@ -8,20 +8,20 @@ public class EnemyStage1Boss : EnemyCombat
 {
     protected Animator animator;
     private Transform groundCheck;
-    public GameObject specialAttackAreaPivot;
-    public AttackArea specialAttackArea;
+    private GameObject specialAttackAreaPivot;
+    private AttackArea specialAttackArea;
     private GameObject specialAttackFX;
-    [SerializeField] int attackComboCount = 1;
-    [SerializeField] int attackMaxComboCount = 3;
+    int attackComboCount = 1;
+    int attackMaxComboCount = 3;
 
     private float checkGroundRadius = 0.2f;
 
-    public float restTimer = 0;
-    public float maxRestTimer = 1.5f;
-    public float maxSpecialAttackTimer = 1.3f;
-    public float specialAttackRange = 4f;
+    private float restTimer = 0;
+    private float maxRestTimer = 1.5f;
+    private float maxSpecialAttackTimer = 1.3f;
+    private float specialAttackRange = 4f;
 
-    [SerializeField] private bool isGrounded = false;
+    private bool isGrounded = false;
     private bool[] UseSpecialAttackPhase = { false, false };
     private bool isSpecialAttackPhase = false;
     private bool isJump = false;
@@ -286,7 +286,7 @@ public class EnemyStage1Boss : EnemyCombat
             CanAttack = true;
             isFacingLock = false;
 
-            CurrentState = EnemyState.Idle;
+            //CurrentState = EnemyState.Idle;
         }
 
         // 코루틴이 끝났으면 null 처리
