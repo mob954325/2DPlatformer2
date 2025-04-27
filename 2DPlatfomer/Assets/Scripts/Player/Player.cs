@@ -3,6 +3,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 enum PlayerState
 {
     Idle = 0,
@@ -750,10 +754,12 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
     void OnDrawGizmos()
     {
+#if UNITY_EDITOR
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, checkGroundRadius);
         }
+#endif
     }
 }

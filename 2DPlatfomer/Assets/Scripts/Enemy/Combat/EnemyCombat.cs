@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
-using Unity.VisualScripting;
-
+#endif
 
 /// <summary>
 /// 모든 전투하는 적이 공통으로 받는 클래스
@@ -199,6 +199,8 @@ public class EnemyCombat : EnemyBase, IAttacker
     // Debug -------------------------------------------------------------------------------------------
     private void OnDrawGizmos()
     {
+#if UNITY_EDITOR
+
         if (attackArea != null)
         {
             // 시야각 
@@ -216,5 +218,6 @@ public class EnemyCombat : EnemyBase, IAttacker
             Handles.color = Color.yellow;
             Handles.DrawWireArc(origin, Vector3.forward, fromDir, sightAngle, attackRange);
         }
+#endif
     }
 }
