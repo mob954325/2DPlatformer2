@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24f78ac81bd46054799bb2e05a2ce68f
+guid: ba428d9510c99a6418179076a6c92793
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewPlayer_Idle_0
+      name: NewPlayer_AttackFinal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6b3ab0fe62c56d44926067958f3b1e2
-      internalID: -545670419
+      spriteID: 497a0ac1f3f384747bf9fd42b52878f0
+      internalID: -440148749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_1
+      name: NewPlayer_AttackFinal_1
       rect:
         serializedVersion: 2
         x: 256
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fb6c6e08d5319c4e9e0d8335916097c
-      internalID: -1425203442
+      spriteID: b467c96b2ed99e54aaab423906c14a8a
+      internalID: -1327829657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_2
+      name: NewPlayer_AttackFinal_2
       rect:
         serializedVersion: 2
         x: 512
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b9f4f7b1e153f4d8ae2be18fa3c926
-      internalID: 1225744428
+      spriteID: 2415ceddac23aac458b7a2386f4d7f10
+      internalID: -1988783705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_3
+      name: NewPlayer_AttackFinal_3
       rect:
         serializedVersion: 2
         x: 768
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 063186a9c9d078641a886e8be215399b
-      internalID: -172135257
+      spriteID: db1e9c0543a10ec42962e6709833e9c7
+      internalID: 2099195798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_4
+      name: NewPlayer_AttackFinal_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 160c02c03d700d948ac11a2956e3fc65
-      internalID: 1532614355
+      spriteID: 1511c12d363ce1b46a95d6a0d4c97115
+      internalID: 1222283789
       vertices: []
       indices: 
       edges: []
@@ -212,11 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewPlayer_Idle_0: -545670419
-      NewPlayer_Idle_1: -1425203442
-      NewPlayer_Idle_2: 1225744428
-      NewPlayer_Idle_3: -172135257
-      NewPlayer_Idle_4: 1532614355
+      NewPlayer_AttackFinal_0: -440148749
+      NewPlayer_AttackFinal_1: -1327829657
+      NewPlayer_AttackFinal_2: -1988783705
+      NewPlayer_AttackFinal_3: 2099195798
+      NewPlayer_AttackFinal_4: 1222283789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24f78ac81bd46054799bb2e05a2ce68f
+guid: 300928da3b5120e45bf58a4ef856cda1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewPlayer_Idle_0
+      name: Stage1Boss_Punch_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6b3ab0fe62c56d44926067958f3b1e2
-      internalID: -545670419
+      spriteID: d0239447b69ce964d8ee679b3b887257
+      internalID: -615708456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_1
+      name: Stage1Boss_Punch_1
       rect:
         serializedVersion: 2
         x: 256
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fb6c6e08d5319c4e9e0d8335916097c
-      internalID: -1425203442
+      spriteID: a5708272faedf2340ad6c438438ec3c5
+      internalID: -926408879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_2
+      name: Stage1Boss_Punch_2
       rect:
         serializedVersion: 2
         x: 512
@@ -153,50 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b9f4f7b1e153f4d8ae2be18fa3c926
-      internalID: 1225744428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewPlayer_Idle_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 063186a9c9d078641a886e8be215399b
-      internalID: -172135257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewPlayer_Idle_4
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 160c02c03d700d948ac11a2956e3fc65
-      internalID: 1532614355
+      spriteID: 52c577172c4530f47bb07c2d6e4eff3c
+      internalID: -468413610
       vertices: []
       indices: 
       edges: []
@@ -212,11 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewPlayer_Idle_0: -545670419
-      NewPlayer_Idle_1: -1425203442
-      NewPlayer_Idle_2: 1225744428
-      NewPlayer_Idle_3: -172135257
-      NewPlayer_Idle_4: 1532614355
+      Stage1Boss_Punch_0: -615708456
+      Stage1Boss_Punch_1: -926408879
+      Stage1Boss_Punch_2: -468413610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

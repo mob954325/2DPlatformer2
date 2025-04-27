@@ -10,9 +10,9 @@ public class EnemyStage1Boss : EnemyCombat
     private Transform groundCheck;
     public GameObject specialAttackAreaPivot;
     public AttackArea specialAttackArea;
-
+    private GameObject specialAttackFX;
     [SerializeField] int attackComboCount = 1;
-    [SerializeField] int attackMaxComboCount = 2;
+    [SerializeField] int attackMaxComboCount = 3;
 
     private float checkGroundRadius = 0.2f;
 
@@ -24,7 +24,9 @@ public class EnemyStage1Boss : EnemyCombat
     [SerializeField] private bool isGrounded = false;
     private bool[] UseSpecialAttackPhase = { false, false };
     private bool isSpecialAttackPhase = false;
+    private bool isJump = false;
 
+    private Coroutine evadeCoroutine = null;
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -39,7 +41,13 @@ public class EnemyStage1Boss : EnemyCombat
         {
             StartCoroutine(ColorChangeProcess());
             if (isSpecialAttackPhase) return;
-            StartCoroutine(EvadeOnHit());
+
+            if(evadeCoroutine != null)
+            {
+                StopCoroutine(evadeCoroutine);
+            }
+
+            evadeCoroutine = StartCoroutine(EvadeOnHit());
         };
         OnAttackPerformed = PlayerAttack;
         specialAttackArea.gameObject.SetActive(false);
@@ -49,8 +57,18 @@ public class EnemyStage1Boss : EnemyCombat
     protected override void Update()
     {
         base.Update();
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, LayerMask.GetMask("Ground"));
+        bool groundedNow = Physics2D.OverlapCircle(groundCheck.position, checkGroundRadius, LayerMask.GetMask("Ground"));
         if (!isSpecialAttackPhase) spriteRenderer.flipX = isFacingLeft;
+
+        if (!isGrounded && groundedNow) // 공중에 있었다가 착지한 경우만
+        {
+            isGrounded = true;
+            if (isJump)
+            {
+                animator.Play("Idle", 0);
+                isJump = false;
+            }
+        }
 
         SpecialAttackPhase();
     }
@@ -62,7 +80,7 @@ public class EnemyStage1Boss : EnemyCombat
 
     protected override void OnChaseStateStart()
     {
-        animator.Play("Walk", 0);
+        animator.Play("Run", 0);
     }
 
     protected override void OnAttackStateStart()
@@ -82,18 +100,7 @@ public class EnemyStage1Boss : EnemyCombat
     {
         if (restTimer > 0.0f)
         {
-            if (isSpecialAttackPhase && restTimer < 5f)
-            {
-                // 특수 공격 진행
-                hitDelay = 1000f;
-                specialAttackArea.gameObject.SetActive(true);
-                isSpecialAttackPhase = true;
-                if(CanAttack && distanceToTarget < specialAttackRange && IsInsight(attackArea.Info.targetObj != null ? attackArea.Info.targetObj.transform : null))
-                {
-                    OnAttack(attackArea.Info.target);
-                }
-            }
-
+            // timer
             restTimer -= Time.deltaTime;
         }
         else // restTimer가 끝나면 행동 시작
@@ -127,7 +134,6 @@ public class EnemyStage1Boss : EnemyCombat
         }
     }
 
-    // NOTE : 공격 루프 안됨
     protected override void OnAttackState()
     {
         base.OnAttackState();
@@ -163,8 +169,6 @@ public class EnemyStage1Boss : EnemyCombat
 
     protected override void OnDeadState()
     {
-        Debug.Log($"{gameObject.name} | 사망");
-
         if (CheckAnimationEnd())
         {
             gameObject.SetActive(false);
@@ -173,7 +177,6 @@ public class EnemyStage1Boss : EnemyCombat
 
     protected override void OnAttackStateEnd()
     {
-        Debug.Log("End");
     }
 
     // Functions ---------------------------------------------------------------------------------------
@@ -202,25 +205,54 @@ public class EnemyStage1Boss : EnemyCombat
 
     private void SpecialAttackPhase()
     {
-        if (CheckSpecialAttackPhase() && !isSpecialAttackPhase)
+        if (isSpecialAttackPhase && restTimer < 5f)
         {
-            restTimer = maxSpecialAttackTimer;
-            isSpecialAttackPhase = true;
-            rigid2d.velocity = Vector2.zero;
-            animator.Play("Attack_S", 0);
-
-            // 쏘는 방향 고정
-            if (moveDirection.x < 0f)
+            if (CheckSpecialAttackPhase() && !isSpecialAttackPhase)
             {
-                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-            }
-            else
-            {
-                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            }
+                restTimer = maxSpecialAttackTimer;
+                isSpecialAttackPhase = true;
+                rigid2d.velocity = Vector2.zero;
+                animator.Play("Crouch", 0);
 
-            isFacingLock = true;
-            CurrentState = EnemyState.Idle;
+                // 쏘는 방향 고정
+                if (moveDirection.x < 0f)
+                {
+                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+                }
+                else
+                {
+                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                }
+
+                // FX
+                specialAttackFX = PoolManager.Instacne.Pop(PoolType.Beam, transform.position, Quaternion.identity);
+                if (isFacingLeft)
+                {
+                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+                    specialAttackFX.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
+                }
+                else
+                {
+                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                    specialAttackFX.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+                }
+
+                // 특수 공격 진행
+                hitDelay = 1000f;
+                specialAttackArea.gameObject.SetActive(true);
+                isSpecialAttackPhase = true;
+
+                // 특수 공격        
+                if (CanAttack && distanceToTarget < specialAttackRange && IsInsight(attackArea.Info.targetObj != null ? attackArea.Info.targetObj.transform : null))
+                {
+                    OnAttack(attackArea.Info.target);
+                }
+
+                restTimer -= Time.deltaTime;
+
+                isFacingLock = true;
+                CurrentState = EnemyState.Idle;
+            }
         }
     }
 
@@ -241,10 +273,16 @@ public class EnemyStage1Boss : EnemyCombat
             yield return new WaitForSeconds(0.3f);
 
             hitDelay = 0f;
+            isGrounded = false;
+            isJump = false;
             CanAttack = true;
             isFacingLock = false;
+
             CurrentState = EnemyState.Idle;
         }
+
+        // 코루틴이 끝났으면 null 처리
+        evadeCoroutine = null;
     }
 
     private void Jump()
@@ -252,14 +290,20 @@ public class EnemyStage1Boss : EnemyCombat
         if (isSpecialAttackPhase) return;
 
         animator.Play("Jump", 0);
-        rigid2d.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+
+        Vector2 jumpVec = new Vector2(isFacingLeft ? -2f : 2f, 5f);
+        rigid2d.AddForce(jumpVec, ForceMode2D.Impulse);
+
+        isJump = true;
     }
 
     private IEnumerator Roll()
     {
         animator.Play("Roll", 0);
         float moveDirectionXValue = moveDirection.x;
-        rigid2d.AddForce((moveDirectionXValue < 0f ? Vector2.left : Vector2.right) * 7f, ForceMode2D.Impulse);
+
+        Vector2 rollVec = new Vector2(moveDirectionXValue < 0f ? -7f : 7f, 2f);
+        rigid2d.AddForce(rollVec, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(0.5f);
 

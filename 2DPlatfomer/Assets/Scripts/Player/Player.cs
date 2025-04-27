@@ -89,7 +89,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         set
         {
             currentHp = Mathf.Clamp(value, 0.0f, MaxHp);
-            Debug.Log($"player {currentHp}");
             OnHpChange?.Invoke(currentHp);
 
             if (currentHp <= 0)
@@ -127,7 +126,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     private Vector2 lastInputVec = Vector2.zero;
     private float stateTimer = 0f;
     private int attackCount = 1;
-    private int maxAttackCount = 2;
+    private int maxAttackCount = 3;
     public float specialAttackTimer = 0f;
     private float maxSpecialAttackTime = 2f; // 임시
 
@@ -682,7 +681,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             // 하단 플랫폼인지 확인
             if (platform.CompareTag("BottomPlatform"))
             {
-                Debug.Log("맨 밑바닥이라 내려갈 수 없음");
+                //Debug.Log("맨 밑바닥이라 내려갈 수 없음");
                 return;
             }
 
@@ -744,7 +743,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     public void OnDead()
     {
         // 사망 로직 작성
-        Debug.Log("플레이어 사망");
         anim.Play("Dead", 0);
     }
 

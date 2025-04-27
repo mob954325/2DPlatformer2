@@ -12,7 +12,6 @@ public class Test_00_EnemyBase : TestBase
 
     private void Start()
     {
-        Debug.Log($"{enemy.Hp}"); 
     }
 
     protected override void OnTest1(InputAction.CallbackContext context)

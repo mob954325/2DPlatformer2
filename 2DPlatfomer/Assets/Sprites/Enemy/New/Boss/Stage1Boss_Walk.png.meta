@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24f78ac81bd46054799bb2e05a2ce68f
+guid: 593649b516ee10043a36ca542015bbc1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewPlayer_Idle_0
+      name: Stage1Boss_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6b3ab0fe62c56d44926067958f3b1e2
-      internalID: -545670419
+      spriteID: 3e26d5e70a4594a4b8545a7a29e42466
+      internalID: -2057615326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_1
+      name: Stage1Boss_Walk_1
       rect:
         serializedVersion: 2
         x: 256
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fb6c6e08d5319c4e9e0d8335916097c
-      internalID: -1425203442
+      spriteID: 296e8e3789c2e1c408c3b88d749500d8
+      internalID: -852642555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_2
+      name: Stage1Boss_Walk_2
       rect:
         serializedVersion: 2
         x: 512
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b9f4f7b1e153f4d8ae2be18fa3c926
-      internalID: 1225744428
+      spriteID: 9f4d8baebb9283246992516b8afe60fc
+      internalID: -660065288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_3
+      name: Stage1Boss_Walk_3
       rect:
         serializedVersion: 2
         x: 768
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 063186a9c9d078641a886e8be215399b
-      internalID: -172135257
+      spriteID: 3170fbd802d4f5742bdedcf3e9788a05
+      internalID: -1859118181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_4
+      name: Stage1Boss_Walk_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -195,8 +195,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 160c02c03d700d948ac11a2956e3fc65
-      internalID: 1532614355
+      spriteID: 00bf68b7798a30743b51c7c944182ab0
+      internalID: -1678152964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage1Boss_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ced381a12f4ec94cb44f4c9c80d02bc
+      internalID: -621279983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage1Boss_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e4e204d430e2b4bb2986359d729f5c
+      internalID: 745425700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage1Boss_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527292c15ba0c0e49afa09a73295fcdf
+      internalID: 903491370
       vertices: []
       indices: 
       edges: []
@@ -212,11 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewPlayer_Idle_0: -545670419
-      NewPlayer_Idle_1: -1425203442
-      NewPlayer_Idle_2: 1225744428
-      NewPlayer_Idle_3: -172135257
-      NewPlayer_Idle_4: 1532614355
+      Stage1Boss_Walk_0: -2057615326
+      Stage1Boss_Walk_1: -852642555
+      Stage1Boss_Walk_2: -660065288
+      Stage1Boss_Walk_3: -1859118181
+      Stage1Boss_Walk_4: -1678152964
+      Stage1Boss_Walk_5: -621279983
+      Stage1Boss_Walk_6: 745425700
+      Stage1Boss_Walk_7: 903491370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

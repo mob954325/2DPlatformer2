@@ -51,7 +51,6 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
         set
         {
             hp = Mathf.Clamp(value, 0.0f, MaxHp);
-            Debug.Log($"{gameObject.name} : {Hp}");
 
             if (hp <= 0.0f)
             {
@@ -216,8 +215,6 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
         hitDelay = maxHitDelay;
         Hp -= damageValue;
         OnHitPerformed?.Invoke();
-
-        Debug.Log($"{gameObject.name} hit!!!");
     }
 
     public void OnDead()
@@ -226,17 +223,14 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
         if (IsDead) return;
 
         OnDeadPerformed?.Invoke();
-        Debug.Log($"{gameObject.name} 사망 ");
     }
 
     public void OnSpawn()
     {
-        Debug.Log("스폰");
     }
 
     public void OnDespawn()
     {
-        Debug.Log("디스폰");
         OnHpChange = null;
         OnHitPerformed = null;
         OnDeadPerformed = null;

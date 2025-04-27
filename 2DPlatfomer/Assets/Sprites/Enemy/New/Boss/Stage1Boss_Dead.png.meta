@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24f78ac81bd46054799bb2e05a2ce68f
+guid: 31bcf6e1dadefd14285b421148ca9bd5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewPlayer_Idle_0
+      name: Stage1Boss_Dead_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
+        width: 254.8
         height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -111,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6b3ab0fe62c56d44926067958f3b1e2
-      internalID: -545670419
+      spriteID: 938d0110db5a2c94993cbe3c9e0744e1
+      internalID: -1090252156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_1
+      name: Stage1Boss_Dead_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 254
         y: 0
-        width: 256
+        width: 254.8
         height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,19 +132,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fb6c6e08d5319c4e9e0d8335916097c
-      internalID: -1425203442
+      spriteID: 63fa5f1efcaa956438b473f0603830cd
+      internalID: 1657320864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_2
+      name: Stage1Boss_Dead_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 508
         y: 0
-        width: 256
+        width: 254.8
         height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b9f4f7b1e153f4d8ae2be18fa3c926
-      internalID: 1225744428
+      spriteID: aae0b192080481447a0e0e336ce677d2
+      internalID: 1796299583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_3
+      name: Stage1Boss_Dead_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 762
         y: 0
-        width: 256
+        width: 254.8
         height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 063186a9c9d078641a886e8be215399b
-      internalID: -172135257
+      spriteID: 0b7e24841a682dc498b448de5960c840
+      internalID: 281996945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewPlayer_Idle_4
+      name: Stage1Boss_Dead_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1016
         y: 0
-        width: 256
+        width: 254.8
         height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 160c02c03d700d948ac11a2956e3fc65
-      internalID: 1532614355
+      spriteID: edcb4d5135f33f7448081c7c7ddee8b2
+      internalID: 733363782
       vertices: []
       indices: 
       edges: []
@@ -212,11 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewPlayer_Idle_0: -545670419
-      NewPlayer_Idle_1: -1425203442
-      NewPlayer_Idle_2: 1225744428
-      NewPlayer_Idle_3: -172135257
-      NewPlayer_Idle_4: 1532614355
+      Stage1Boss_Dead_0: -1090252156
+      Stage1Boss_Dead_1: 1657320864
+      Stage1Boss_Dead_2: 1796299583
+      Stage1Boss_Dead_3: 281996945
+      Stage1Boss_Dead_4: 733363782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

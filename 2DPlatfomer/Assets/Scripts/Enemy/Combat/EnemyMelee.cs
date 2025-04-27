@@ -99,8 +99,6 @@ public class EnemyMelee : EnemyCombat
 
     protected override void OnDeadState()
     {
-        Debug.Log($"{gameObject.name} | 사망");
-
         if(CheckAnimationEnd())
         {
             gameObject.SetActive(false);
