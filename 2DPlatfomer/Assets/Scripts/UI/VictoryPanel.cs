@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows;
 
-public class DefeatPanel : MonoBehaviour
+public class VictoryPanel : MonoBehaviour
 {
     Player player;
     PlayerInputActions input;
     CanvasGroup cg;
 
+    private float timer = 0;
     private bool isClick = false;
+
     private void Awake()
     {
         cg = GetComponent<CanvasGroup>();
@@ -19,24 +20,30 @@ public class DefeatPanel : MonoBehaviour
     {
         Close();
     }
+
+    private void Update()
+    {
+        if(cg != null && cg.alpha > 0f)
+        {
+            timer += Time.deltaTime;    
+        }
+    }
+
     public void Initialize(Player player)
     {
         this.player = player;
         cg = GetComponent<CanvasGroup>();
         input = new PlayerInputActions();
 
-        player.OnDeadPerformed += Show;
-
         Close();
     }
 
     public void Close()
     {
+        if (cg == null) return;
         cg.alpha = 0f;
         cg.interactable = false;
         cg.blocksRaycasts = false;
-
-        if (input != null) input.UI.Disable();
     }
 
     public void Show()
@@ -56,11 +63,20 @@ public class DefeatPanel : MonoBehaviour
 
     private void Click_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        if (isClick) return;
+        if (isClick || timer < 0f) return;
 
         isClick = true;
-        Close();
+
+        // 클릭 이벤트가 중복 등록되지 않도록 먼저 제거
         input.UI.Click.performed -= Click_started;
-        GameManager.Instance.PlayerSpawn();
+
+        // UI 닫기
+        Close();
+
+        // 씬 전환
+        GameManager.Instance.ChangeScene(0); // menu
+
+        // 입력 시스템 비활성화
+        input.UI.Disable();
     }
 }

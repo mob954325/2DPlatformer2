@@ -14,13 +14,13 @@ public class Test_00_PoolManager : TestBase
 
     private void Start()
     {
-        PoolManager.Instacne.Register(PoolType.EnemyMelee.ToString(), enemyPrefabs[0]);
-        PoolManager.Instacne.Register(PoolType.EnemyRange.ToString(), enemyPrefabs[1]);
+        PoolManager.Instance.Register(PoolType.EnemyMelee.ToString(), enemyPrefabs[0]);
+        PoolManager.Instance.Register(PoolType.EnemyRange.ToString(), enemyPrefabs[1]);
     }
 
     protected override void OnTest1(InputAction.CallbackContext context)
     {
-        PoolManager.Instacne.Pop(type.ToString(), spawnPosition.position);
+        PoolManager.Instance.Pop(type.ToString(), spawnPosition.position);
     }
 #endif
 }

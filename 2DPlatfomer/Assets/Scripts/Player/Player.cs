@@ -51,7 +51,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             StateEnd(state);
             state = value;
 
-            rigid2d.velocity = Vector2.zero;
             StateStart(state);
         }
     }
@@ -452,7 +451,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
             specialAttackArea.gameObject.SetActive(true);
             specialAttackTimer = maxSpecialAttackTime;
 
-            specialAttackFX = PoolManager.Instacne.Pop(PoolType.Beam, transform.position, Quaternion.identity);
+            specialAttackFX = PoolManager.Instance.Pop(PoolType.Beam, transform.position + Vector3.back, Quaternion.identity);
             if (lastInputVec.x < 0f)
             {
                 specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
@@ -603,6 +602,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         dashTrail.enabled = false;
         dashTimer = 0.0f;
         rigid2d.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        rigid2d.velocity = Vector2.zero;
     }
 
     private void JumpStateEnd()

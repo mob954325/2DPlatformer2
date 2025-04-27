@@ -8,7 +8,7 @@ public class Stage1AManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instacne.SetSpawnPoint(StartObject.transform.position);
-        GameManager.Instacne.PlayerSpawn();
+        GameManager.Instance.SetSpawnPoint(StartObject.transform.position);
+        GameManager.Instance.PlayerSpawn();
     }
 }

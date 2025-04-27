@@ -26,7 +26,7 @@ public class SavePoint : MonoBehaviour, IInteractable
         if(obj != null)
         {
             obj.transform.position = this.transform.position;
-            GameManager.Instacne.SetSpawnPoint(obj.transform.position);
+            GameManager.Instance.SetSpawnPoint(obj.transform.position);
         }
     }
 }

@@ -18,7 +18,7 @@ public class EnemyStage1Boss : EnemyCombat
 
     public float restTimer = 0;
     public float maxRestTimer = 1.5f;
-    public float maxSpecialAttackTimer = 7f;
+    public float maxSpecialAttackTimer = 2f;
     public float specialAttackRange = 4f;
 
     [SerializeField] private bool isGrounded = false;
@@ -49,6 +49,7 @@ public class EnemyStage1Boss : EnemyCombat
 
             evadeCoroutine = StartCoroutine(EvadeOnHit());
         };
+
         OnAttackPerformed = PlayerAttack;
         specialAttackArea.gameObject.SetActive(false);
         CurrentState = EnemyState.Idle;
@@ -100,8 +101,19 @@ public class EnemyStage1Boss : EnemyCombat
     {
         if (restTimer > 0.0f)
         {
-            // timer
-            restTimer -= Time.deltaTime;
+            if (isSpecialAttackPhase && restTimer < 5f)
+            {
+                // 특수 공격 진행
+                hitDelay = 1000f;
+                specialAttackArea.gameObject.SetActive(true);
+                isSpecialAttackPhase = true;
+
+                // 특수 공격        
+                if (CanAttack && distanceToTarget < specialAttackRange && IsInsight(attackArea.Info.targetObj != null ? attackArea.Info.targetObj.transform : null))
+                {
+                    OnAttack(attackArea.Info.target);
+                }
+            }
         }
         else // restTimer가 끝나면 행동 시작
         {
@@ -119,6 +131,8 @@ public class EnemyStage1Boss : EnemyCombat
                 CurrentState = EnemyState.Chasing;
             }
         }
+
+        restTimer -= Time.deltaTime;
     }
 
     protected override void OnChasingState()
@@ -205,54 +219,38 @@ public class EnemyStage1Boss : EnemyCombat
 
     private void SpecialAttackPhase()
     {
-        if (isSpecialAttackPhase && restTimer < 5f)
+        if (CheckSpecialAttackPhase() && !isSpecialAttackPhase)
         {
-            if (CheckSpecialAttackPhase() && !isSpecialAttackPhase)
+            restTimer = maxSpecialAttackTimer;
+            isSpecialAttackPhase = true;
+            rigid2d.velocity = Vector2.zero;
+            animator.Play("Crouch", 0);
+
+            // 쏘는 방향 고정
+            if (moveDirection.x < 0f)
             {
-                restTimer = maxSpecialAttackTimer;
-                isSpecialAttackPhase = true;
-                rigid2d.velocity = Vector2.zero;
-                animator.Play("Crouch", 0);
-
-                // 쏘는 방향 고정
-                if (moveDirection.x < 0f)
-                {
-                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-                }
-                else
-                {
-                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-                }
-
-                // FX
-                specialAttackFX = PoolManager.Instacne.Pop(PoolType.Beam, transform.position, Quaternion.identity);
-                if (isFacingLeft)
-                {
-                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-                    specialAttackFX.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
-                }
-                else
-                {
-                    specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-                    specialAttackFX.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
-                }
-
-                // 특수 공격 진행
-                hitDelay = 1000f;
-                specialAttackArea.gameObject.SetActive(true);
-                isSpecialAttackPhase = true;
-
-                // 특수 공격        
-                if (CanAttack && distanceToTarget < specialAttackRange && IsInsight(attackArea.Info.targetObj != null ? attackArea.Info.targetObj.transform : null))
-                {
-                    OnAttack(attackArea.Info.target);
-                }
-
-                restTimer -= Time.deltaTime;
-
-                isFacingLock = true;
-                CurrentState = EnemyState.Idle;
+                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
             }
+            else
+            {
+                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            }
+
+            // FX
+            specialAttackFX = PoolManager.Instance.Pop(PoolType.Beam, transform.position + Vector3.back, Quaternion.identity);
+            if (isFacingLeft)
+            {
+                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+                specialAttackFX.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
+            }
+            else
+            {
+                specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                specialAttackFX.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            }
+
+            isFacingLock = true;
+            CurrentState = EnemyState.Idle;
         }
     }
 

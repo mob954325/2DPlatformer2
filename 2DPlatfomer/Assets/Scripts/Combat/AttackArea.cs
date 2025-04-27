@@ -49,7 +49,8 @@ public class AttackArea : MonoBehaviour
         if (damageable != null && damageable != GetComponentInParent<IDamageable>())
         {
             OnActiveAttackArea?.Invoke(damageable, collision.transform);
-            //info.targetObj = collision.gameObject; 
+            info.targetObj = collision.gameObject;
+            info.target = damageable;
         }
     }
 

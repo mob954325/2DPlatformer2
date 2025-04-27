@@ -11,17 +11,17 @@ public class Stage2AManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instacne.SetSpawnPoint(StartObject.transform.position);
-        GameManager.Instacne.PlayerSpawn();
+        GameManager.Instance.SetSpawnPoint(StartObject.transform.position);
+        GameManager.Instance.PlayerSpawn();
 
         foreach (var obj in meleeSpawnPoints)
         {
-            PoolManager.Instacne.Pop(PoolType.EnemyMelee, obj.transform.position);
+            PoolManager.Instance.Pop(PoolType.EnemyMelee, obj.transform.position);
         }
 
         foreach(var obj in rangeSpawnPoints)
         {
-            PoolManager.Instacne.Pop(PoolType.EnemyRange, obj.transform.position);
+            PoolManager.Instance.Pop(PoolType.EnemyRange, obj.transform.position);
         }
     }
 }

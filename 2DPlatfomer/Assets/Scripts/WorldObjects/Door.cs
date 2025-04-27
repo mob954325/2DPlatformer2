@@ -8,7 +8,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        PoolManager.Instacne.ClearAll();
-        GameManager.Instacne.ChangeScene(nextStageIndex);
+        PoolManager.Instance.ClearAll();
+        GameManager.Instance.ChangeScene(nextStageIndex);
     }
 }

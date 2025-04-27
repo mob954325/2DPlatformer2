@@ -29,10 +29,6 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
 
-        hpUI = FindAnyObjectByType<PlayerHpUI>();
-        skillUI = FindAnyObjectByType<PlayerSkillUI>();
-        defeatUI = FindAnyObjectByType<DefeatPanel>();
-
         SetPoolManager();
     }
 
@@ -40,7 +36,7 @@ public class GameManager : Singleton<GameManager>
     {
         for(int i = 0; i < (int)PoolType.PoolTypeCount; i++)
         {
-            PoolManager.Instacne.Register(((PoolType)i).ToString(), poolPrefab[i]);
+            PoolManager.Instance.Register(((PoolType)i).ToString(), poolPrefab[i]);
         }
     }
 
@@ -53,9 +49,13 @@ public class GameManager : Singleton<GameManager>
     public void PlayerSpawn()
     {
         player = null;
-        player = PoolManager.Instacne.Pop(PoolType.Player, spawnPosition, Quaternion.identity).GetComponent<Player>();
+        player = PoolManager.Instance.Pop(PoolType.Player, spawnPosition, Quaternion.identity).GetComponent<Player>();
 
-        if(isPlayerSpawned)
+        hpUI = FindAnyObjectByType<PlayerHpUI>();
+        skillUI = FindAnyObjectByType<PlayerSkillUI>();
+        defeatUI = FindAnyObjectByType<DefeatPanel>();
+
+        if (isPlayerSpawned)
         {
             playerVcam.Follow = player.transform;
             playerVcam.LookAt = player.transform;
@@ -89,7 +89,7 @@ public class GameManager : Singleton<GameManager>
         player = null;
         playerVcam = null;
         isPlayerSpawned = false;
-        PoolManager.Instacne.ClearAll();
+        PoolManager.Instance.ClearAll();
         SceneManager.LoadScene(index);
     }
 }

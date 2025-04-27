@@ -157,6 +157,7 @@ public class PoolManager : Singleton<PoolManager>
             list.Value.readyQueue.Clear();
             list.Value.objectList.Clear();
         }
+        poolDictionary.Clear();
     }
 
     public void ClearPool(string key)

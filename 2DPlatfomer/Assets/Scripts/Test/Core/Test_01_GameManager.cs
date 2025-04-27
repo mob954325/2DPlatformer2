@@ -13,7 +13,7 @@ public class Test_01_GameManager : TestBase
 
     protected override void OnTest1(InputAction.CallbackContext context)
     {
-        PoolManager.Instacne.Pop(type, spawnTransform.position, Quaternion.identity);
+        PoolManager.Instance.Pop(type, spawnTransform.position, Quaternion.identity);
     }
 #endif
 }
