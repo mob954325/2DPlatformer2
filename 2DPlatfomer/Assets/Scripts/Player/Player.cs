@@ -462,6 +462,8 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
                 specialAttackAreaPivot.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                 specialAttackFX.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             }
+
+            rigid2d.velocity = Vector2.zero;
         }
     }
 
@@ -614,18 +616,21 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     {
         isAttacking = false;
         attackArea.gameObject.SetActive(false);
+        rigid2d.velocity = Vector2.zero;
     }
 
     private void CrouchStateEnd()
     {
         isCrouching = false;
         ChangeToCrouchCollider(false);
+        rigid2d.velocity = Vector2.zero;
     }
 
     private void RollStateEnd()
     {
         isRolling = false;
         isImmune = false;
+        rigid2d.velocity = Vector2.zero;
     }
 
     private void DeadStateEnd()

@@ -214,7 +214,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IPoolable
 
         hitDelay = maxHitDelay;
         Hp -= damageValue;
-        OnHitPerformed?.Invoke();
+
+        if(!IsDead) OnHitPerformed?.Invoke();
     }
 
     public void OnDead()

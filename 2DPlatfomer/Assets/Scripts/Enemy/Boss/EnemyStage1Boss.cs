@@ -18,7 +18,7 @@ public class EnemyStage1Boss : EnemyCombat
 
     public float restTimer = 0;
     public float maxRestTimer = 1.5f;
-    public float maxSpecialAttackTimer = 2f;
+    public float maxSpecialAttackTimer = 1.3f;
     public float specialAttackRange = 4f;
 
     [SerializeField] private bool isGrounded = false;
@@ -95,6 +95,7 @@ public class EnemyStage1Boss : EnemyCombat
     protected override void OnDeadStateStart()
     {
         animator.Play("Dead", 0);
+        rigid2d.velocity = Vector2.zero;
     }
 
     protected override void OnIdleState()
@@ -105,12 +106,19 @@ public class EnemyStage1Boss : EnemyCombat
             {
                 // 특수 공격 진행
                 hitDelay = 1000f;
+                isFacingLock = true;
                 specialAttackArea.gameObject.SetActive(true);
                 isSpecialAttackPhase = true;
+
+                if (attackArea.Info.targetObj != null) // 거리 업데이트
+                {
+                    distanceToTarget = Vector2.Distance(attackArea.Info.targetObj.transform.position, (transform.position));
+                }
 
                 // 특수 공격        
                 if (CanAttack && distanceToTarget < specialAttackRange && IsInsight(attackArea.Info.targetObj != null ? attackArea.Info.targetObj.transform : null))
                 {
+                    moveDirection.x = spriteRenderer.flipX ? -1 : 1;
                     OnAttack(attackArea.Info.target);
                 }
             }
@@ -183,6 +191,8 @@ public class EnemyStage1Boss : EnemyCombat
 
     protected override void OnDeadState()
     {
+        animator.Play("Dead", 0);
+
         if (CheckAnimationEnd())
         {
             gameObject.SetActive(false);

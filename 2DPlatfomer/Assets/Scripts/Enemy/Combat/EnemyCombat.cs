@@ -130,7 +130,7 @@ public class EnemyCombat : EnemyBase, IAttacker
     {       
         if (attackArea.Info.target == null || attackArea.Info.targetObj == null) return;
 
-        if(!isFacingLock) // 임시
+        if(!isFacingLock)
         {
             isFacingLeft = attackArea.Info.targetObj.transform.position.x - transform.position.x < 0 ? true : false; // 플레이어가 범위 안에 있을 때만 바라보는 위치 갱신
             moveDirection = isFacingLeft ? Vector2.left : Vector2.right;
