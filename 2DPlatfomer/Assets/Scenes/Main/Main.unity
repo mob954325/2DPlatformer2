@@ -1408,6 +1408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefeatPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4464746345927859626, guid: f7c1d4eca13866b42b3aed13dd7f5819, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6291117258912633067, guid: f7c1d4eca13866b42b3aed13dd7f5819, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1509,6 +1513,10 @@ PrefabInstance:
     - target: {fileID: 4128087749182417237, guid: 4720c01c972505b46b1d9616b176fdcd, type: 3}
       propertyPath: m_Name
       value: VictoryPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128087749182417237, guid: 4720c01c972505b46b1d9616b176fdcd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875779312085194126, guid: 4720c01c972505b46b1d9616b176fdcd, type: 3}
       propertyPath: m_Pivot.x
