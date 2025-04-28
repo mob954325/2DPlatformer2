@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,5 +10,5 @@ public class Stage1AManager : MonoBehaviour
     {
         GameManager.Instance.SetSpawnPoint(StartObject.transform.position);
         GameManager.Instance.PlayerSpawn();
-    }
+    }        
 }

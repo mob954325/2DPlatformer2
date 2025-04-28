@@ -27,6 +27,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     AttackArea attackArea;
     Vector3 attackAreaVec = Vector3.zero;
 
+    GameObject InteractionGuideObject;
     GameObject specialAttackAreaPivot;
     AttackArea specialAttackArea;
 
@@ -81,7 +82,6 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         set
         {
             maxHp = value;
-            Hp = maxHp;
         }
     }
 
@@ -169,6 +169,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         specialAttackAreaPivot = transform.GetChild(4).gameObject;
         specialAttackArea = specialAttackAreaPivot.GetComponentInChildren<AttackArea>(true); //
         interactDectect = GetComponentInChildren<PlayerInteractDetect>();
+        InteractionGuideObject = transform.GetChild(6).gameObject;
 
         groundCheck = transform.GetChild(0); 
         groundLayer = LayerMask.GetMask("Ground");
@@ -184,14 +185,17 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
         attackArea.gameObject.SetActive(false);
         specialAttackArea.gameObject.SetActive(false);
+        InteractionGuideObject.gameObject.SetActive(false);
 
         ChangeToCrouchCollider(false);
         hasSpecialAttack = true;
-        MaxHp = 20;
     }    
 
     private void OnDisable()
     {
+        OnHpChange = null;
+        OnDeadPerformed = null;
+        OnHitPerformed = null;
         attackArea.OnActiveAttackArea = null;
         specialAttackArea.OnActiveAttackArea = null;
         input.OnInteract = null;
@@ -209,6 +213,20 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
         KeyUpdate();
         AnimationUpdate();
         TimerUpdate();
+        GuidUpdate();
+    }
+
+    private void GuidUpdate()
+    {
+        if (interactDectect.Target != null)
+        {
+            InteractionGuideObject.SetActive(true);
+        }
+        else
+        {
+            InteractionGuideObject.SetActive(false);
+        }
+
     }
 
     private void TimerUpdate()
@@ -444,6 +462,9 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
             SetAttackAreaPosition();
             attackArea.gameObject.SetActive(true);
+
+            GameObject fx = PoolManager.Instance.Pop(PoolType.HitFX1);
+            fx.transform.position = attackArea.transform.position;
         }
         else if (isSpecialAttacking)
         {

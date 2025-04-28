@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,6 @@ public class VictoryPanel : MonoBehaviour
     CanvasGroup cg;
 
     private float timer = 0;
-    private bool isClick = false;
 
     private void Awake()
     {
@@ -48,35 +47,32 @@ public class VictoryPanel : MonoBehaviour
 
     public void Show()
     {
-        isClick = false;
-
         cg.alpha = 1f;
         cg.interactable = true;
         cg.blocksRaycasts = true;
 
         input.UI.Enable();
 
-        // ±‚¡∏ ¿Ã∫•∆Æ ∏’¿˙ ¡¶∞≈ (¡ﬂ∫π πÊ¡ˆ)
+        // Í∏∞Ï°¥ Ïù¥Î≤§Ìä∏ Î®ºÏ†Ä Ï†úÍ±∞ (Ï§ëÎ≥µ Î∞©ÏßÄ)
         input.UI.Click.performed -= Click_started;
         input.UI.Click.performed += Click_started;
     }
 
     private void Click_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        if (isClick || timer < 0f) return;
+        if (timer < 3f) return;
 
-        isClick = true;
-
-        // ≈¨∏Ø ¿Ã∫•∆Æ∞° ¡ﬂ∫π µÓ∑œµ«¡ˆ æ µµ∑œ ∏’¿˙ ¡¶∞≈
+        // ÌÅ¥Î¶≠ Ïù¥Î≤§Ìä∏Í∞Ä Ï§ëÎ≥µ Îì±Î°ùÎêòÏßÄ ÏïäÎèÑÎ°ù Î®ºÏ†Ä Ï†úÍ±∞
         input.UI.Click.performed -= Click_started;
 
-        // UI ¥›±‚
+        // UI Îã´Í∏∞
         Close();
 
-        // æ¿ ¿¸»Ø
+        // Ïî¨ Ï†ÑÌôò
         GameManager.Instance.ChangeScene(0); // menu
+        GameManager.Instance.SaveRemainHp(20);
 
-        // ¿‘∑¬ Ω√Ω∫≈€ ∫Ò»∞º∫»≠
+        // ÏûÖÎ†• ÏãúÏä§ÌÖú ÎπÑÌôúÏÑ±Ìôî
         input.UI.Disable();
     }
 }

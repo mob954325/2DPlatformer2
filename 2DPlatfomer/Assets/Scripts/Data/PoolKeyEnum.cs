@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,5 +9,7 @@ public enum PoolType
     EnemyRange,
     Beam,
     Stage1Boss,
+    HitFX1,
+    HitFX2,
     PoolTypeCount
 }

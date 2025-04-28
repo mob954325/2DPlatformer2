@@ -1,3 +1,4 @@
+Ôªøusing System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,12 @@ public class DefeatPanel : MonoBehaviour
     PlayerInputActions input;
     CanvasGroup cg;
 
+    private float timer = 0;
+
     private bool isClick = false;
+
+    public Action OnClick;
+
     private void Awake()
     {
         cg = GetComponent<CanvasGroup>();
@@ -19,6 +25,15 @@ public class DefeatPanel : MonoBehaviour
     {
         Close();
     }
+
+    private void Update()
+    {
+        if (cg != null && cg.alpha > 0f)
+        {
+            timer += Time.deltaTime;
+        }
+    }
+
     public void Initialize(Player player)
     {
         this.player = player;
@@ -49,18 +64,19 @@ public class DefeatPanel : MonoBehaviour
 
         input.UI.Enable();
 
-        // ±‚¡∏ ¿Ã∫•∆Æ ∏’¿˙ ¡¶∞≈ (¡ﬂ∫π πÊ¡ˆ)
+        // Í∏∞Ï°¥ Ïù¥Î≤§Ìä∏ Î®ºÏ†Ä Ï†úÍ±∞ (Ï§ëÎ≥µ Î∞©ÏßÄ)
         input.UI.Click.performed -= Click_started;
         input.UI.Click.performed += Click_started;
     }
 
     private void Click_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        if (timer < 1.5f) return;
         if (isClick) return;
 
         isClick = true;
         Close();
         input.UI.Click.performed -= Click_started;
-        GameManager.Instance.PlayerSpawn();
+        OnClick?.Invoke();
     }
 }

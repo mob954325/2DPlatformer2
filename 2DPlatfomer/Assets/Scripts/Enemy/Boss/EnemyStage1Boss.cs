@@ -89,6 +89,9 @@ public class EnemyStage1Boss : EnemyCombat
         base.OnAttackStateStart();
         rigid2d.velocity = Vector2.zero;
         animator.Play("Attack" + attackComboCount, 0);
+        GameObject fx = PoolManager.Instance.Pop(PoolType.HitFX2);
+        fx.transform.position = attackArea.Info.targetObj.transform.position;
+
         OnAttack(attackArea.Info.target);
     }
 

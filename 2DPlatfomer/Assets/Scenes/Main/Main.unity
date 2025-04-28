@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1068,11 +1068,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'aaaaaaaaaaaaaaaaaaaaaaa
-
-    aaaaaaaaaaaaaaaaaaaaaaa
-
-    aaaaaaaaaaaaaaaaaaaaaaa'
+  m_text: "key control> \r\nad /// (left-right move)\ns /// (crouch)\ns+space ///
+    (platform under moving)\nad+(left)shift /// dash\nad+(left)alt /// rolling (this
+    will help to escape the attack and damage happening\ne /// (saving point), (moving
+    scene at door)\r\n\nleft mouse click (1,2,3 combo attack)\nright mouse click
+    (special attack)\r\n\nyou can only once use special attack /// the key image
+    next to HP bar will disappear after you used skill|\r\n\n<credit>\r\nDirector
+    - Junshik Park\nHead Program developer - Seongho Lee\nCharacter artist - Yuseong
+    Jin\nBackground artist - Jihoon Park\r\nthanks for little help-Yuseong Lee"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1099,8 +1102,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1115,7 +1118,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1135,7 +1138,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -339.265, w: -598.45087}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

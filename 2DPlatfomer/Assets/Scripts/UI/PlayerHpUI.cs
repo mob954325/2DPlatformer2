@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,8 +12,8 @@ public class PlayerHpUI : MonoBehaviour
     {
         this.player = player;
         hpSlider = GetComponent<Slider>();
-        player.OnHpChange = SetSliderValue;
-        SetSliderValue(player.MaxHp); // slider value ÃÊ±âÈ­
+        player.OnHpChange += SetSliderValue;
+        SetSliderValue(player.MaxHp); // slider value ì´ˆê¸°í™”
     }
 
     public void SetSliderValue(float value)
@@ -23,9 +23,9 @@ public class PlayerHpUI : MonoBehaviour
     }
 
     /// <summary>
-    /// ÇÃ·¹ÀÌ¾î Ã¼·Â º¯È­ º¸°£¿ë ÄÚ·çÆ¾ ( ÃÊ´ç Ã¼·ÂÀÌ ÁÙ¾îµë )
+    /// í”Œë ˆì´ì–´ ì²´ë ¥ ë³€í™” ë³´ê°„ìš© ì½”ë£¨í‹´ ( ì´ˆë‹¹ ì²´ë ¥ì´ ì¤„ì–´ë“¬ )
     /// </summary>
-    /// <param name="goalValue">µµ´ŞÇÒ Ã¼·Â</param>
+    /// <param name="goalValue">ë„ë‹¬í•  ì²´ë ¥</param>
     private IEnumerator ValueReduceProcess(float goalValue)
     {
         float timeElapsed = 0.0f;

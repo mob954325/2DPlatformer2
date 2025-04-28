@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,16 +10,16 @@ public interface IPoolable
     public void OnDespawn();
 
     /// <summary>
-    /// PoolManager Queue¿¡ µ¹¾Æ°¡±â À§ÇÑ µ¨¸®°ÔÀÌÆ®
+    /// PoolManager Queueì— ëŒì•„ê°€ê¸° ìœ„í•œ ë¸ë¦¬ê²Œì´íŠ¸
     /// </summary>
     Action ReturnAction { get; set; }
 }
 
-// ÃÊ±âÈ­
-// ¿ÀºêÁ§Æ® ²¨³»±â
-// ¹è¿­ È®Àå
-// ¸ğµç ¿ÀºêÁ§Æ® Á¦°Å
-// NOTE ¸¸¾à ¾À·Îµå°¡ Additive¶ó¸é Ç® ¸Å´ÏÀú ÃÊ±âÈ­°¡ ÇÊ¿äÇÒ ¼ö µµ ÀÖÀ½
+// ì´ˆê¸°í™”
+// ì˜¤ë¸Œì íŠ¸ êº¼ë‚´ê¸°
+// ë°°ì—´ í™•ì¥
+// ëª¨ë“  ì˜¤ë¸Œì íŠ¸ ì œê±°
+// NOTE ë§Œì•½ ì”¬ë¡œë“œê°€ Additiveë¼ë©´ í’€ ë§¤ë‹ˆì € ì´ˆê¸°í™”ê°€ í•„ìš”í•  ìˆ˜ ë„ ìˆìŒ
 
 
 public class PoolManager : Singleton<PoolManager>
@@ -66,7 +66,7 @@ public class PoolManager : Singleton<PoolManager>
             return null;
         }
 
-        if (data.readyQueue.Count == 0) // È®Àå
+        if (data.readyQueue.Count == 0) // í™•ì¥
         {
             ExpandPoolSize(key);
         }
@@ -119,9 +119,9 @@ public class PoolManager : Singleton<PoolManager>
 
         int prevCapacity = data.capacity;
         data.capacity *= 2;
-        Debug.LogWarning($"{gameObject.name} Ç® ¸Å´ÏÀú Å©±â È®Àå | {prevCapacity} -> {data.capacity}");
+        Debug.LogWarning($"{gameObject.name} í’€ ë§¤ë‹ˆì € í¬ê¸° í™•ì¥ | {prevCapacity} -> {data.capacity}");
 
-        // »õ·Î¿î Ç® µî·Ï
+        // ìƒˆë¡œìš´ í’€ ë“±ë¡
         data.objectList = new List<GameObject>(data.capacity);
         for(int i = 0; i < prevCapacity; i++)
         {
@@ -160,15 +160,18 @@ public class PoolManager : Singleton<PoolManager>
         poolDictionary.Clear();
     }
 
-    public void ClearPool(string key)
+    public void DisablePool(string key)
     {
         if (!poolDictionary.TryGetValue(key, out var data)) return;
 
         foreach (var obj in data.objectList)
         {
-            Destroy(obj);
+            ReturnToPool(key, obj);
         }
+    }
 
-        poolDictionary.Remove(key);
+    public void DisablePool(PoolType type)
+    {
+        DisablePool(type.ToString());
     }
 }
