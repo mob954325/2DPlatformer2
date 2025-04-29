@@ -74,3 +74,6 @@ crashlytics-build.properties
 # Ignore Input log
 /[Aa]ssets/ScreencastInput/Logs
 /[Aa]ssets/ScreencastInput/Logs.meta
+
+# TextMesh Pro files
+[Aa]ssets/TextMesh*Pro/
