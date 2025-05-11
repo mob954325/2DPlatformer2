@@ -153,6 +153,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
     public Action OnDeadPerformed { get; set; }
 
     public bool IsDead => Hp <= 0;
+
     private void OnEnable()
     {
         input = GetComponent<PlayerInput>();
@@ -189,7 +190,7 @@ public class Player : MonoBehaviour, IDamageable, IAttacker
 
         ChangeToCrouchCollider(false);
         hasSpecialAttack = true;
-    }    
+    }
 
     private void OnDisable()
     {

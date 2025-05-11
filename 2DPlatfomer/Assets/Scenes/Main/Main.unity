@@ -696,7 +696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1069,13 +1069,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "key control> \r\nad /// (left-right move)\ns /// (crouch)\ns+space ///
-    (platform under moving)\nad+(left)shift /// dash\nad+(left)alt /// rolling (this
+    (platform under moving)\nad+(left)shift /// dash\nad+(left)ctrl /// rolling (this
     will help to escape the attack and damage happening\ne /// (saving point), (moving
-    scene at door)\r\n\nleft mouse click (1,2,3 combo attack)\nright mouse click
-    (special attack)\r\n\nyou can only once use special attack /// the key image
-    next to HP bar will disappear after you used skill|\r\n\n<credit>\r\nDirector
-    - Junshik Park\nHead Program developer - Seongho Lee\nCharacter artist - Yuseong
-    Jin\nBackground artist - Jihoon Park\r\nthanks for little help-Yuseong Lee"
+    scene at door)\r\n\nj (1,2,3 combo attack)\nk (special attack)\r\n\nyou can only
+    once use special attack /// the key image next to HP bar will disappear after
+    you used skill|\r\n\n<credit>\r\nDirector - Junshik Park\nHead Program developer
+    - Seongho Lee\nCharacter artist - Yuseong Jin\nBackground artist - Jihoon Park\r\nthanks
+    for little help-Yuseong Lee"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
